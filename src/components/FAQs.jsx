@@ -45,21 +45,22 @@ const FAQItem = ({ question, answer }) => {
 const FAQsSection = () => {
   const faqsData = [
     {
-      question: "There are no suitable jobs on Ulinkit's job portal. Can I still send my CV?",
+      question: "There are no suitable jobs on Ulinkit's job portal. Can I still submit my CV?",
       answer:
-        "While we encourage you to regularly check our job portal for the latest openings, you are welcome to send your CV to our careers email address. Our recruitment team will review your profile and keep it on file for future opportunities that align with your skills and experience.",
+        "Although we recommend checking our job portal regularly for new openings, you are welcome to send your CV to our careers email address. Our recruitment team will review your profile and keep it on file for future roles that align with your qualifications and experience.",
     },
     {
-      question: "What happens to my job application once I've applied?",
+      question: "What happens after I submit my job application?",
       answer:
-        "Once you submit your application, our recruitment team will carefully review it. If your profile matches the requirements of the role, you will be contacted for the next steps in the recruitment process, which may include an initial screening call, interviews, and assessments. We strive to keep all applicants informed of their application status, although the volume of applications may sometimes cause delays.",
+        "Once you submit your application, our recruitment team will carefully assess your profile. If your qualifications match the requirements of the role, you will be contacted for the next steps, which may include an initial screening call, interviews, and assessments. We aim to keep all applicants informed about the status of their application, although response times may vary depending on the volume of applications.",
     },
     {
-      question: "What is the interview like?",
+      question: "What can I expect from the interview process?",
       answer:
-        "Our interview process typically involves one or more stages, depending on the role. You can expect to meet with members of our recruitment team and the hiring manager. The interviews will focus on understanding your experience, skills, and cultural fit with Tradeling. We may also include technical questions or case studies relevant to the position you've applied for. We aim to create a comfortable and engaging environment for you to showcase your abilities.",
+        "Our interview process typically involves multiple stages, depending on the role. You'll have the opportunity to meet with our recruitment team and the hiring manager. The interviews will focus on your experience, skills, and cultural fit with Ulinkit. You may also be asked technical questions or work on case studies relevant to the role you've applied for. We strive to provide a comfortable and engaging environment to allow you to demonstrate your capabilities.",
     },
   ];
+  
 
   return (
     <div

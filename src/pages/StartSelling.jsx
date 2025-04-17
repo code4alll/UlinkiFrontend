@@ -32,8 +32,8 @@ const BecomeSeller = () => {
       answer: "Complete your profile, submit required business documents, and maintain good order fulfillment metrics. Our verification team will review your application."
     },
     {
-      question: "Can I sell in the UAE?",
-      answer: "Yes! Ulinkit handles all the local requirements, customs clearance, and product registration needed to sell in UAE markets."
+      question: "Can I sell in the Global Market?",
+      answer: "Yes! Ulinkit handles all the local requirements, customs clearance, and product registration needed to sell in Global markets."
     }
   ];
 
@@ -79,15 +79,17 @@ const BecomeSeller = () => {
               fontSize: "2.8rem",
               marginBottom: "1.5rem",
               fontWeight: 700,
-              lineHeight: 1.2
-            }}>Sell more! Unlock the MENA market.</h1>
+              lineHeight: 1.2,
+              color: "white",
+            }}>Sell more! Unlock the Global Marketplace.</h1>
             <p style={{
               fontSize: "1.1rem",
               marginBottom: "2rem",
               lineHeight: 1.6,
-              opacity: 0.9
+              opacity: 0.9,
+              color:'white',
             }}>
-              Easily sell to the UAE without opening a local office. Tens of thousands
+              Easily sell to the Global Market without opening a local office. Tens of thousands
               of verified wholesale buyers are only a few clicks away.
             </p>
             <button 
@@ -187,8 +189,7 @@ const BecomeSeller = () => {
             fontWeight: 600,
             lineHeight: 1.3
           }}>
-            Trade with confidence: we are backed by the Dubai Government and strategically located at the Dubai Airport
-            Free Zone.
+           We are backed by the govt of india ACT coperate Policy and strategically located at the New Delhi India.
           </h2>
 
           <div style={{
@@ -198,27 +199,48 @@ const BecomeSeller = () => {
             marginTop: "3rem"
           }}>
             {[
-              {
-                icon: "🌐",
-                title: "Enter the wholesale market in MENA",
-                description: "Our verified B2B buyers are looking for products like yours."
-              },
-              {
-                icon: "💰",
-                title: "Access trade finance & credit insurance",
-                description: "Secure payment solutions and risk protection for your transactions."
-              },
-              {
-                icon: "🚚",
-                title: "Convenient cross-border logistic services",
-                description: "Integrated digital solutions for shipping, customs clearance, export licenses, and more."
-              },
-              {
-                icon: "📝",
-                title: "Find active buyers in the RFQ Marketplace",
-                description: "Submit bids on open RFQs to connect with buyers looking for your products."
-              }
-            ].map((feature, index) => (
+  {
+    icon: "📊",
+    title: "Real-time market insights & analytics",
+    description: "Stay ahead of trends with industry data, buyer behavior, and price analysis."
+  },
+  {
+    icon: "🤝",
+    title: "Trusted global partnerships",
+    description: "Collaborate with certified suppliers and verified buyers from across the globe."
+  },
+  {
+    icon: "📦",
+    title: "Seamless order & inventory management",
+    description: "Track your orders, manage inventory, and fulfill shipments from one dashboard."
+  },
+  {
+    icon: "📱",
+    title: "Mobile-first experience",
+    description: "Manage your business on the go with our responsive and intuitive mobile platform."
+  },
+  {
+    icon: "🛡️",
+    title: "Secure transactions & data privacy",
+    description: "We use advanced encryption and compliance measures to protect your data and payments."
+  },
+  {
+    icon: "🎯",
+    title: "Targeted marketing campaigns",
+    description: "Promote your products with smart ad placements and featured listings for higher visibility."
+  },
+  {
+    icon: "🧾",
+    title: "Automated invoice & tax compliance",
+    description: "Generate compliant invoices and manage cross-border tax documents effortlessly."
+  },
+  {
+    icon: "📤",
+    title: "Easy product uploads & smart catalogs",
+    description: "Upload multiple products, manage categories, and create an optimized catalog in minutes."
+  }
+]
+.map((feature, index) => (
               <div 
                 key={index}
                 onMouseEnter={() => setHoveredCard(index)}
@@ -291,6 +313,7 @@ const BecomeSeller = () => {
                 alt="How it works process diagram"
                 style={{
                   width: "100%",
+                 
                   height: "auto",
                   borderRadius: "4px"
                 }}
@@ -318,7 +341,7 @@ const BecomeSeller = () => {
                 description: "Showcase your products in the best way. Our team will help you upload your catalogue and launch sales promotions."
               },
               {
-                title: "2. Use Tradeling Logistics to get your products to market",
+                title: "2. Use Ulinkit Logistics to get your products to market",
                 description: "Look no further for seamless support with import, export, customs, shipping, warehousing, and last-mile delivery.",
                 link: true
               },
@@ -560,7 +583,7 @@ const BecomeSeller = () => {
             }}>
               {[
                 "We help with Customs Clearance and Product Registration.",
-                "Easily sell in the Middle East. No need for your own local office.",
+                "Easily sell in the Global Market Place. No need for your own local office.",
                 "We offer Exporter of Record services, if you do not have an export licence."
               ].map((benefit, index) => (
                 <div key={index} style={{
@@ -649,7 +672,7 @@ const BecomeSeller = () => {
                 ))}
               </div>
               <img 
-                src="/Images/global_Logistics.webp" 
+                src="/Images/global_Logistics3.webp" 
                 alt="Global logistics" 
                 style={{
                   width: "100%",
@@ -761,13 +784,13 @@ const BecomeSeller = () => {
             {[
               {
                 logo: "/Images/Blog2.webp",
-                quote: "Ulinkit is helping us bring healthy foods to the UAE region. We are reaching more customers and making more sales, at no additional cost.",
-                author: "Henry Haddad, Kensmatic Foods"
+                quote: "Ulinkit is helping us bring healthy foods to the Gloabl region. We are reaching more customers and making more sales, at no additional cost.",
+                author: "Mushahid - Kensmatic Foods"
               },
               {
                 logo: "/Images/Blog1.webp",
                 quote: "Having our products listed on Ulinkit definitely makes sense. All of our products are available online for potential customers to see and get in touch with us directly.",
-                author: "Sao Marcos , BRF - Sadia Foods"
+                author: "Raj Shah  - Sadia Foods"
               }
             ].map((testimonial, index) => (
               <div 

@@ -21,7 +21,7 @@ const features = [
 
 const blogCards = [
     {
-        title: "Tradeling: Tips for Safe and Smart Bulk Buying",
+        title: "Ulinkit: Tips for Safe and Smart Bulk Buying",
         subtitle: "Optimise costs while improving procurement efficiency",
         date: "JAN 28, 2025",
         tags: ["Sourcing", "Budgeting", "Fulfillment"]
@@ -34,7 +34,7 @@ const Enterprise = () => {
     const [hoveredFeature, setHoveredFeature] = React.useState(null);
 
     return (
-        <div style={{ fontFamily: 'sans-serif' }}>
+        <div >
             {/* Hero Section */}
             <div style={{
                 backgroundColor: '#00527A',
@@ -65,15 +65,14 @@ const Enterprise = () => {
                             marginBottom: '20px',
                             lineHeight: '1.2'
                         }}>
-                            Your trusted <span style={{ color: '#F28705' }}>sourcing partner</span> <br />
-                            for all purchasing needs.
+                         "Your reliable <span style={{ color: '#F28705' }}>sourcing partner</span> <br /> for all your procurement needs."
                         </h1>
                         <p style={{
                             fontSize: '16px',
                             lineHeight: '1.8',
                             marginBottom: '30px'
                         }}>
-                            Unique to the region and the first of its kind, <strong style={{ color: '#F28705' }}>ULINKIT Enterprise</strong> is your go-to product sourcing partner. With over 7 million items in curated catalogues at competitive prices, we streamline sourcing, supplier management, and communication hassles. Serving all business departments, we take care of the heavy 'sourcing', so you don't have to.
+Exclusive to the region and the first of its kind, <strong style={{ color: '#F28705' }}>ULINKIT Enterprise</strong> is your trusted product sourcing partner. With over 7 million items in curated catalogs at competitive prices, we simplify sourcing, supplier management, and eliminate communication challenges. Serving all business departments, we handle the complex 'sourcing' so you don't have to.
                         </p>
                         <button
                             style={{
@@ -121,12 +120,13 @@ const Enterprise = () => {
                         }}>
                             {/* Feature list items */}
                             {[
-                                { icon: 'bi-list-check', text: 'Manage RFQs, Price Negotiations & LPOs' },
-                                { icon: 'bi-file-earmark-text-fill', text: 'Contractual Pricing & Curated Catalogues' },
-                                { icon: 'bi-person-check-fill', text: 'One Supplier, for all your purchasing needs' },
-                                { icon: 'bi-gear-fill', text: 'Integrates with SAP, Oracle, and other ERPs' },
-                                { icon: 'bi-credit-card-2-front-fill', text: 'Flexible payment terms' }
-                            ].map((item, index) => (
+    { "icon": "bi-list-check", "text": "Efficient Management of RFQs, Price Negotiations & LPOs" },
+    { "icon": "bi-file-earmark-text-fill", "text": "Contractual Pricing & Curated Product Catalogs" },
+    { "icon": "bi-person-check-fill", "text": "A Single Supplier for All Your Procurement Needs" },
+    { "icon": "bi-gear-fill", "text": "Seamless Integration with SAP, Oracle, and Other ERPs" },
+    { "icon": "bi-credit-card-2-front-fill", "text": "Flexible Payment Options for Your Convenience" }
+]
+.map((item, index) => (
                                 <div key={index} style={{
                                     display: 'flex',
                                     alignItems: 'center',
@@ -157,7 +157,7 @@ const Enterprise = () => {
                     fontWeight: 'bold',
                     lineHeight: '1.3'
                 }}>
-                    <span style={{ color: '#F28705' }}>Tailored sourcing solutions</span> for you and your business. One supplier, one contact.
+           <span style={{ color: '#F28705' }}>Customized sourcing solutions</span> for you and your business. One supplier, one point of contact.
                 </h1>
             </div>
 
@@ -191,7 +191,7 @@ const Enterprise = () => {
                             marginBottom: '30px',
                             lineHeight: '1.3'
                         }}>
-                            Streamline product sourcing with our<br /> comprehensive platform:
+                           Optimize product sourcing with our<br /> all-in-one platform:
                         </h1>
                         <ul style={{
                             listStyleType: 'none',
@@ -199,14 +199,15 @@ const Enterprise = () => {
                             margin: 0
                         }}>
                             {[
-                                'FREE registration & access to procurement platform',
-                                'One supplier, for all your purchasing needs',
-                                'Consolidate all orders & payments in one place',
-                                'Manage quotations, price negotiations, LPOs and more!',
-                                'Expertly managed supplier network & access to 7 mill+ items',
-                                'Contractual pricing & curated catalogues',
-                                'Multiple payment options + credit finance',
-                            ].map((text, index) => (
+    "FREE registration and access to the procurement platform",
+    "One supplier for all your purchasing needs",
+    "Consolidate orders and payments in a single platform",
+    "Efficiently manage quotations, price negotiations, LPOs, and more!",
+    "Expertly managed supplier network with access to over 7 million items",
+    "Contractual pricing and curated product catalogs",
+    "Multiple payment options and credit financing"
+]
+.map((text, index) => (
                                 <li key={index} style={{
                                     borderBottom: '1px solid rgba(255, 255, 255, 0.4)',
                                     padding: '15px 0',
@@ -452,29 +453,37 @@ const Enterprise = () => {
                     }}>
                         Partner with us and unlock significant benefits. Enjoy enhanced sourcing capabilities and receive complimentary access to our procurement solution software and dashboards, absolutely free of charge.
                     </p>
-                    <button style={{
-                        backgroundColor: '#F28705',
-                        color: '#FFFFFF',
-                        padding: '20px 40px',
-                        borderRadius: '5px',
-                        border: 'none',
-                        fontSize: '14px',
-                        fontWeight: 'bold',
-                        cursor: 'pointer',
-                        transition: 'all 0.3s ease',
-                        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
-                        whiteSpace:'nowrap'
-                    }}
-                    onMouseEnter={(e) => {
-                        e.currentTarget.style.transform = 'translateY(-3px)';
-                        e.currentTarget.style.boxShadow = '0 6px 12px rgba(0, 0, 0, 0.3)';
-                    }}
-                    onMouseLeave={(e) => {
-                        e.currentTarget.style.transform = 'translateY(0)';
-                        e.currentTarget.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
-                    }}>
-                        Get in touch
-                    </button>
+                    <button
+                            style={{
+                                backgroundColor: '#F28705',
+                                color: '#FFFFFF',
+                                padding: '15px 30px',
+                                borderRadius: '5px',
+                                border: 'none',
+                                fontSize: '16px',
+                                display: 'inline-block',
+                                textAlign: 'center',
+                                cursor: 'pointer',
+                                whiteSpace: 'nowrap',
+                                fontWeight: 'bold',
+                                transition: 'all 0.3s ease',
+                                transform: 'translateY(0)',
+                                boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
+                            }}
+                            onMouseEnter={(e) => {
+                                e.currentTarget.style.transform = 'translateY(-2px)';
+                                e.currentTarget.style.boxShadow = '0 6px 10px rgba(0, 0, 0, 0.15)';
+                            }}
+                            onMouseLeave={(e) => {
+                                e.currentTarget.style.transform = 'translateY(0)';
+                                e.currentTarget.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+                            }}
+                        >
+                           More
+                        </button>
+ 
+
+
                 </div>
             </div>
 
