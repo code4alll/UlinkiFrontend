@@ -216,31 +216,7 @@ const BecomeASeller = () => {
                 </section>
             </article>
 
-            <article className="flexcol wh home-alt">
-                <div className="flexcol wh" style={{ gap: '20px' }}>
-                    <h1 className="heading5">Success stories</h1>
-                </div>
-                <div className="perfect-grid2" style={{ gap: '8%' }}>
-                    <div className='flexcol' style={{ gap: '20px' }}>
-                        <div className="photo">
-                            <img src={three} alt="three" />
-                        </div>
-                        <h2 className="italic">
-                            U-link IT US aims for the highest levels of quality, and they do this by paying close attention to every little thing. They do their best to meet the needs of the growing market.
-                        </h2>
-                        <h3 className="descrip"> Tamron, General Manager, Dubai</h3>
-                    </div>
-                    <div className='flexcol' style={{ gap: '20px' }}>
-                        <div className="photo">
-                            <img src={three} alt="three" />
-                        </div>
-                        <h4 className="italic">
-                            They have long held the opinion that an internet business needs to be expertly represented in order to exist, and U-link IT US provides just that.
-                        </h4>
-                        <h5 className="descrip"> Asante General Trading, Dubai</h5>
-                    </div>
-                </div>
-            </article>
+           
 
             <article className="flexcol wh home-alt" style={{ backgroundColor: 'var(--bgClr)' }}>
                 <div className="flexcol wh" style={{ gap: '20px' }}>
