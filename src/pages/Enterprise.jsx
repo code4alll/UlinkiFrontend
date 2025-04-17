@@ -498,7 +498,7 @@ Exclusive to the region and the first of its kind, <strong style={{ color: '#F28
                     fontSize: '18px',
                     fontWeight: 'normal'
                 }}>
-                    Have any question? Please reach out to a friendly customer service agent on: +971 44 910000 or business@tradeling.com
+                    Have any question? Please reach out to a friendly customer service agent on: +971 44 910000 or Support@Ulinkit.com
                 </h2>
             </div>
         </div>
