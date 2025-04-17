@@ -159,7 +159,7 @@ function App() {
           <Route path='/blog' element={<Layout><Blog/></Layout>} />
           <Route path='/webinar' element={<Layout><Webinar/></Layout>} />
           <Route path='/logistics' element={<Layout><Logistics/></Layout>} />
-          <Route path='/start-Selling' element={<Layout><StartSelling/></Layout>} />
+          <Route path='/become-a-seller' element={<Layout><BecomeASeller/></Layout>} />
           <Route path='/product-List-Policy' element={<Layout><ProductListingPolicy/></Layout>} />
           <Route path='/enterprise' element={<Layout><Enterprise/></Layout>} />
           <Route path='/buy-Back-Program' element={<Layout><BuybackProgram/></Layout>} />

@@ -72,7 +72,7 @@ const Footer = () => {
           <section className="footer">
             <h1 className="footer-title">Sell on Ulinkit</h1>
             <div className="item-list">
-              <Link to="/start-Selling" className="itemLink">Start Selling</Link>
+              <Link to="/become-a-seller" className="itemLink">Start Selling</Link>
               <Link to="/webinar" className="itemLink">Webinar & E-Books</Link>
               <Link to="/logistics" className="itemLink">Ulink Logistics</Link>
               <Link to="/product-List-Policy" className="itemLink">Product Listing Policy</Link>

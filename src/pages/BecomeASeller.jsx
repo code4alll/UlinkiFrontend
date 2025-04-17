@@ -25,6 +25,9 @@ import { Helmet } from 'react-helmet-async';
 const BecomeASeller = () => {
 
     const [activeIndex, setActiveIndex] = useState(null);
+      const [hoveredButton, setHoveredButton] = useState(false);
+      const [hoveredCard, setHoveredCard] = useState(null);
+    
     const toggleAccordion = (index) => {
         setActiveIndex(activeIndex === index ? null : index);
     };
@@ -45,29 +48,29 @@ const BecomeASeller = () => {
         loop: true,
     };
     const { View } = useLottie(options);
-
     const howork = [
         {
             id: uuidv4(),
-            title: 'Easily upload and manage your products',
-            dis: 'Showcase your products in the best way. Our team will help you upload your catalogue and launch sales promotions.',
+            title: 'Easily Upload and Manage Your Products',
+            dis: 'Showcase your products effortlessly. Our team will assist you in uploading your catalog and launching sales campaigns to boost visibility.',
         },
         {
             id: uuidv4(),
-            title: 'Use Ulink Logistics to get your products to market',
-            dis: 'Look no further for seamless support with import, export, customs, shipping, warehousing, and last-mile delivery.',
+            title: 'Streamline Delivery with Ulink Logistics',
+            dis: 'Simplify import, export, customs, shipping, warehousing, and last-mile delivery with our end-to-end logistics support.',
         },
         {
             id: uuidv4(),
-            title: 'Get world-class customer support',
-            dis: 'Count on hands-on support and account management from the moment you register. Your buyers will receive fast and responsive customer service in the local languages of their choice.',
+            title: 'Access Dedicated, Multilingual Customer Support',
+            dis: 'From registration to order fulfillment, enjoy personalized account management and responsive customer service in multiple local languages.',
         },
         {
             id: uuidv4(),
-            title: 'Boost your sales: we offer finance and credit solutions to your buyers',
-            dis: 'Your buyers can apply for trade finance with us. You get paid immediately and the buyer has set repayment terms with us: it eases their cashflow and encourages them to buy faster and with greater confidence.',
+            title: 'Boost Sales with Flexible Finance and Credit Solutions',
+            dis: 'Empower your buyers with trade finance options. You receive instant payments, while they benefit from structured repayment terms—driving faster and more confident purchases.',
         },
-    ]
+    ];
+    
 
 
     return (
@@ -98,8 +101,9 @@ const BecomeASeller = () => {
             </article>
 
             <article className="flexcol wh home-alt">
-                <h1 className="heading5 confidencetrade" style={{ color: 'var(--CodeTwo)' }}>Trade with confidence: We are backed by the Indian Government and strategically located in India (Delhi).</h1>
+                <h1 className="heading5 confidencetrade" style={{ color: 'var(--CodeTwo)' }}>Trade with confidence: We are backed by the govt of India ACT Trade Policy and strategically located at the New Delhi India</h1>
                 <div className="perfect-grid">
+                    
                     <section className='flexcol' style={{ gap: '20px' }}>
                         <img src={global} className='grid-icon' alt='global' />
                         <h2 className="heading3">Enter the wholesale/retail market anywhere in the world</h2>
@@ -122,6 +126,116 @@ const BecomeASeller = () => {
                     </section>
                 </div>
             </article>
+            <section style={{
+        backgroundColor: "white",
+        padding: "80px 0",
+        position: "relative",
+        zIndex: 1
+      }}>
+        <div style={{
+          maxWidth: 1200,
+          margin: "0 auto",
+          padding: "0 40px"
+        }}>
+          <h2 style={{
+            color: "#003a4d",
+            fontSize: "1.8rem",
+            marginBottom: "3rem",
+            maxWidth: 800,
+            marginLeft: "auto",
+            marginRight: "auto",
+            textAlign: "center",
+            fontWeight: 600,
+            lineHeight: 1.3
+          }}>
+Strategically Located & Officially Backed for Your Success
+          </h2>
+
+          <div style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+            gap: "2rem",
+            marginTop: "3rem"
+          }}>
+            {[
+  {
+    icon: "📊",
+    title: "Real-time market insights & analytics",
+    description: "Stay ahead of trends with industry data, buyer behavior, and price analysis."
+  },
+  {
+    icon: "🤝",
+    title: "Trusted global partnerships",
+    description: "Collaborate with certified suppliers and verified buyers from across the globe."
+  },
+  {
+    icon: "📦",
+    title: "Seamless order & inventory management",
+    description: "Track your orders, manage inventory, and fulfill shipments from one dashboard."
+  },
+  {
+    icon: "📱",
+    title: "Mobile-first experience",
+    description: "Manage your business on the go with our responsive and intuitive mobile platform."
+  },
+  {
+    icon: "🛡️",
+    title: "Secure transactions & data privacy",
+    description: "We use advanced encryption and compliance measures to protect your data and payments."
+  },
+  {
+    icon: "🎯",
+    title: "Targeted marketing campaigns",
+    description: "Promote your products with smart ad placements and featured listings for higher visibility."
+  },
+  {
+    icon: "🧾",
+    title: "Automated invoice & tax compliance",
+    description: "Generate compliant invoices and manage cross-border tax documents effortlessly."
+  },
+  {
+    icon: "📤",
+    title: "Easy product uploads & smart catalogs",
+    description: "Upload multiple products, manage categories, and create an optimized catalog in minutes."
+  }
+]
+.map((feature, index) => (
+              <div 
+                key={index}
+                onMouseEnter={() => setHoveredCard(index)}
+                onMouseLeave={() => setHoveredCard(null)}
+                style={{
+                  backgroundColor: "#fff",
+                  borderRadius: "8px",
+                  padding: "2rem",
+                  boxShadow: hoveredCard === index ? "0 15px 30px rgba(0, 58, 77, 0.1)" : "0 5px 15px rgba(0, 58, 77, 0.05)",
+                  transition: "all 0.3s ease",
+                  border: "1px solid rgba(0, 58, 77, 0.1)",
+                  transform: hoveredCard === index ? "translateY(-5px)" : "none"
+                }}
+              >
+                <div style={{
+                  fontSize: "2.5rem",
+                  marginBottom: "1.5rem"
+                }}>
+                  {feature.icon}
+                </div>
+                <h3 style={{
+                  color: "#003a4d",
+                  fontSize: "1.2rem",
+                  fontWeight: 600,
+                  marginBottom: "1rem"
+                }}>{feature.title}</h3>
+                <p style={{
+                  fontSize: "1rem",
+                  color: "#666",
+                  lineHeight: 1.6
+                }}>{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
             <article className="howitworks home-alt">
                 <div className="perfect-grid2">
@@ -216,31 +330,134 @@ const BecomeASeller = () => {
                 </section>
             </article>
 
-            <article className="flexcol wh home-alt">
-                <div className="flexcol wh" style={{ gap: '20px' }}>
-                    <h1 className="heading5">Success stories</h1>
+            <section style={{
+        backgroundColor: "#f8fafc",
+        padding: "80px 0",
+        position: "relative"
+      }}>
+        <div style={{
+          maxWidth: 1200,
+          margin: "0 auto",
+          padding: "0 40px"
+        }}>
+          <h2 style={{
+            color: "#003a4d",
+            fontSize: "2rem",
+            marginBottom: "3rem",
+            textAlign: "center",
+            fontWeight: 600
+          }}>Success stories</h2>
+
+          <div style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+            gap: "2rem"
+          }}>
+            {[
+              {
+                logo: "/Images/Person.avif",
+                quote: "Ulinkit is helping us bring healthy foods to the Gloabl region. We are reaching more customers and making more sales, at no additional cost.",
+                author: "Mushahid - Kensmatic Foods"
+              },
+              {
+                logo: "/Images/Person2.avif",
+                quote: "Having our products listed on Ulinkit definitely makes sense. All of our products are available online for potential customers to see and get in touch with us directly.",
+                author: "Raj Shah  - Sadia Foods"
+              }
+            ].map((testimonial, index) => (
+              <div 
+                key={index}
+                style={{
+                  backgroundColor: "white",
+                  borderRadius: "8px",
+                  padding: "2.5rem",
+                  boxShadow: "0 10px 30px rgba(0, 58, 77, 0.05)",
+                  position: "relative",
+                  overflow: "hidden",
+                  transition: "all 0.3s ease",
+                  ':hover': {
+                    transform: "translateY(-5px)",
+                    boxShadow: "0 15px 35px rgba(0, 58, 77, 0.1)"
+                  }
+                }}
+              >
+                <div style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "4px",
+                  backgroundColor: "#ff5722"
+                }}></div>
+                <div style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  textAlign: "center"
+                }}>
+                  <div style={{
+                    width: "80px",
+                    height: "80px",
+                    borderRadius: "50%",
+                    overflow: "hidden",
+                    marginBottom: "1.5rem",
+                    border: "3px solid #f0f0f0"
+                  }}>
+                    <img
+                      src={testimonial.logo}
+                      alt="Company logo"
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "contain",
+                        padding: "10px"
+                      }}
+                    />
+                  </div>
+                  <div style={{
+                    position: "relative",
+                    marginBottom: "1.5rem"
+                  }}>
+                    <span style={{
+                      position: "absolute",
+                      top: "-20px",
+                      left: "-10px",
+                      fontSize: "4rem",
+                      color: "rgba(0, 58, 77, 0.05)",
+                      lineHeight: 0,
+                      zIndex: 0
+                    }}>"</span>
+                    <p style={{
+                      fontSize: "1.1rem",
+                      color: "#666",
+                      fontStyle: "italic",
+                      margin: "1rem 0",
+                      position: "relative",
+                      zIndex: 1,
+                      lineHeight: 1.6
+                    }}>{testimonial.quote}</p>
+                    <span style={{
+                      position: "absolute",
+                      bottom: "-30px",
+                      right: "-10px",
+                      fontSize: "4rem",
+                      color: "rgba(0, 58, 77, 0.05)",
+                      lineHeight: 0,
+                      zIndex: 0
+                    }}>"</span>
+                  </div>
+                  <p style={{
+                    fontSize: "0.9rem",
+                    color: "#999",
+                    fontWeight: 500,
+                    marginTop: "1rem"
+                  }}>{testimonial.author}</p>
                 </div>
-                <div className="perfect-grid2" style={{ gap: '8%' }}>
-                    <div className='flexcol' style={{ gap: '20px' }}>
-                        <div className="photo">
-                            <img src={three} alt="three" />
-                        </div>
-                        <h2 className="italic">
-                            U-link IT US aims for the highest levels of quality, and they do this by paying close attention to every little thing. They do their best to meet the needs of the growing market.
-                        </h2>
-                        <h3 className="descrip"> Tamron, General Manager, Dubai</h3>
-                    </div>
-                    <div className='flexcol' style={{ gap: '20px' }}>
-                        <div className="photo">
-                            <img src={three} alt="three" />
-                        </div>
-                        <h4 className="italic">
-                            They have long held the opinion that an internet business needs to be expertly represented in order to exist, and U-link IT US provides just that.
-                        </h4>
-                        <h5 className="descrip"> Asante General Trading, Dubai</h5>
-                    </div>
-                </div>
-            </article>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
             <article className="flexcol wh home-alt" style={{ backgroundColor: 'var(--bgClr)' }}>
                 <div className="flexcol wh" style={{ gap: '20px' }}>
