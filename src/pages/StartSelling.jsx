@@ -138,7 +138,7 @@ const BecomeSeller = () => {
             }
           }}>
             <img
-              src="/Images/Selling.webp"
+              src="/Images/Blog1.webp"
               alt="Ulinkit platform with shipping boxes"
               style={{
                 width: "100%",
@@ -718,7 +718,7 @@ const BecomeSeller = () => {
             gap: "2rem",
             marginTop: "2rem"
           }}>
-            {["Make it Kenya", "Malaysian Chamber of Commerce", "MODS", "Belarus Chamber of Commerce", "CEPIT", "CCI France UAE"].map((partner, index) => (
+            {["Amazon Copy", "Tredling", "DP World", "Amazon Global"].map((partner, index) => (
               <div 
                 key={index}
                 style={{
