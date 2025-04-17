@@ -35,24 +35,25 @@ const DataValue = [
   {
     title: "Integrity",
     image: "/Images/Integrity.avif",
-    description: "We value integrity above all else, ensuring transparency and trust in every action we take."
+    description: "We uphold the highest standards of integrity, fostering trust and transparency in every relationship and decision we make."
   },
   {
     title: "Collaboration",
     image: "/Images/HandShake.avif",
-    description: "Working together is key to driving innovation and delivering the best solutions for our clients."
+    description: "We believe in the power of teamwork, uniting diverse perspectives to drive meaningful innovation and impactful solutions."
   },
   {
     title: "Innovation",
     image: "/Images/People.avif",
-    description: "We believe in continuously innovating to meet the evolving needs of our customers and markets."
+    description: "We are committed to continuous innovation, adapting to change and anticipating the needs of tomorrow’s global businesses."
   },
   {
     title: "Diversity",
     image: "/Images/Enhancement.avif",
-    description: "We embrace diversity in all forms, creating an inclusive environment where everyone feels valued."
+    description: "We celebrate diversity and cultivate an inclusive culture where every voice is heard, valued, and empowered to thrive."
   }
 ];
+
 
 const Careers = () => {
   const [hoverStates, setHoverStates] = useState({
@@ -97,7 +98,7 @@ const Careers = () => {
         justifyContent: 'center',
         alignItems: 'center',
         minHeight: '100vh',
-        backgroundImage: `url(${warehouseImg})`,
+        backgroundImage: `url('Images/People.avif')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         color: 'white',
@@ -137,9 +138,9 @@ const Careers = () => {
               WebkitTextFillColor: 'transparent',
               lineHeight: 1.25
             }}>
-              All your procurement and distribution needs in one integrated platform.
+          Join a platform that powers global procurement and distribution — all in one place
               <br />
-              <span style={{ color: 'white' }}>It's easier with Ulinkit.</span>
+              <span style={{ color: 'white' }}>It's easier with Ulinkit</span>
             </h1>
       
             <button 
@@ -193,7 +194,7 @@ const Careers = () => {
             }}>
               <span style={{ marginRight: '0.5rem' }}>♦️</span> Ulinkit
             </div>
-            <p style={{ fontSize: '0.875rem', color: 'rgba(229, 231, 235, 0.8)' }}>MENA's leading wholesale marketplace</p>
+            <p style={{ fontSize: '0.875rem', color: 'rgba(229, 231, 235, 0.8)' }}>Global MarketPlace leading wholesale marketplace</p>
             <div style={{
               background: '#4b5563',
               height: '1.5rem',
@@ -261,15 +262,10 @@ const Careers = () => {
             marginBottom: '1rem',
             color: '#1f2937'
           }}>
-            Ulinkit stands as the MENA region's leading and most extensive
-            business-to-business eMarketplace, dedicated to streamlining the
-            purchasing process for both buyers and sellers.
+         Ulinkit stands as the world's leading and most comprehensive business-to-business eMarketplace, committed to simplifying the purchasing process for both buyers and sellers globally.
           </h2>
           <p style={{ color: '#4b5563' }}>
-            Through our technology, comprehensive ecosystem, financial solutions,
-            and skilled workforce, we facilitate international trade between the
-            Middle East and the rest of the world, supporting the growth of SMEs
-            in their business aspirations.
+          Leveraging our advanced technology, expansive ecosystem, financial solutions, and talented workforce, we enable seamless international trade, connecting businesses worldwide and supporting the growth of SMEs in achieving their business goals.
           </p>
         </div>
       </div>
@@ -318,9 +314,7 @@ const Careers = () => {
       Our Core Values
     </h1>
     <p style={{ color: '#4b5563', fontSize: '1rem', lineHeight: '1.75' }}>
-      Putting our people first while ensuring our culture is grounded in diversity and where
-      integrity is pivotal, will mean we are driving individual and community excellence and
-      ensuring our customer is at the heart of everything that we do!
+    Our commitment to putting people first, embracing diversity, and upholding integrity ensures that we cultivate excellence within our teams and prioritize customer satisfaction in every aspect of our business.
     </p>
   </div>
 

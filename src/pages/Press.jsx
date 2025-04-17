@@ -5,110 +5,57 @@ const Press = () => {
   const [hoveredBox, setHoveredBox] = useState(null);
 
 
-    const newsData = [
-      {
-        date: 'June 28 2022',
-        title: 'Ulinkit reaches 1 million unique products on the platform in 14 categories',
-        desc: 'This milestone will help businesses have a variety of options with great opportunities to save and make generous margins for their business growth.',
-        image: '/Images/Blog1.webp',
-      },
-      {
-        date: 'June 7 2022',
-        title: 'Al Etihad Credit Bureau, Tradeling ink credit facilities agreement targeting UAE businesses',
-        desc: 'Al Etihad Credit Bureau (AECB) signed an agreement with Tradeling, a MENA-based B2B e-commerce platform, to facilitate offering buyers on the site better credit facilities.',
-        image: '/Images/Blog1.webp',
-      },
-      {
-        date: 'May 23 2022',
-        title: 'Is this new secret to success helping entrepreneurs reach record profit margins: The B2B2C model',
-        desc: 'Tradeling, a hyper-growing e-marketplace focused on B2B transactions in the MENA region, has recorded exceptional revenue growth of more than 35 percent month-on-month...',
-        image: '/Images/Blog1.webp',
-      },
-      {
-        date: 'April 27 2022',
-        title: 'Ulinkit launches its second fulfilment centre in the UAE',
-        desc: 'The new facility is part of Tradeling’s strategy to strengthen its operations in the UAE and expand its footprint across the MENA region, starting with Egypt and Saudi Arabia.',
-        image: '/Images/Blog2.webp',
-      },
-      {
-        date: 'April 12 2022',
-        title: 'Dubai-based Tradeling partners with Hong-Kong’s electronics manufacturer Astrum',
-        desc: 'Ulinkit will be the exclusive distributor of Astrum’s goods in the MENA region.',
-        image: '/Images/Blog3.webp',
-      },
-      {
-        date: 'March 9 2022',
-        title: 'Ulinkit and CCI France UAE join hands to drive global sourcing',
-        desc: 'Ulinkit signed an MoU with CCI France UAE to strengthen global sourcing of a large breadth of products and services for the region’s B2B eMarketplace.',
-        image: '/Images/Blog4.webp',
-      },
-      {
-        date: 'March 8 2022',
-        title: 'Inside the progress achieved by women in tech in the Middle East',
-        desc: 'Today’s world has transformed to include women in decision making processes a lot more and I feel like my opinion matters and my talent and experience is being appreciated.',
-        image: '/Images/Blog1.webp',
-      },
-      {
-        date: 'February 28 2022',
-        title: 'Ulinkit unlocks the MENA Region to Danish businesses',
-        desc: 'The Trade Council of Denmark signed an MoU with Tradeling to increase trade volume between Denmark-based companies and MENA-based buyers.',
-        image: '/Images/Blog1.webp',
-      },
-      {
-        date: 'January 19 2022',
-        title: 'Ulinkit signs MoU with Hutchison Ports Ajman',
-        desc: 'This agreement includes faster cargo clearance and delivery to Tradeling’s facilities for businesses importing goods into the UAE.',
-        image: '/Images/Blog1.webp',
-      },
-      {
-        date: 'January 11 2022',
-        title: 'Former Aramex COO Iyad Kamal joins Tradeling’s board',
-        desc: 'Iyad Kamal brings vast logistics experience to help develop Tradeling’s logistics expansion plans across the MENA region.',
-        image: '/Images/Blog1.webp',
-      },
-      {
-        date: 'February 28 2022',
-        title: 'Ulinkit unlocks the MENA Region to Danish businesses through a new partnership with The Trade Council of Denmark',
-        desc: 'The Trade Council of Denmark (TC MENA) has signed a Memorandum of Understanding (MoU) with Tradeling to promote Denmark-based companies to increase trade volume between the companies and MENA-based buyers.',
-        image: '/Images/Blog1.webp',
-      },
-      {
-        date: 'January 19 2022',
-        title: 'Ulinkit signs MoU with Hutchison Ports Ajman',
-        desc: 'The agreement will open new opportunities, including faster cargo clearance and delivery to Tradeling’s facilities for businesses globally to import goods into the UAE.',
-        image: '/Images/Blog1.webp',
-      },
-      {
-        date: 'January 11 2022',
-        title: 'Former Aramex COO Iyad Kamal gets appointed to Tradeling’s board',
-        desc: 'Iyad Kamal, a seasoned logistics and supply chain expert and business operations executive brings vast experience in cross-border logistics and operations and will be collaborating with Tradeling’s executive management team in developing the company’s logistics expansion plans and capabilities in the UAE and across the MENA region.',
-        image: '/Images/Blog1.webp',
-      },
-      {
-        date: 'December 21 2021',
-        title: 'Ulinkit signs MoU with UK Department of International Trade',
-        desc: 'New understanding to help businesses tap into the £12.0 billion trade between the two countries. UAE was the UK’s 23rd largest trading partner accounting for 1.0 percent of total UK trade.',
-        image: '/Images/Blog1.webp',
-      },
-      {
-        date: 'December 14 2021',
-        title: 'Dubai-based Tradeling Appoints Harry Pappas as Chief Financial Officer',
-        desc: 'Ulinkit, the eMarketplace focused on business-to-business (B2B) transactions in the Middle East and North Africa has announced the appointment of Harry Pappas as Chief Financial Officer (CFO), effective immediately.',
-        image: '/Images/Blog1.webp',
-      },
-      {
-        date: 'November 28 2021',
-        title: 'Etihad Credit Insurance and Tradeling sign deal to boost trade in MENA region',
-        desc: 'ECI will provide Tradeling’s customers with solutions that will protect them against risks arising from customers’ insolvency, protracted defaults as well as supply and political challenges.',
-        image: '/Images/Blog1.webp',
-      },
-      {
-        date: 'November 11 2021',
-        title: 'Ulinkit unlocks the MENA region for Indian sellers by signing an MOU with Trade India',
-        desc: 'Through this vital partnership, Tradeling will provide a holistic solution for sellers based in India; utilising Tradeling\'s platform to list and trade their products.',
-        image: '/Images/Blog1.webp',
-      },
-    ];
+  const newsData = [
+    {
+      date: 'April 5 2025',
+      title: 'Ulinkit hits a milestone with 2 million products across 20+ categories',
+      desc: 'This achievement reflects Ulinkit’s rapid growth and commitment to offering diverse products, providing businesses greater flexibility and competitive margins.',
+      image: '/Images/Blog1.webp',
+    },
+    {
+      date: 'March 20 2025',
+      title: 'Ulinkit partners with Free Zones to enhance international trade',
+      desc: 'Through this partnership, Ulinkit aims to simplify cross-border logistics and improve import/export efficiency for global B2B traders.',
+      image: '/Images/Blog2.webp',
+    },
+    {
+      date: 'March 2 2025',
+      title: 'Ulinkit introduces Smart Procurement Tools for buyers',
+      desc: 'The new AI-powered procurement suite empowers buyers with better pricing, supplier discovery, and real-time insights, boosting business productivity.',
+      image: '/Images/Blog3.webp',
+    },
+    {
+      date: 'February 15 2025',
+      title: 'Ulinkit launches Seller Academy to empower global vendors',
+      desc: 'The new initiative helps sellers maximize visibility, optimize listings, and navigate competitive international B2B markets with ease and strategy.',
+      image: '/Images/Blog4.webp',
+    },
+    {
+      date: 'January 28 2025',
+      title: 'Ulinkit signs MoU with Global Export Authorities',
+      desc: 'This strategic collaboration is set to boost exports by providing businesses with seamless access to new global markets through Ulinkit’s robust platform.',
+      image: '/Images/Blog5.webp',
+    },
+    {
+      date: 'January 5 2025',
+      title: 'Ulinkit opens AI-enabled fulfillment center to support faster logistics',
+      desc: 'The new facility will support faster order processing, intelligent inventory management, and streamlined delivery across international locations.',
+      image: '/Images/Blog6.webp',
+    },
+    {
+      date: 'December 18 2024',
+      title: 'Ulinkit launches Global Seller Connect Program',
+      desc: 'This initiative is designed to onboard and support sellers worldwide in expanding their reach via Ulinkit’s trusted B2B marketplace.',
+      image: '/Images/Blog2.webp',
+    },
+    {
+      date: 'December 1 2024',
+      title: 'Ulinkit hosts first Virtual B2B Expo with 500+ exhibitors',
+      desc: 'The event brought together global suppliers and buyers under one digital roof, enabling seamless networking and live product demonstrations.',
+      image: '/Images/Blog1.webp',
+    },
+  ];
+  
 
 
   return (

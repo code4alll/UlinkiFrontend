@@ -6,66 +6,67 @@ const App = () => {
 
   const blogCards = [
     {
-      title: "Ulinkit: Tips for Safe and Smart Bulk Buying",
-      subtitle: "Optimise costs while improving procurement efficiency",
-      date: "JAN 28, 2025",
-      tags: ["Sourcing", "Budgeting", "Fulfillment"]
+      "title": "Ulinkit: Effective Strategies for Safe and Smart Bulk Purchasing",
+      "subtitle": "Optimize costs and enhance procurement efficiency",
+      "date": "JAN 28, 2025",
+      "tags": ["Sourcing", "Budgeting", "Fulfillment"]
     },
     {
-      title: "Beyond Retail: Selling and Pricing for B2B Wholesale",
-      subtitle: "Complexities of B2B wholesale pricing",
-      date: "JAN 27, 2025",
-      tags: ["Sourcing", "Budgeting", "Fulfillment"]
+      "title": "Beyond Retail: Mastering Selling and Pricing for B2B Wholesale",
+      "subtitle": "Navigating the complexities of B2B wholesale pricing",
+      "date": "JAN 27, 2025",
+      "tags": ["Sourcing", "Budgeting", "Fulfillment"]
     },
     {
-      title: "Small Business Owners - Buy In Bulk To Save",
-      subtitle: "Lower costs through bulk buying",
-      date: "JAN 22, 2025",
-      tags: ["Sourcing", "Budgeting"]
+      "title": "Small Business Owners: Unlock Savings with Bulk Purchases",
+      "subtitle": "Achieve cost savings through strategic bulk buying",
+      "date": "JAN 22, 2025",
+      "tags": ["Sourcing", "Budgeting"]
     },
     {
-      title: "Ulinkit Excels - One Of The Best Bulk Wholesalers Of Consumer Electronics",
-      subtitle: "Successful procurement requires reliable sources",
-      date: "JAN 22, 2025",
-      tags: ["Sourcing"]
+      "title": "Ulinkit Excels: A Leading Bulk Wholesaler of Consumer Electronics",
+      "subtitle": "Reliable sourcing is key to successful procurement",
+      "date": "JAN 22, 2025",
+      "tags": ["Sourcing"]
     },
     {
-      title: "The Benefits Of Buying From Wholesale Marketplaces",
-      subtitle: "A smart choice for small retailers",
-      date: "DEC 17, 2024",
-      tags: ["B2B", "Sourcing", "Business Advisor"]
+      "title": "The Advantages of Purchasing from Wholesale Marketplaces",
+      "subtitle": "A smart strategy for small retailers seeking efficiency",
+      "date": "DEC 17, 2024",
+      "tags": ["B2B", "Sourcing", "Business Advisor"]
     },
     {
-      title: "The Go-To Online Wholesale Marketplace For B2B Buyers And Sellers",
-      subtitle: "Transforming procurement in the UAE",
-      date: "DEC 17, 2024",
-      tags: ["B2B", "Sourcing", "Business Advisor"]
+      "title": "The Premier Online Wholesale Marketplace for B2B Buyers and Sellers",
+      "subtitle": "Transforming procurement processes in the UAE",
+      "date": "DEC 17, 2024",
+      "tags": ["B2B", "Sourcing", "Business Advisor"]
     },
     {
-      title: "The 8 Main Steps In The Procurement Process",
-      subtitle: "Procurement processes vary greatly depending on business needs.",
-      date: "JAN 17, 2023",
-      tags: ["B2B", "Business Advisor"]
+      "title": "The 8 Essential Steps in the Procurement Process",
+      "subtitle": "Procurement processes differ based on business needs",
+      "date": "JAN 17, 2023",
+      "tags": ["B2B", "Business Advisor"]
     },
     {
-      title: "5 Ways For Resellers To Spot Category and Product Trends",
-      subtitle: "How to master the art of product demand prediction",
-      date: "NOV 30, 2022",
-      tags: ["B2B", "Business Advisor"]
+      "title": "5 Ways Resellers Can Identify Product and Category Trends",
+      "subtitle": "Master the art of predicting product demand trends",
+      "date": "NOV 30, 2022",
+      "tags": ["B2B", "Business Advisor"]
     },
     {
-      title: "Opportunities, Advantages Of Reselling",
-      subtitle: "Insights on how to stay ahead of your competitors",
-      date: "NOV 30, 2022",
-      tags: ["B2B", "Sourcing", "Business Advisor"]
+      "title": "Opportunities and Advantages of Reselling",
+      "subtitle": "Stay ahead of competitors by understanding the resale landscape",
+      "date": "NOV 30, 2022",
+      "tags": ["B2B", "Sourcing", "Business Advisor"]
     },
     {
-      title: "5 Steps - Creating a Strategic Procurement Process",
-      subtitle: "Minimize risk with a strategic procurement plan",
-      date: "NOV 29, 2022",
-      tags: ["B2B", "Sourcing", "Business Advisor"]
+      "title": "5 Key Steps for Building a Strategic Procurement Process",
+      "subtitle": "Reduce risks with a well-defined procurement strategy",
+      "date": "NOV 29, 2022",
+      "tags": ["B2B", "Sourcing", "Business Advisor"]
     }
-  ];
+  ]
+  
 
   // State for hover effects
   const [hoveredTag, setHoveredTag] = useState(null);

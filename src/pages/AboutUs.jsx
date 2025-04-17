@@ -146,9 +146,9 @@ const About = () => {
               color: "transparent",
               lineHeight: 1.25,
             }}>
-              All your procurement and distribution needs in one integrated platform.
+             Your one-stop solution for seamless procurement and global distribution
               <br />
-              <span style={{ color: "white" }}>It's easier with Ulinkit.</span>
+              <span style={{ color: "white" }}>It's easier with Ulinkit</span>
             </h1>
             <motion.button
   style={{
@@ -203,7 +203,8 @@ const About = () => {
               fontSize: "1.5rem",
               fontWeight: 700,
               marginBottom: "0.5rem",
-              background: "linear-gradient(to right, #4a00e0, #8e2de2)",
+              background: "linear-gradient(to right, #ff7e5f, #feb47b)",
+
               WebkitBackgroundClip: "text",
               color: "transparent",
             }}>
@@ -213,7 +214,7 @@ const About = () => {
               fontSize: "0.875rem",
               color: "#E5E7EB",
             }}>
-              MENA's leading wholesale marketplace
+            Global leading wholesale marketplace
             </p>
             <div style={{
               backgroundColor: "#4B5563",
@@ -427,11 +428,8 @@ const About = () => {
             color: "#4a4a4a",
             lineHeight: "1.75",
           }}>
-            Ulinkit stands as the MENA region's leading and most extensive
-            business-to-business marketplace, dedicated to streamlining the
-            purchasing process for both buyers and sellers. We are at the
-            forefront of shaping the B2B landscape, supporting corporations of
-            all sizes in their growth.
+       Ulinkit is a premier global B2B marketplace, designed to simplify and accelerate the buying and selling process for businesses worldwide. As a leader in the international trade space, we empower companies of all sizes to grow, connect, and thrive in today’s competitive landscape.
+
           </p>
         </motion.div>
 
@@ -490,10 +488,8 @@ const About = () => {
             color: "#4a4a4a",
             lineHeight: "1.75",
           }}>
-            We optimise business procurement by connecting international
-            suppliers with MENA region buyers. ULINKIT empowers both buyers and
-            sellers through tailored product offerings and customised tools that
-            improve business efficiency and success.
+           We streamline business procurement by bridging international suppliers with buyers across the Global Marketplace. Ulinkit empowers both sellers and buyers through personalized product solutions and intelligent tools designed to boost efficiency, productivity, and growth.
+
           </p>
         </motion.div>
       </div>
@@ -553,11 +549,8 @@ const About = () => {
             lineHeight: "1.75rem",
             color: "#e5e7eb",
           }}>
-            To transform the B2B landscape in the MENA region by creating a
-            unified platform that seamlessly connects business buyers and
-            sellers from around the world. Our mission is to simplify and
-            streamline the procurement process, empowering businesses to
-            purchase with confidence and ease — saving both time and money.
+            Our mission is to revolutionize the B2B ecosystem across the Global MarketPlace region by building a unified platform that effortlessly connects global buyers and sellers. We aim to simplify procurement, enabling businesses to trade with confidence, reduce costs, and save valuable time through a smarter, more efficient purchasing experience.
+
           </p>
         </motion.div>
       </div>
@@ -577,10 +570,12 @@ const About = () => {
         {/* Image */}
         <motion.div
           style={{
-            width: "100%",
+            width: "40%",
             overflow: "hidden",
             borderRadius: "0.5rem",
             boxShadow: "0 10px 15px rgba(0,0,0,0.1)",
+            display: "flex",
+            justifyContent: "center",
           }}
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -588,13 +583,15 @@ const About = () => {
           whileHover={{ scale: 1.02 }}
         >
           <img
-            src="/Images/Company1.avif"
+            src="/Images/2.webp"
             alt="Warehouse"
             style={{
-              width: "100%",
+              width: "40%",
               height: "100%",
-              objectFit: "cover",
+              objectFit: "fit",
               borderRadius: "0.5rem",
+            
+      
             }}
           />
         </motion.div>
@@ -666,7 +663,7 @@ const About = () => {
           }}
           whileHover={{ scale: 1.02 }}
         >
-          We are the MENA region's leading and most extensive B2B marketplace
+          We are the Global MarketPlace region's leading and most extensive B2B marketplace
         </motion.p>
 
         <motion.h2
@@ -678,7 +675,7 @@ const About = () => {
           }}
           whileHover={{ scale: 1.02 }}
         >
-          Everything you need in one B2B integrated platform. It's easier with Tradeling
+          Everything you need in one B2B integrated platform. It's easier with Ulinkit
         </motion.h2>
 
         <motion.p
@@ -705,6 +702,7 @@ const About = () => {
             border: "none",
             fontSize: "1rem",
             fontWeight: 600,
+            whiteSpace: "nowrap",
           }}
           whileHover={{ 
             scale: 1.1,

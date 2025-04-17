@@ -287,9 +287,10 @@ function Logistics() {
       fontWeight: '500',
     },
     growthSection: {
-      background: 'linear-gradient(135deg, #06b6d4, #3b82f6)',
+      background: 'linear-gradient(135deg, #3770bf, #468ff6)',
       padding: '100px 10%',
       textAlign: 'center',
+   
     },
     growthTitle: {
       fontSize: '36px',
@@ -348,26 +349,39 @@ function Logistics() {
 
   const services = [
     {
-      title: 'Warehousing & Storage',
-      desc: 'Our secure, temperature-controlled warehouse in Dubai\'s free zone ensures duty- and tax-free storage, with advanced inventory management for seamless order fulfillment.',
+      title: 'Global Trade Enablement',
+      desc: 'Easily connect with verified international buyers and sellers. Our platform simplifies compliance, documentation, and trade flows for global business expansion.',
     },
     {
-      title: 'Efficient Pick & Pack',
-      desc: 'Leave the entire order fulfillment to us. From picking and packing to shipment, our expert teams and advanced systems ensure fast, accurate processing, so your customers get their orders on time.',
+      title: 'End-to-End Logistics Support',
+      desc: 'From pick-up to delivery, we offer comprehensive logistics solutions including customs clearance, warehousing, and multi-modal transport across borders.',
     },
     {
-      title: 'Advanced Inventory Management',
-      desc: 'Our advanced software keeps stock levels optimized, preventing shortages and excess inventory. Focus on growing your business while we handle the rest.',
+      title: 'Smart Product Listing & Cataloging',
+      desc: 'Showcase your products with professionally designed catalogs, SEO-friendly listings, and smart categorization for better global visibility.',
     },
     {
-      title: 'Domestic & Cross-border Delivery',
-      desc: 'Fast, reliable delivery—locally and globally. Expand your reach with seamless domestic and international shipping, all with real-time tracking.',
+      title: 'Localized Payment Solutions',
+      desc: 'Receive and send payments in local currencies with minimal fees. Our secure platform supports multiple gateways, credit terms, and buyer protection.',
     },
     {
-      title: 'Distribution & Product Registration in GCC',
-      desc: 'We help international brands enter the GCC seamlessly. Our IOR service manages imports and saves you licensing and setup costs.',
+      title: 'Integrated RFQ & Negotiation Tools',
+      desc: 'Post or respond to RFQs directly, negotiate in real-time, and convert deals faster with our built-in tools for smart B2B matchmaking.',
     },
+    {
+      title: 'Multi-language & Multi-currency Support',
+      desc: 'Break language and currency barriers. List products and communicate with global users using built-in translation and localized pricing tools.',
+    },
+    {
+      title: 'Verified Partner Network',
+      desc: 'Partner with trustworthy logistics, finance, and customs agents in different countries to simplify your global trade experience.',
+    },
+    {
+      title: 'Customizable B2B Storefront',
+      desc: 'Launch your own mini-storefront within Ulinkit, complete with branding, product categories, and messaging — no coding needed.',
+    }
   ];
+  
 
   const benefits = [
     { title: 'Instant Launch', desc: 'Launch your e-commerce operations right away using our ready-to-go logistics network—no setup time needed.' },
@@ -381,7 +395,7 @@ function Logistics() {
   const deliveryFeatures = [
     {
       title: 'Same & Next Day Delivery',
-      desc: 'Experience lightning-fast shipping throughout the UAE. Reliable service that ensures you arrive on time.',
+      desc: 'Experience lightning-fast shipping throughout the Global MarketPlace. Reliable service that ensures you arrive on time.',
     },
     {
       title: 'Flexible Payment with COD',
@@ -534,7 +548,7 @@ function Logistics() {
         <div style={styles.deliveryContent}>
           <h2 style={styles.deliveryTitle}>Impress your customers with fast & accurate delivery</h2>
           <p style={styles.deliveryDesc}>
-            Streamline your ecommerce logistics and focus on growing your business with Tradeling's all-in-one delivery solution. Deliver a top-notch customer experience every time, whether shipping domestically or internationally.
+            Streamline your ecommerce logistics and focus on growing your business with Ulinkit's all-in-one delivery solution. Deliver a top-notch customer experience every time, whether shipping domestically or internationally.
           </p>
           <div style={styles.deliveryGrid}>
             {deliveryFeatures.map((card, i) => (
