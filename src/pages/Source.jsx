@@ -27,46 +27,150 @@ const Source = () => {
                 </div>
             </section>
 
-            <article className="flexcol wh home-alt" style={{ background: '#f0f0f0' }}>
-                <div className="flexcol wh" style={{ gap: '20px' }}>
-                    <h1 className="heading5" style={{ color: '#003953' }}>What our customers say</h1>
+            
+            <section style={{
+        backgroundColor: "#f8fafc",
+        padding: "80px 0",
+        position: "relative"
+      }}>
+        <div style={{
+          maxWidth: 1200,
+          margin: "0 auto",
+          padding: "0 40px"
+        }}>
+          <h2 style={{
+            color: "#003a4d",
+            fontSize: "2rem",
+            marginBottom: "3rem",
+            textAlign: "center",
+            fontWeight: 600
+          }}>What Our Customer Says</h2>
+
+          <div style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+            gap: "2rem"
+          }}>
+            {[
+              {
+                logo: "/Images/Person.avif",
+                quote: "Ulinkit is helping us bring healthy items to the Global MarketPlace. We are reaching more customers and making more sales, at no additional cost.",
+                author: "Mushahid - Kensmatic Foods"
+              },
+              {
+                logo: "/Images/Person2.avif",
+                quote: "Having our products listed on Ulinkit definitely makes sense. All of our products are available online for potential customers to see and get in touch with us directly.",
+                author: "Raj Shah  - Sadia Foods"
+              }
+            ].map((testimonial, index) => (
+              <div 
+                key={index}
+                style={{
+                  backgroundColor: "white",
+                  borderRadius: "8px",
+                  padding: "2.5rem",
+                  boxShadow: "0 10px 30px rgba(0, 58, 77, 0.05)",
+                  position: "relative",
+                  overflow: "hidden",
+                  transition: "all 0.3s ease",
+                  ':hover': {
+                    transform: "translateY(-5px)",
+                    boxShadow: "0 15px 35px rgba(0, 58, 77, 0.1)"
+                  }
+                }}
+              >
+                <div style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "4px",
+                  backgroundColor: "#ff5722"
+                }}></div>
+                <div style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  textAlign: "center"
+                }}>
+                  <div style={{
+                    width: "80px",
+                    height: "80px",
+                    borderRadius: "50%",
+                    overflow: "hidden",
+                    marginBottom: "1.5rem",
+                    border: "3px solid #f0f0f0"
+                  }}>
+                    <img
+                      src={testimonial.logo}
+                      alt="Company logo"
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "contain",
+                        padding: "10px"
+                      }}
+                    />
+                  </div>
+                  <div style={{
+                    position: "relative",
+                    marginBottom: "1.5rem"
+                  }}>
+                    <span style={{
+                      position: "absolute",
+                      top: "-20px",
+                      left: "-10px",
+                      fontSize: "4rem",
+                      color: "rgba(0, 58, 77, 0.05)",
+                      lineHeight: 0,
+                      zIndex: 0
+                    }}>"</span>
+                    <p style={{
+                      fontSize: "1.1rem",
+                      color: "#666",
+                      fontStyle: "italic",
+                      margin: "1rem 0",
+                      position: "relative",
+                      zIndex: 1,
+                      lineHeight: 1.6
+                    }}>{testimonial.quote}</p>
+                    <span style={{
+                      position: "absolute",
+                      bottom: "-30px",
+                      right: "-10px",
+                      fontSize: "4rem",
+                      color: "rgba(0, 58, 77, 0.05)",
+                      lineHeight: 0,
+                      zIndex: 0
+                    }}>"</span>
+                  </div>
+                  <p style={{
+                    fontSize: "0.9rem",
+                    color: "#999",
+                    fontWeight: 500,
+                    marginTop: "1rem"
+                  }}>{testimonial.author}</p>
                 </div>
-                <div className="perfect-grid2" style={{ gap: '8%' }}>
-                    <div className='flexcol' style={{ gap: '20px' }}>
-                        <div className="photo">
-                            <img src={three} alt="three" />
-                        </div>
-                        <h2 className="italic">
-                            Ulinkit makes negotiation very easy. I can select the products I want and send my target prices to the sellers directly. The whole process is very structured and effective.
-                        </h2>
-                        <h3 className="descrip"> Tamron, General Manager, Dubai</h3>
-                    </div>
-                    <div className='flexcol' style={{ gap: '20px' }}>
-                        <div className="photo">
-                            <img src={three} alt="three" />
-                        </div>
-                        <h4 className="italic">
-                            I can find any product I want on Ulinkit. I can easily see multiple options, compare prices, and get in touch with the seller.
-                        </h4>
-                        <h5 className="descrip"> Asante General Trading, Dubai</h5>
-                    </div>
-                </div>
-            </article>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
             <section className="sourceBanner" style={{ background: 'white' }}>
                 <article className="sourceTextTwo">
                     <h1 className="heading5" style={{ color: '#003953' }}>Why source on Ulinkit?</h1>
                     <div className="sourceTextBox">
                         <p className='heading3'>Increase your margins</p>
-                        <p className="heading2">“...I don’t mind admitting it’s the secret behind our higher profits...”</p>
+                        <p className="heading2">“I don’t mind admitting it’s the secret behind our higher profits...”</p>
                     </div>
                     <div className="sourceTextBox">
                         <p className='heading3'>Easily import from anywhere</p>
-                        <p className="heading2">“...great selection from China, India or more than 50 other countries.”</p>
+                        <p className="heading2">“great selection from Dubai, India or more than 50 other countries.”</p>
                     </div>
                     <div className="sourceTextBox">
                         <p className='heading3'>Convenient payment & invoicing</p>
-                        <p className="heading2">“...a relief to pay for everything with a quick bank transfer.”</p>
+                        <p className="heading2">“a relief to pay for everything with a quick bank transfer.”</p>
                     </div>
                     <div className="sourceTextBox">
                         <p className='heading3'>One place to communicate</p>
@@ -161,7 +265,7 @@ const Source = () => {
                 </div>
             </section>
 
-            <section className="flexcol wh home" style={{ gap: '60px', backgroundColor: 'var(--CodeTwoHover)', color: 'white' }}>
+            <section className="flexcol wh home" style={{ gap: '60px', backgroundColor: '#3770bf', color: 'white', marginBottom:'40px' }}>
                 <article className="flexcol wh" style={{ gap: '20px' }}>
                     <h1 className="heading5" style={{ color: 'var(--bgClr)' }}>Join Ulink today!</h1>
                     <h2 className="heading2" style={{ color: 'var(--bgClr)' }}>Boost your business and increase your sales anywhere in the world.</h2>

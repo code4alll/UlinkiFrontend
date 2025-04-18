@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const WebinarAndEBooks = () => {
   const [webinars, setWebinars] = useState([]);
@@ -114,6 +115,18 @@ const WebinarAndEBooks = () => {
   };
 
   return (
+    <Fragment>
+
+   
+    <Helmet>
+  <title>Webinars - Ulinkit</title>
+  <meta 
+    name="description" 
+    content="Access expert-led webinars to grow your business on Ulinkit. Learn strategies, tips, and platform features to maximize your global reach." 
+  />
+  <link rel="canonical" href="https://www.ulinkit.com/webinar" />
+</Helmet>
+
     <div style={{
       padding: '2rem',
       backgroundColor: '#f9fafb',
@@ -506,6 +519,7 @@ const WebinarAndEBooks = () => {
         </div>
       )}
     </div>
+    </Fragment>
   );
 };
 

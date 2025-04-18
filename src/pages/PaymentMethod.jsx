@@ -17,148 +17,214 @@ const PaymentMethod = () => {
 
     const faqs = [
         {
-            id: uuidv4(),
-            title: 'What is an Installment payment method?',
-            panel: (<div>
-                <p className='heading2 headMargin'>An installment payment method is enabling you to pay your Tradeling.com purchase in installments. The minimum order value to qualify for an installment payment is 500 AED or more, subject to your bank’s terms and conditions. There might be processing fees and interest charges applicable for the installment period of your choice subject to your bank’s terms and conditions. Pay for orders on Tradeling.com in super easy monthly installments, as long as you have a credit card from any of these banks:</p>
-                <p className='heading2 headMargin'>ENBD, ADCB, FAB, Dubai First, Mawarid Finance, RAK, Al Hilal, CBD, Emirates Islamic, Dubai Islamic Bank, Deem Finance LLC, Standard Chartered Bank, Ajman Bank, Arab Bank UAE</p>
-            </div>),
+          id: uuidv4(),
+          title: 'What is an Installment Payment Method?',
+          panel: (
+            <div>
+              <p className='heading2 headMargin'>
+                Ulinkit.com offers an installment payment option that allows you to split your purchase into easy monthly payments. This is available for orders above 500 AED (or equivalent in your local currency), subject to your bank’s terms and conditions. Additional processing fees or interest rates may apply based on your chosen tenure.
+              </p>
+              <p className='heading2 headMargin'>
+                Supported banks include: ENBD, ADCB, FAB, Dubai First, Mawarid Finance, RAK, Al Hilal, CBD, Emirates Islamic, Dubai Islamic Bank, Deem Finance LLC, Standard Chartered, Ajman Bank, Arab Bank UAE.
+              </p>
+            </div>
+          ),
         },
         {
-            id: uuidv4(),
-            title: 'Which banks are supported Installment?',
-            panel: (<div>
-                <p className='heading2 headMargin'>ENBD, ADCB, FAB, Dubai First, Mawarid Finance, RAK, Al Hilal, CBD, Emirates Islamic, Dubai Islamic Bank, Deem Finance LLC, Standard Chartered Bank, Ajman Bank, Arab Bank UAE</p>
-            </div>),
+          id: uuidv4(),
+          title: 'Which banks are supported for installment payments?',
+          panel: (
+            <div>
+              <p className='heading2 headMargin'>
+                Ulinkit currently supports installment plans through the following banks: ENBD, ADCB, FAB, Dubai First, Mawarid Finance, RAK, Al Hilal, CBD, Emirates Islamic, Dubai Islamic Bank, Deem Finance LLC, Standard Chartered, Ajman Bank, and Arab Bank UAE.
+              </p>
+            </div>
+          ),
         },
         {
-            id: uuidv4(),
-            title: 'Do I need to contact my bank?',
-            panel: (<div>
-                <p className='heading2 headMargin'>No, you do not need to contact your bank when requesting an instalment payment plan via Tradeling.com. Your bank will contact you, post your instalment payment request subject to their terms and conditions. </p>
-            </div>),
+          id: uuidv4(),
+          title: 'Do I need to contact my bank for installment setup?',
+          panel: (
+            <div>
+              <p className='heading2 headMargin'>
+                No, there's no need to contact your bank. Once you opt for the installment plan on Ulinkit.com, your bank will follow up directly based on its internal processes.
+              </p>
+            </div>
+          ),
         },
         {
-            id: uuidv4(),
-            title: 'Can I pay with prepaid cards, bank transfers & cash on delivery to get the installment payment plan?',
-            panel: (<div>
-                <p className='heading2 headMargin'>No, you cannot. The installment payment plan is only applicable for the credit card payment method.</p>
-            </div>),
+          id: uuidv4(),
+          title: 'Can I use bank transfers, prepaid cards, or COD for installment payments?',
+          panel: (
+            <div>
+              <p className='heading2 headMargin'>
+                No, installment plans are exclusively available for payments made via credit cards from supported banks.
+              </p>
+            </div>
+          ),
         },
         {
-            id: uuidv4(),
-            title: 'What if I return the item? Will I get a full refund?',
-            panel: (<div>
-                <p className='heading2 headMargin'>You will be refunded subject to our return and refund policy. <a href="/return-policy" className='hoverr'>Click here</a> to know more. </p>
-            </div>),
+          id: uuidv4(),
+          title: 'Will I get a full refund if I return an item paid via installment?',
+          panel: (
+            <div>
+              <p className='heading2 headMargin'>
+                Yes, refunds are processed in accordance with our return policy. <a href="/return-policy" className='hoverr'>Click here</a> to learn more.
+              </p>
+            </div>
+          ),
         },
         {
-            id: uuidv4(),
-            title: 'What happens if I cancel the order I paid by an installment payment plan?',
-            panel: (<div>
-                <p className='heading2 headMargin'>If your products are eligible for a refund subject to our return and refund policy, we will be able to process your request. However, you need to contact your bank for installment-specific queries. </p>
-            </div>),
+          id: uuidv4(),
+          title: 'What happens if I cancel an installment order?',
+          panel: (
+            <div>
+              <p className='heading2 headMargin'>
+                If your cancellation qualifies for a refund under our return policy, Ulinkit will refund the amount. However, for any interest reversal or bank-specific queries, please contact your bank directly.
+              </p>
+            </div>
+          ),
         },
         {
-            id: uuidv4(),
-            title: 'How long will it take the bank to process my request?',
-            panel: (<div>
-                <p className='heading2 headMargin'>The banks will need about 7-9 working days to process your request, subject to your banks’ policies. The amount you have requested will first be taken from your credit card. once the installment payment has been approved your next statement will be altered to pay the amount in installments.</p>
-            </div>),
+          id: uuidv4(),
+          title: 'How long does the bank take to process the installment request?',
+          panel: (
+            <div>
+              <p className='heading2 headMargin'>
+                Typically, banks take 7–9 business days to process installment requests. The full amount will be charged initially and your next statement will reflect the monthly breakdown once approved.
+              </p>
+            </div>
+          ),
         },
         {
-            id: uuidv4(),
-            title: 'Can I use discount coupons along with an Installment plan?',
-            panel: (<div>
-                <p className='heading2 headMargin'>Yes ,you can.</p>
-            </div>),
+          id: uuidv4(),
+          title: 'Can I use discount coupons with installment plans?',
+          panel: (
+            <div>
+              <p className='heading2 headMargin'>
+                Yes, you can apply discount coupons along with your installment payment.
+              </p>
+            </div>
+          ),
         },
         {
-            id: uuidv4(),
-            title: 'Can I use installment payment on promotion and offer items?',
-            panel: (<div>
-                <p className='heading2 headMargin'>Installment payment can be used on all orders that meet the minimum order value of AED 500 or more, subject to your bank’s terms and conditions.</p>
-            </div>),
+          id: uuidv4(),
+          title: 'Are installment plans applicable on promotional items?',
+          panel: (
+            <div>
+              <p className='heading2 headMargin'>
+                Yes, as long as the total cart value is 500 AED or more (or equivalent), installment payments can be used.
+              </p>
+            </div>
+          ),
         },
         {
-            id: uuidv4(),
-            title: 'Are there penalties if I dont pay my bank installments on time?',
-            panel: (<div>
-                <p className='heading2 headMargin'>Each bank has different terms and conditions, hence we will advise you to contact the bank directly.</p>
-            </div>),
+          id: uuidv4(),
+          title: 'Are there penalties for missed payments?',
+          panel: (
+            <div>
+              <p className='heading2 headMargin'>
+                Penalties depend on your bank’s policies. We recommend contacting your bank directly for full details.
+              </p>
+            </div>
+          ),
         },
         {
-            id: uuidv4(),
-            title: 'What is the interest rate and processing fees for installment payments?',
-            panel: (<div>
-                <p className='heading2 headMargin'>Please refer to your bank’s terms and conditions.</p>
-            </div>),
+          id: uuidv4(),
+          title: 'What are the interest and processing charges?',
+          panel: (
+            <div>
+              <p className='heading2 headMargin'>
+                Charges vary by bank. Please refer to your issuing bank’s terms for the applicable fees and interest rates.
+              </p>
+            </div>
+          ),
         },
         {
-            id: uuidv4(),
-            title: 'What are the processing fees?',
-            panel: (<div>
-                <p className='heading2 headMargin'>Banks do charge a nominal fee but in some cases they may not. Please check with your bank and review their terms and conditions.</p>
-            </div>),
+          id: uuidv4(),
+          title: 'Is the processing fee one-time or recurring?',
+          panel: (
+            <div>
+              <p className='heading2 headMargin'>
+                Typically, the processing fee is a one-time charge. Confirm details with your bank.
+              </p>
+            </div>
+          ),
         },
         {
-            id: uuidv4(),
-            title: 'Is the processing fee a one time fee or how often would I be charged?',
-            panel: (<div>
-                <p className='heading2 headMargin'>A processing fee is a one-time charge. Please check with your bank and review their terms and conditions. </p>
-            </div>),
+          id: uuidv4(),
+          title: 'Are there any additional charges beyond processing and interest fees?',
+          panel: (
+            <div>
+              <p className='heading2 headMargin'>
+                No additional charges are imposed by Ulinkit.com. However, check with your bank for any extra fees.
+              </p>
+            </div>
+          ),
         },
         {
-            id: uuidv4(),
-            title: 'Are there any fees involved other than the processing fee and applicable interest?',
-            panel: (<div>
-                <p className='heading2 headMargin'>No, but please check with your bank and review their terms and conditions for more information. </p>
-            </div>),
+          id: uuidv4(),
+          title: 'What if I cancel my credit card after activating an installment plan?',
+          panel: (
+            <div>
+              <p className='heading2 headMargin'>
+                This may impact your installment plan. Please contact your bank for further guidance.
+              </p>
+            </div>
+          ),
         },
         {
-            id: uuidv4(),
-            title: 'What happens if I cancel my credit card post installment plan activation?',
-            panel: (<div>
-                <p className='heading2 headMargin'>Please check with your bank and review their terms and conditions. </p>
-            </div>),
+          id: uuidv4(),
+          title: 'What are the available tenure options?',
+          panel: (
+            <div>
+              <p className='heading2 headMargin'>
+                Tenure and applicable charges depend on your bank. Common options include 3, 6, or 12 months. Check with your issuing bank for available options.
+              </p>
+            </div>
+          ),
         },
         {
-            id: uuidv4(),
-            title: 'What are the tenure options and the processing fees available for an installment payment plan on my credit card?',
-            panel: (<div>
-                <p className='heading2 headMargin'>Tenure options, as well as processing fees, vary depending on your bank. Please check with your bank and review their terms and conditions. </p>
-            </div>),
+          id: uuidv4(),
+          title: 'How do I know my installment is confirmed?',
+          panel: (
+            <div>
+              <p className='heading2 headMargin'>
+                You will typically receive a confirmation notification from your bank once the installment is activated.
+              </p>
+            </div>
+          ),
         },
         {
-            id: uuidv4(),
-            title: 'How will I know if my purchase transaction has been transferred to an installment payment plan?',
-            panel: (<div>
-                <p className='heading2 headMargin'>We recommend that you read your bank’s terms and conditions but you can expect to receive confirmation of the installment plan of your bank </p>
-            </div>),
+          id: uuidv4(),
+          title: 'Can I have multiple installment plans at the same time?',
+          panel: (
+            <div>
+              <p className='heading2 headMargin'>
+                Yes, multiple installment plans can be active simultaneously for different purchases, based on your bank’s approval.
+              </p>
+            </div>
+          ),
         },
         {
-            id: uuidv4(),
-            title: 'Can I apply for more than one installment payment plan at the same time?',
-            panel: (<div>
-                <p className='heading2 headMargin'>Yes, you can apply for multiple installment payment plans (one per purchase) at the same but approval is subject to your bank’s terms and conditions. </p>
-            </div>),
+          id: uuidv4(),
+          title: 'Terms and Conditions for Installment Plans',
+          panel: (
+            <div>
+              <p className='heading2 headMargin'>
+                Ulinkit.com facilitates installment options via partnered banks for eligible purchases. The availability, tenure, interest rate, and processing charges are governed by the issuing bank’s policy.
+              </p>
+              <p className='heading2 headMargin'>
+                Installments are not available via debit cards, bank transfers, or cash-on-delivery. Ulinkit holds no responsibility for approval, modifications, or cancellations of installment plans, as these are managed solely by the banks.
+              </p>
+              <p className='heading2 headMargin'>
+                For specific queries or issues, we encourage users to consult directly with their bank. Ulinkit.com displays installment details shared by banks on a best-effort basis.
+              </p>
+            </div>
+          ),
         },
-        {
-            id: uuidv4(),
-            title: 'Terms and Conditions of Installments',
-            panel: (<div>
-                <p className='heading2 headMargin'>The following terms & conditions apply to any transactions made using Instalment as a payment option on Tradeling.com.
-
-                    Tradeling allows Instalments payment method on all purchases on Tradeling.com meeting the minimum order value, using eligible credit cards. Your issuing bank facilitates the Instalment payment method.
-
-                    If your bank rejects your request, the order will not be converted into an Instalment payment plan and you will be charged to your Credit Card. </p>
-                <p className='heading2 headMargin'>Installments are not available on purchases made using Debit cards, Bank Transfers and Cash on Delivery payment methods. </p>
-                <p className="heading2 headMargin">Installments are offered by the respective banks to the customer and Tradeling has no role to play in the approval, extension, pricing, modification, pre-closure, closure or any matter incidental thereto pertaining to offering of the Instalment, which is decided at the sole discretion of the bank. </p>
-                <p className='heading2 headMargin'>Installments being offered by the banks to the customers is governed by the respective terms and conditions of each bank/issuer and the customer is advised to approach the bank/issuer in case of any complaint, dispute or inquiry about an Instalment transaction.Tradeling.com on a best effort basis displays representative Instalment related information (Instalment amount, Interest rate charged, Total amount payable) for the customer's purchase on its website as per the information shared with it by the respective banks on an "AS IS" basis. Banks/Issuers are the authoritative sources of this information and customers are advised to directly contact their bank/issuer for any further clarifications in this regard. For more information, we request you to review the terms and conditions of the respective banks offering such an Installment facility.
-                </p>
-            </div>),
-        }
-    ];
+      ];
+      
 
 
     return (

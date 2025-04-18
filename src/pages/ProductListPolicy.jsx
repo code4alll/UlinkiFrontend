@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const prohibitedItems = [
   'Listing of services or job opportunities',
@@ -82,6 +83,18 @@ const ProductListingPolicy = () => {
   };
 
   return (
+    <Fragment>
+      <Helmet>
+  <title>Product Listing Policy - Ulinkit</title>
+  <meta 
+    name="description" 
+    content="Understand Ulinkit's product listing policy. Learn the rules, requirements, and best practices to ensure your products meet platform standards." 
+  />
+  <link rel="canonical" href="https://www.ulinkit.com/productlistingpolicy" />
+</Helmet>
+
+
+   
     <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '30px 20px' }}>
       <h1 style={{ fontSize: '32px', fontWeight: '600', textAlign: 'center', marginBottom: '10px' }}>
         Product Listing Policy
@@ -185,6 +198,7 @@ const ProductListingPolicy = () => {
         .
       </h2>
     </div>
+    </Fragment>
   );
 };
 

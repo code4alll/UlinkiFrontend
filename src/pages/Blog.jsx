@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import myimage from '../assets/myimage.webp'; // Adjust the path as necessary
+import { Helmet } from "react-helmet-async";
 
 const App = () => {
   const tags = ['All', 'Sourcing', 'B2B', 'Business Advisor', 'Retailing', 'SRM', 'Fulfillment', 'Payment', 'Warehousing'];
@@ -73,6 +74,16 @@ const App = () => {
   const [hoveredButton, setHoveredButton] = useState(false);
 
   return (
+    <Fragment>
+      <Helmet>
+  <title>Blog - Ulinkit</title>
+  <meta 
+    name="description" 
+    content="Stay updated with the latest news, insights, and tips from Ulinkit. Discover success stories, platform updates, and e-commerce trends in our blog." 
+  />
+  <link rel="canonical" href="https://www.ulinkit.com/blog" />
+</Helmet>
+
     <div style={{ fontFamily: 'sans-serif', backgroundColor: '#f4f4f4' }}>
 
       {/* Header */}
@@ -217,6 +228,7 @@ const App = () => {
       {/* Footer */}
     
     </div>
+    </Fragment>
   );
 };
 

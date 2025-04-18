@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Helmet } from "react-helmet-async";
 
 const About = () => {
   const [hoveredButton, setHoveredButton] = useState(false);
@@ -85,6 +86,15 @@ const About = () => {
 
   return (
     <>
+  <Helmet>
+  <title>About Ulinkit</title>
+  <meta 
+    name="description" 
+    content="Ulinkit is a global platform connecting sellers and buyers across borders. Learn more about our mission, services, and how we're empowering businesses worldwide." 
+  />
+  <link rel="canonical" href="https://www.ulinkit.com/become-a-seller" />
+</Helmet>
+
       {/* Hero Section */}
       <div style={{
         position: "relative",

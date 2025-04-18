@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const Press = () => {
   const [activeTab, setActiveTab] = useState('In The News');
@@ -59,6 +60,17 @@ const Press = () => {
 
 
   return (
+    <Fragment>
+      <Helmet>
+  <title>Press - Ulinkit</title>
+  <meta 
+    name="description" 
+    content="Read the latest media coverage and press releases about Ulinkit. Discover how we’re transforming cross-border selling and online trade." 
+  />
+  <link rel="canonical" href="https://www.ulinkit.com/press" />
+</Helmet>
+
+  
     <div style={{
       margin: 0,
       fontFamily: "'Segoe UI', sans-serif",
@@ -247,6 +259,7 @@ const Press = () => {
         ))}
       </div>
     </div>
+    </Fragment>
   );
 };
 
