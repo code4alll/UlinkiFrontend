@@ -60,7 +60,6 @@ const FAQsSection = () => {
         "Our interview process typically involves multiple stages, depending on the role. You'll have the opportunity to meet with our recruitment team and the hiring manager. The interviews will focus on your experience, skills, and cultural fit with Ulinkit. You may also be asked technical questions or work on case studies relevant to the role you've applied for. We strive to provide a comfortable and engaging environment to allow you to demonstrate your capabilities.",
     },
   ];
-  
 
   return (
     <div
@@ -68,19 +67,30 @@ const FAQsSection = () => {
         backgroundColor: 'white',
         padding: '48px 16px',
         textAlign: 'center',
+        overflowX: 'hidden',  // Prevents horizontal overflow
       }}
     >
       <div
         style={{
-          maxWidth: '768px',
+          maxWidth: '100%',  // Allow the container to use full width of the screen
           margin: '0 auto',
           padding: '0 16px',
+          boxSizing: 'border-box',  // Ensures padding is within width
         }}
       >
-        <h2 style={{ fontSize: '30px', fontWeight: 'bold', color: '#1f2937', marginBottom: '12px' }}>
+        <h2 style={{
+          fontSize: '2rem',
+          fontWeight: 'bold',
+          color: '#1f2937',
+          marginBottom: '12px',
+        }}>
           FAQ's
         </h2>
-        <p style={{ color: '#4b5563', marginBottom: '32px' }}>
+        <p style={{
+          color: '#4b5563',
+          marginBottom: '32px',
+          fontSize: '1rem',
+        }}>
           A section dedicated to addressing common queries about the recruitment process, company benefits, and more.
         </p>
 
@@ -103,6 +113,8 @@ const FAQsSection = () => {
             transition: 'transform 0.3s ease',
             cursor: 'pointer',
             whiteSpace: 'nowrap',
+            fontSize: '1rem',
+            maxWidth: '100%',  // Ensure the button doesn't overflow
           }}
           onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.05)')}
           onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}

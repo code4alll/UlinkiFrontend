@@ -6,10 +6,22 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Helmet } from "react-helmet-async";
+import { useEffect } from "react";
 
 const About = () => {
+  
   const [hoveredButton, setHoveredButton] = useState(false);
   const [activeTimelineItem, setActiveTimelineItem] = useState(null);
+ 
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  
+    useEffect(() => {
+      const handleResize = () => {
+        setIsMobile(window.innerWidth < 768);
+      };
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
   const timelineData = [
     {
@@ -97,96 +109,95 @@ const About = () => {
 
       {/* Hero Section */}
       <div style={{
-        position: "relative",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        minHeight: "100vh",
-        backgroundImage: `url("/Images/Company.avif")`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        color: "white",
-        padding: "5rem 1rem",
-      
-
-      }}>
+      position: "relative",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      minHeight: "100vh",
+      backgroundImage: `url("/Images/Company.avif")`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      color: "white",
+      padding: "5rem 1rem",
+    }}>
         {/* Dark overlay with blur */}
         <div style={{
-          position: "absolute",
-          top: 0,
-          right: 0,
-          bottom: 0,
-          left: 0,
-          background: "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5))",
-          backdropFilter: "blur(4px)",
-          WebkitBackdropFilter: "blur(4px)",
-        }}></div>
+        position: "absolute",
+        top: 0,
+        right: 0,
+        bottom: 0,
+        left: 0,
+        background: "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5))",
+        backdropFilter: "blur(4px)",
+        WebkitBackdropFilter: "blur(4px)",
+      }}></div>
 
-        <motion.div 
-          style={{
-            position: "relative",
-            maxWidth: "1280px",
-            margin: "0 auto",
-            padding: "0 1rem",
-            zIndex: 10,
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
+<motion.div
+        style={{
+          position: "relative",
+          maxWidth: "1280px",
+          margin: "0 auto",
+          padding: "0 1rem",
+          zIndex: 10,
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          textAlign: "center",
+        }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
           {/* Text Content */}
-          <motion.div 
-            style={{
-              maxWidth: "42rem",
-              textAlign: "center",
-              marginBottom: "3rem",
-            }}
-            whileHover={{ scale: 1.02 }}
-          >
+          <motion.div
+          style={{
+            maxWidth: "42rem",
+            marginBottom: "3rem",
+          }}
+          whileHover={{ scale: 1.02 }}
+        >
             <h1 style={{
-              fontSize: "2.25rem",
-              fontWeight: 800,
-              marginBottom: "1.5rem",
-              backgroundImage: '#3770bf',
-              WebkitBackgroundClip: "text",
-              color: "transparent",
-              lineHeight: 1.25,
-            }}>
-             Your one-stop solution for seamless procurement and global distribution
-              <br />
-              <span style={{ color: "white" }}>It's easier with Ulinkit</span>
-            </h1>
-            <motion.button
-  style={{
-    background: "linear-gradient(to right, #fc7927, #ff9857)",
-    color: "white",
-    fontWeight: "bold",
-    padding: "12px 32px",
-    borderRadius: "8px",
-    boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-    whiteSpace: "nowrap",
-    border: "none",
-    cursor: "pointer",
-    fontSize: "1rem",
-    display: "inline-block",
-    width: "fit-content",         // ✅ Button fits the content
-    overflow: "hidden",           // ✅ Prevent text overflow
-    textOverflow: "ellipsis",     // ✅ Ellipsis if needed
-    transition: "all 0.3s ease-in-out",
-  }}
-  whileHover={{
-    background: "linear-gradient(to right, #fc792)",
-    scale: 1.05,
-    boxShadow: "0 6px 12px rgba(0, 0, 0, 0.15)"
-  }}
-  whileTap={{ scale: 0.95 }}
->
-  Get in touch
-</motion.button>
+            fontSize: "2.25rem",
+            fontWeight: 800,
+            marginBottom: "1.5rem",
+            backgroundImage: '#3770bf',
+            WebkitBackgroundClip: "text",
+            color: "transparent",
+            lineHeight: 1.25,
+            color: 'white',
+          }}>
+            Your one-stop solution for seamless procurement and global distribution
+            <br />
+            <span style={{ color: "white" }}>It's easier with Ulinkit</span>
+          </h1>
+          <motion.button
+            style={{
+              background: "linear-gradient(to right, #fc7927, #ff9857)",
+              color: "white",
+              fontWeight: "bold",
+              padding: "12px 32px",
+              borderRadius: "8px",
+              boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+              whiteSpace: "nowrap",
+              border: "none",
+              cursor: "pointer",
+              fontSize: "1rem",
+              display: "inline-block",
+              width: "fit-content",         // Button fits the content
+              overflow: "hidden",           // Prevent text overflow
+              textOverflow: "ellipsis",     // Ellipsis if needed
+              transition: "all 0.3s ease-in-out",
+            }}
+            whileHover={{
+              background: "linear-gradient(to right, #fc792)",
+              scale: 1.05,
+              boxShadow: "0 6px 12px rgba(0, 0, 0, 0.15)"
+            }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Get in touch
+          </motion.button>
 
 
           </motion.div>
@@ -375,7 +386,7 @@ const About = () => {
       {/* Who We Are & What We Do */}
       <div style={{
         display: "flex",
-        flexDirection: "row",
+        flexDirection: "column",
         padding: "5rem 1rem",
         gap: "2.5rem",
         width: "100%",
@@ -565,77 +576,77 @@ const About = () => {
         </motion.div>
       </div>
 
-      {/* Chairman Quote */}
-      <div style={{
+     {/* Chairman Quote */}
+     <div
+      style={{
         width: "100%",
         display: "flex",
-        flexDirection: "column",
+        flexDirection: isMobile ? "column" : "row", // Adjust layout based on screen size
         alignItems: "center",
         justifyContent: "center",
         padding: "3rem 1rem",
         gap: "2.5rem",
         maxWidth: "1280px",
         margin: "0 auto",
-      }}>
-        {/* Image */}
-        <motion.div
-          style={{
-            width: "40%",
-            overflow: "hidden",
-            borderRadius: "0.5rem",
-            boxShadow: "0 10px 15px rgba(0,0,0,0.1)",
-            display: "flex",
-            justifyContent: "center",
-          }}
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-          whileHover={{ scale: 1.02 }}
-        >
-          <img
-            src="/Images/2.webp"
-            alt="Warehouse"
-            style={{
-              width: "40%",
-              height: "100%",
-              objectFit: "fit",
-              borderRadius: "0.5rem",
-            
-      
-            }}
-          />
-        </motion.div>
-
-        {/* Text */}
-        <motion.div
+      }}
+    >
+      {/* Image */}
+      <motion.div
+        style={{
+          width: isMobile ? "80%" : "40%", // Increase the image width on mobile
+          overflow: "hidden",
+          borderRadius: "0.5rem",
+          boxShadow: "0 10px 15px rgba(0,0,0,0.1)",
+          display: "flex",
+          justifyContent: "center",
+        }}
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6 }}
+        whileHover={{ scale: 1.02 }}
+      >
+        <img
+          src="/Images/2.webp"
+          alt="Warehouse"
           style={{
             width: "100%",
-            textAlign: "center",
+            height: "auto", // Keep the aspect ratio intact
+            objectFit: "cover",
+            borderRadius: "0.5rem",
           }}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          
-          <p style={{
-            color: "#fc7927",
-            fontWeight: 600,
-            marginBottom: "0.5rem",
-          }}>
-            Mr Dhiraj Gupta, Chairman of Ulinkit
-          </p>
-          <h2 style={{
-            fontSize: "1.5rem",
-            fontWeight: "bold",
-            color: "#1f2937",
-            lineHeight: "1.625",
-          }}>
-            "Ulinkit is all about opportunities. We are investing in the future
-            of our people. The brilliant ecosystem approach will create layers
-            of growth that build on top of the existing economic structures."
-          </h2>
-        </motion.div>
-      </div>
+        />
+      </motion.div>
+
+      {/* Text */}
+      <motion.div
+        style={{
+          width: "100%",
+          textAlign: "center",
+        }}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        <p style={{
+          color: "#fc7927",
+          fontWeight: 600,
+          marginBottom: "0.5rem",
+        }}>
+          Mr Dhiraj Gupta, Chairman of Ulinkit
+        </p>
+        <h2 style={{
+          fontSize: "1.5rem",
+          fontWeight: "bold",
+          color: "#1f2937",
+          lineHeight: "1.625",
+        }}>
+          "Ulinkit is all about opportunities. We are investing in the future
+          of our people. The brilliant ecosystem approach will create layers
+          of growth that build on top of the existing economic structures."
+        </h2>
+      </motion.div>
+    </div>
+
 
       {/* Why Ulinkit */}
       <motion.div
