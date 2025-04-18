@@ -8,25 +8,25 @@ import warehouseImg from '../assets/Warehouse.jpeg';
 const Data = [
   {
     id: 1,
-    icon: <FaCalendarAlt style={{ color: '#f97316', fontSize: '2.5rem' }} />,
+    icon: <FaCalendarAlt style={{ color: '#fc7927', fontSize: '2.5rem' }} />,
     numbersData: '14',
     title: 'Years in business',
   },
   {
     id: 2,
-    icon: <FaGlobe style={{ color: '#f97316', fontSize: '2.5rem' }} />,
+    icon: <FaGlobe style={{ color: '#fc7927', fontSize: '2.5rem' }} />,
     numbersData: '33',
     title: 'Nationalities',
   },
   {
     id: 3,
-    icon: <GiTalk style={{ color: '#f97316', fontSize: '2.5rem' }} />,
+    icon: <GiTalk style={{ color: '#fc7927', fontSize: '2.5rem' }} />,
     numbersData: '47',
     title: 'Languages spoken',
   },
   {
     id: 4,
-    icon: <FaUsers style={{ color: '#f97316', fontSize: '2.5rem' }} />,
+    icon: <FaUsers style={{ color: '#fc7927', fontSize: '2.5rem' }} />,
     numbersData: '200+',
     title: 'Talent working here',
   },
@@ -133,7 +133,7 @@ const Careers = () => {
               fontSize: '2.5rem',
               fontWeight: 800,
               marginBottom: '1.5rem',
-              background: 'linear-gradient(to right, #3770bf, #468ff6)',
+              background: '#3770bf',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               lineHeight: 1.25

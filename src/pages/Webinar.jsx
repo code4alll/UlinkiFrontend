@@ -5,6 +5,16 @@ const WebinarAndEBooks = () => {
   const [ebooks, setEbooks] = useState([]);
   const [hoveredCard, setHoveredCard] = useState(null);
   const [activeTab, setActiveTab] = useState('webinars');
+  const [showRegistrationForm, setShowRegistrationForm] = useState(false);
+  const [selectedWebinar, setSelectedWebinar] = useState(null);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    company: '',
+    questions: ''
+  });
+  const [registrationSuccess, setRegistrationSuccess] = useState(false);
 
   // Fetch webinars and e-books data (mock data in this case)
   useEffect(() => {
@@ -15,10 +25,29 @@ const WebinarAndEBooks = () => {
     ];
 
     const fetchedEbooks = [
-      { id: 1, title: 'The Ultimate Guide to React', downloadLink: '/ebooks/react-guide.pdf', image: '/Images/Blog3.webp', description: 'A comprehensive guide for mastering React.js from basics to advanced concepts. Includes code examples, tips, and best practices for creating efficient React applications.' },
-      { id: 2, title: 'Mastering JavaScript', downloadLink: '/ebooks/js-master.pdf', image: '/Images/Blog3.webp', description: 'An in-depth book on JavaScript concepts and best practices. From closures and promises to async/await, this guide covers all the essentials for becoming a JavaScript pro.' },
-      { id: 3, title: 'CSS Flexbox & Grid: A Complete Guide', downloadLink: '/ebooks/css-flexgrid-guide.pdf', image: '/Images/Blog3.webp', description: 'A step-by-step guide to mastering CSS Flexbox and Grid systems. This book covers everything you need to know to create modern layouts that work across devices.' }
+      {
+        id: 1,
+        title: 'The Global Freelancer’s Toolkit',
+        downloadLink: '/ebooks/global-freelancer-toolkit.pdf',
+        image: '/Images/Logistics.webp',
+        description: 'Empower your freelance career with this essential guide covering tools, platforms, and strategies for success in both local and global markets. Ideal for service providers on Ulinkit.'
+      },
+      {
+        id: 2,
+        title: 'Selling Globally: A Guide for Local Entrepreneurs',
+        downloadLink: '/ebooks/selling-globally-guide.pdf',
+        image: '/Images/Logistics4.avif',
+        description: 'Learn how to take your local products and services to international markets. This book covers online marketplace tips, shipping strategies, and cross-border communication skills.'
+      },
+      {
+        id: 3,
+        title: 'The Digital Nomad Handbook',
+        downloadLink: '/ebooks/digital-nomad-handbook.pdf',
+        image: '/Images/Digital_Handbook.webp',
+        description: 'Designed for remote workers and entrepreneurs, this guide provides practical tips for working from anywhere. Includes visa info, co-working spaces, and earning globally while living locally.'
+      }
     ];
+    
 
     setWebinars(fetchedWebinars);
     setEbooks(fetchedEbooks);
@@ -36,13 +65,62 @@ const WebinarAndEBooks = () => {
     setActiveTab(tab);
   };
 
+  const handleRegisterClick = (webinar) => {
+    setSelectedWebinar(webinar);
+    setShowRegistrationForm(true);
+    setRegistrationSuccess(false);
+  };
+
+  const handleFormChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Here you would typically send the data to your backend
+    console.log('Registration data:', {
+      webinar: selectedWebinar,
+      attendee: formData
+    });
+    
+    // Simulate successful registration
+    setRegistrationSuccess(true);
+    // Reset form after 3 seconds
+    setTimeout(() => {
+      setShowRegistrationForm(false);
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        company: '',
+        questions: ''
+      });
+    }, 3000);
+  };
+
+  const closeModal = () => {
+    setShowRegistrationForm(false);
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      company: '',
+      questions: ''
+    });
+  };
+
   return (
     <div style={{
       padding: '2rem',
       backgroundColor: '#f9fafb',
       borderRadius: '0.5rem',
       maxWidth: '1200px',
-      margin: '0 auto'
+      margin: '0 auto',
+      position: 'relative'
     }}>
       <h2 style={{
         fontSize: '1.875rem',
@@ -51,6 +129,173 @@ const WebinarAndEBooks = () => {
         fontWeight: '600',
         color: '#1f2937'
       }}>Webinars & E-Books</h2>
+
+      {/* Registration Form Modal */}
+      {showRegistrationForm && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: 'rgba(0, 0, 0, 0.5)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          zIndex: 1000
+        }}>
+          <div style={{
+            backgroundColor: 'white',
+            padding: '2rem',
+            borderRadius: '0.5rem',
+            width: '100%',
+            maxWidth: '500px',
+            boxShadow: '0 10px 25px rgba(0, 0, 0, 0.2)'
+          }}>
+            {registrationSuccess ? (
+              <div style={{ textAlign: 'center' }}>
+                <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: '#10b981' }}>Registration Successful!</h3>
+                <p>Thank you for registering for "{selectedWebinar.title}".</p>
+                <p>We've sent the webinar details to your email.</p>
+                <button
+                  onClick={closeModal}
+                  style={{
+                    marginTop: '1.5rem',
+                    padding: '0.75rem 1.5rem',
+                    backgroundColor: '#fc7927',
+                    color: 'white',
+                    border: 'none',
+                    borderRadius: '0.375rem',
+                    cursor: 'pointer',
+                    fontWeight: '600'
+                  }}
+                >
+                  Close
+                </button>
+              </div>
+            ) : (
+              <>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
+                  <h3 style={{ fontSize: '1.5rem', fontWeight: '600' }}>Register for {selectedWebinar.title}</h3>
+                  <button 
+                    onClick={closeModal}
+                    style={{
+                      background: 'none',
+                      border: 'none',
+                      fontSize: '1.5rem',
+                      cursor: 'pointer',
+                      color: '#6b7280'
+                    }}
+                  >
+                    &times;
+                  </button>
+                </div>
+                <form onSubmit={handleSubmit}>
+                  <div style={{ marginBottom: '1rem' }}>
+                    <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500' }}>Full Name *</label>
+                    <input
+                      type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleFormChange}
+                      required
+                      style={{
+                        width: '100%',
+                        padding: '0.75rem',
+                        borderRadius: '0.375rem',
+                        border: '1px solid #d1d5db',
+                        fontSize: '1rem'
+                      }}
+                    />
+                  </div>
+                  <div style={{ marginBottom: '1rem' }}>
+                    <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500' }}>Email *</label>
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleFormChange}
+                      required
+                      style={{
+                        width: '100%',
+                        padding: '0.75rem',
+                        borderRadius: '0.375rem',
+                        border: '1px solid #d1d5db',
+                        fontSize: '1rem'
+                      }}
+                    />
+                  </div>
+                  <div style={{ marginBottom: '1rem' }}>
+                    <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500' }}>Phone Number</label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleFormChange}
+                      style={{
+                        width: '100%',
+                        padding: '0.75rem',
+                        borderRadius: '0.375rem',
+                        border: '1px solid #d1d5db',
+                        fontSize: '1rem'
+                      }}
+                    />
+                  </div>
+                  <div style={{ marginBottom: '1rem' }}>
+                    <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500' }}>Company/Organization</label>
+                    <input
+                      type="text"
+                      name="company"
+                      value={formData.company}
+                      onChange={handleFormChange}
+                      style={{
+                        width: '100%',
+                        padding: '0.75rem',
+                        borderRadius: '0.375rem',
+                        border: '1px solid #d1d5db',
+                        fontSize: '1rem'
+                      }}
+                    />
+                  </div>
+                  <div style={{ marginBottom: '1.5rem' }}>
+                    <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500' }}>Questions for the Speaker (Optional)</label>
+                    <textarea
+                      name="questions"
+                      value={formData.questions}
+                      onChange={handleFormChange}
+                      rows="3"
+                      style={{
+                        width: '100%',
+                        padding: '0.75rem',
+                        borderRadius: '0.375rem',
+                        border: '1px solid #d1d5db',
+                        fontSize: '1rem'
+                      }}
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    style={{
+                      width: '100%',
+                      padding: '0.75rem',
+                      backgroundColor: '#fc7927',
+                      color: 'white',
+                      border: 'none',
+                      borderRadius: '0.375rem',
+                      fontSize: '1rem',
+                      fontWeight: '600',
+                      cursor: 'pointer',
+                      transition: 'background-color 0.2s'
+                    }}
+                  >
+                    Complete Registration
+                  </button>
+                </form>
+              </>
+            )}
+          </div>
+        </div>
+      )}
 
       {/* Tab Navigation */}
       <div style={{
@@ -65,7 +310,7 @@ const WebinarAndEBooks = () => {
             padding: '0.5rem 1rem',
             borderRadius: '0.375rem',
             fontWeight: '600',
-            backgroundColor: activeTab === 'webinars' ? '#f97316' : '#e5e7eb',
+            backgroundColor: activeTab === 'webinars' ? '#fc7927' : '#e5e7eb',
             color: activeTab === 'webinars' ? 'white' : '#4b5563',
             border: 'none',
             cursor: 'pointer',
@@ -80,7 +325,7 @@ const WebinarAndEBooks = () => {
             padding: '0.5rem 1rem',
             borderRadius: '0.375rem',
             fontWeight: '600',
-            backgroundColor: activeTab === 'ebooks' ? '#f97316' : '#e5e7eb',
+            backgroundColor: activeTab === 'ebooks' ? '#fc7927' : '#e5e7eb',
             color: activeTab === 'ebooks' ? 'white' : '#4b5563',
             border: 'none',
             cursor: 'pointer',
@@ -152,9 +397,10 @@ const WebinarAndEBooks = () => {
                       color: '#6b7280'
                     }}>Date: {webinar.date}</p>
                     <button
+                      onClick={() => handleRegisterClick(webinar)}
                       style={{
                         marginTop: '0.5rem',
-                        background: 'linear-gradient(to right, #f97316, #ea580c)',
+                        background: 'linear-gradient(to right, #fc7927, #ea580c)',
                         color: 'white',
                         fontWeight: 'bold',
                         padding: '0.75rem 1.5rem',
@@ -239,7 +485,7 @@ const WebinarAndEBooks = () => {
                       style={{
                         display: 'inline-block',
                         marginTop: '1rem',
-                        color: '#3b82f6',
+                        color: '#3770bf',
                         fontWeight: '600',
                         textDecoration: 'none',
                         transition: 'all 0.2s ease',

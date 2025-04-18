@@ -68,15 +68,15 @@ const Press = () => {
       {/* Header Section */}
       <div style={{
         backgroundColor: 'white',
-        color: '#00394f',
+        color: '#fc7927',
         padding: '40px',
         position: 'relative'
       }}>
         <h1 style={{ fontSize: '40px', margin: 0 }}>Press</h1>
         <p style={{ margin: '10px 0' }}>
           For press requests please email:<br />
-          <a href="mailto:press@tradeling.com" style={{
-            color: '#ff5a3c',
+          <a href="mailto:press@Ulinkit.com" style={{
+            color: '#fc7927',
             textDecoration: 'none',
             transition: 'all 0.2s ease'
           }}
@@ -102,7 +102,7 @@ const Press = () => {
           <button style={{
             background: 'none',
             border: 'none',
-            color: '#ff5a3c',
+            color: '#fc7927',
             cursor: 'pointer',
             marginRight: '15px',
             fontWeight: 'bold',
@@ -124,7 +124,7 @@ const Press = () => {
           <button style={{
             background: 'none',
             border: 'none',
-            color: '#ff5a3c',
+            color: '#fc7927',
             cursor: 'pointer',
             fontWeight: 'bold',
             transition: 'all 0.2s ease',
@@ -160,7 +160,7 @@ const Press = () => {
               padding: '10px 20px',
               cursor: 'pointer',
               position: 'relative',
-              borderBottom: activeTab === tab ? '2px solid #ff5a3c' : 'none',
+              borderBottom: activeTab === tab ? '2px solid #fc7927' : 'none',
               fontWeight: activeTab === tab ? 'bold' : 'normal',
               color: activeTab === tab ? '#00394f' : '#666',
               transition: 'all 0.2s ease'
@@ -168,7 +168,7 @@ const Press = () => {
             onClick={() => setActiveTab(tab)}
             onMouseEnter={(e) => {
               if (activeTab !== tab) {
-                e.currentTarget.style.color = '#ff5a3c';
+                e.currentTarget.style.color = '#fc7927';
               }
             }}
             onMouseLeave={(e) => {
@@ -214,10 +214,10 @@ const Press = () => {
             <h3 style={{ fontSize: '14px', color: '#888', margin: '0 0 5px' }}>{news.date}</h3>
             <h4 style={{ 
               fontSize: '18px', 
-              color: '#00394f', 
+              color: '#fc7927', 
               margin: '0 0 10px',
               transition: 'color 0.2s ease',
-              color: hoveredBox === idx ? '#ff5a3c' : '#00394f'
+              color: hoveredBox === idx ? '#fc7927' : '#00394f'
             }}>
               {news.title}
             </h4>
@@ -226,7 +226,7 @@ const Press = () => {
               href="#" 
               style={{
                 textDecoration: 'none',
-                color: '#ff5a3c',
+                color: '#fc7927',
                 fontWeight: 'bold',
                 display: 'inline-block',
                 marginTop: '10px',
@@ -234,11 +234,11 @@ const Press = () => {
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.textDecoration = 'underline';
-                e.currentTarget.style.color = '#e04a2d';
+                e.currentTarget.style.color = '#fc7927';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.textDecoration = 'none';
-                e.currentTarget.style.color = '#ff5a3c';
+                e.currentTarget.style.color = '#fc7927';
               }}
             >
               READ MORE

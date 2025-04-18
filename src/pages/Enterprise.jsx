@@ -37,7 +37,7 @@ const Enterprise = () => {
         <div >
             {/* Hero Section */}
             <div style={{
-                backgroundColor: '#00527A',
+                backgroundColor: '#3770bf',
                 color: '#FFFFFF',
                 padding: '80px 20px',
                 display: 'flex',
@@ -76,7 +76,7 @@ Exclusive to the region and the first of its kind, <strong style={{ color: '#F28
                         </p>
                         <button
                             style={{
-                                backgroundColor: '#F28705',
+                                backgroundColor: '#fc7927',
                                 color: '#FFFFFF',
                                 padding: '15px 30px',
                                 borderRadius: '5px',
@@ -168,7 +168,7 @@ Exclusive to the region and the first of its kind, <strong style={{ color: '#F28
                 justifyContent: 'center',
                 alignItems: 'center',
                 flexDirection: 'column',
-                backgroundColor: '#0099cc',
+                backgroundColor: '#3770bf',
                 color: '#FFFFFF',
                 padding: '60px 20px'
             }}>
@@ -225,7 +225,7 @@ Exclusive to the region and the first of its kind, <strong style={{ color: '#F28
                         <button style={{
                             marginTop: '30px',
                             padding: '12px 24px',
-                            backgroundColor: '#F28705',
+                            backgroundColor: '#Fc7927',
                             color: '#FFFFFF',
                             border: 'none',
                             borderRadius: '5px',
@@ -253,7 +253,8 @@ Exclusive to the region and the first of its kind, <strong style={{ color: '#F28
             <div style={{
                 backgroundColor: '#00527a',
                 color: '#FFFFFF',
-                padding: '80px 20px'
+                padding: '80px 20px',
+                marginTop: '60px',
             }}>
                 <div style={{
                     maxWidth: '1200px',
@@ -292,7 +293,7 @@ Exclusive to the region and the first of its kind, <strong style={{ color: '#F28
                                     fontWeight: 'bold',
                                     marginBottom: '10px',
                                     transition: 'color 0.2s ease',
-                                    color: hoveredCard === index ? '#F28705' : '#00527A'
+                                    color: hoveredCard === index ? '#3770bf' : '#00527A'
                                 }}>{card.title}</h3>
                                 <p style={{ fontSize: '14px', marginBottom: '10px' }}>{card.subtitle}</p>
                                 <small style={{ fontSize: '12px', color: '#888' }}>{card.date}</small>
@@ -334,7 +335,7 @@ Exclusive to the region and the first of its kind, <strong style={{ color: '#F28
                         marginBottom: '60px'
                     }}>
                         We are committed to
-                        <span style={{ color: '#F28705' }}> resolving the frustrations</span> faced in your business sourcing and buying operations.
+                        <span style={{ color: '#fc7927' }}> resolving the frustrations</span> faced in your business sourcing and buying operations.
                     </h1>
                     
                     <div style={{
@@ -370,7 +371,7 @@ Exclusive to the region and the first of its kind, <strong style={{ color: '#F28
                                         borderRadius: '50%',
                                         border: '1px solid #6c757d',
                                         transition: 'all 0.3s ease',
-                                        backgroundColor: hoveredFeature === index ? '#F28705' : 'transparent'
+                                        backgroundColor: hoveredFeature === index ? '#fc7927' : 'transparent'
                                     }}>
                                         <Icon style={{
                                             width: '32px',
@@ -440,7 +441,7 @@ Exclusive to the region and the first of its kind, <strong style={{ color: '#F28
                       ,
                       color:'white'
                     }}>
-                        <span style={{ color: '#F28705' }}>Save time & money</span> – there's no need to invest in a procurement solution!
+                        <span style={{ color: '#Fc7927' }}>Save time & money</span> – there's no need to invest in a procurement solution!
                     </h1>
                     <p style={{
                         fontSize: '18px',
@@ -455,7 +456,7 @@ Exclusive to the region and the first of its kind, <strong style={{ color: '#F28
                     </p>
                     <button
                             style={{
-                                backgroundColor: '#F28705',
+                                backgroundColor: '#Fc7927',
                                 color: '#FFFFFF',
                                 padding: '15px 30px',
                                 borderRadius: '5px',
@@ -495,11 +496,19 @@ Exclusive to the region and the first of its kind, <strong style={{ color: '#F28
                 textAlign: 'center'
             }}>
                 <h2 style={{
-                    fontSize: '18px',
-                    fontWeight: 'normal'
-                }}>
-                    Have any question? Please reach out to a friendly customer service agent on: +971 44 910000 or Support@Ulinkit.com
-                </h2>
+  fontSize: '18px',
+  fontWeight: 'normal'
+}}>
+  Have any questions? Please reach out to a friendly customer service agent at: 
+  <a href="tel:+918750518844" style={{ marginLeft: '8px', color: '#fc7927', textDecoration: 'none' }}>
+    +91 87505 18844
+  </a> 
+  or 
+  <a href="mailto:Support@Ulinkit.com" style={{ marginLeft: '8px', color: '#fc7927', textDecoration: 'none' }}>
+    Support@Ulinkit.com
+  </a>
+</h2>
+
             </div>
         </div>
     );
