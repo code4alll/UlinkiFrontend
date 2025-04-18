@@ -25,7 +25,7 @@ const About = () => {
 
   const timelineData = [
     {
-      year: "2010",
+      year: "2011",
       title: "Founded",
       description: "Started as data mining firm in 2011 providing Global business based data to various clients.",
       image: "/Images/Founded.avif",
