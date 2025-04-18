@@ -34,10 +34,11 @@ const prohibitedItems = [
 ];
 
 
+
 const ProductListingPolicy = () => {
   const [openSections, setOpenSections] = useState({
     uaeProhibitedItems: false,
-    tradelingProhibitedItems: false,
+   UlinkitProhibitedItems: false,
     fullPolicy: false,
   });
 
@@ -50,7 +51,7 @@ const ProductListingPolicy = () => {
 
   const sectionStyle = {
     cursor: 'pointer',
-    color: '#FFA500',
+    color: '#3770bf',
     fontSize: '20px',
     fontWeight: '600',
     marginBottom: '10px',
@@ -139,7 +140,7 @@ const ProductListingPolicy = () => {
       <div style={sectionBox}>
         <h2 onClick={() => toggleSection('tradelingProhibitedItems')} style={sectionStyle}>
           OTHER THINGS PROHIBITED BY Ulinkit
-          <span style={arrowStyle(openSections.tradelingProhibitedItems)}>▼</span>
+          <span style={arrowStyle(openSections.UlinkitProhibitedItems)}>▼</span>
         </h2>
         {openSections.tradelingProhibitedItems && (
           <ul style={listStyle}>
@@ -178,7 +179,7 @@ const ProductListingPolicy = () => {
 
       <h2 style={{ textAlign: 'center', fontSize: '18px', marginTop: '30px' }}>
         If you have any questions regarding the Product Listing Policy, please{' '}
-        <a href="contact-us" style={{ color: '#3087d1', textDecoration: 'underline' }}>
+        <a href="contact-us" style={{ color: '#3770bf', textDecoration: 'underline' }}>
           Contact Us
         </a>
         .

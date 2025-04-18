@@ -356,7 +356,7 @@ Strategically Located & Officially Backed for Your Success
             {[
               {
                 logo: "/Images/Person.avif",
-                quote: "Ulinkit is helping us bring healthy foods to the Gloabl region. We are reaching more customers and making more sales, at no additional cost.",
+                quote: "Ulinkit is helping us bring healthy foods to the Global region. We are reaching more customers and making more sales, at no additional cost.",
                 author: "Mushahid - Kensmatic Foods"
               },
               {

@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 function Logistics() {
+  const navigate = useNavigate(); 
+  const handleGetStartedClick = () => {
+    navigate('/login'); // Navigate to login page
+  }; 
+
   const [activeNav, setActiveNav] = useState('Services');
   const [isVisible, setIsVisible] = useState(false);
 
@@ -44,7 +50,7 @@ function Logistics() {
       backgroundColor: 'rgba(255,255,255,0.1)',
     },
     hero: {
-      backgroundImage: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url("/Images/Blog1.webp")',
+      backgroundImage: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url("/Images/Logistics2.avif")',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       padding: '180px 10% 100px',
@@ -287,9 +293,11 @@ function Logistics() {
       fontWeight: '500',
     },
     growthSection: {
-      background: 'linear-gradient(135deg, #3770bf, #468ff6)',
+      background: 'linear-gradient(135deg, #3770bf)',
       padding: '100px 10%',
       textAlign: 'center',
+      marginBottom: '50px',
+      borderRadius: '12px',
    
     },
     growthTitle: {
@@ -463,19 +471,20 @@ function Logistics() {
           Ulinkit Logistics Services provides a complete solution which is tailor made to your business need.
         </motion.p>
         <motion.button
-          style={{
-            ...styles.growthButton,
-            alignSelf: 'flex-start',
-            marginTop: '20px'
-          }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.6, duration: 0.8 }}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          Get Started
-        </motion.button>
+      style={{
+        ...styles.growthButton,
+        alignSelf: 'flex-start',
+        marginTop: '20px'
+      }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.6, duration: 0.8 }}
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      onClick={handleGetStartedClick} // <-- Navigate on click
+    >
+      Get Started
+    </motion.button>
       </motion.div>
 
       {/* Services Section */}

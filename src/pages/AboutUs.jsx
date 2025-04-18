@@ -141,7 +141,7 @@ const About = () => {
               fontSize: "2.25rem",
               fontWeight: 800,
               marginBottom: "1.5rem",
-              backgroundImage: "linear-gradient(to right, #3770bf, #468ff6)",
+              backgroundImage: '#3770bf',
               WebkitBackgroundClip: "text",
               color: "transparent",
               lineHeight: 1.25,
@@ -152,7 +152,7 @@ const About = () => {
             </h1>
             <motion.button
   style={{
-    background: "linear-gradient(to right, #f97316, #fb923c)",
+    background: "linear-gradient(to right, #fc7927, #ff9857)",
     color: "white",
     fontWeight: "bold",
     padding: "12px 32px",
@@ -169,7 +169,7 @@ const About = () => {
     transition: "all 0.3s ease-in-out",
   }}
   whileHover={{
-    background: "linear-gradient(to right, #fb923c, #f97316)",
+    background: "linear-gradient(to right, #fc792)",
     scale: 1.05,
     boxShadow: "0 6px 12px rgba(0, 0, 0, 0.15)"
   }}
@@ -203,7 +203,7 @@ const About = () => {
               fontSize: "1.5rem",
               fontWeight: 700,
               marginBottom: "0.5rem",
-              background: "linear-gradient(to right, #ff7e5f, #feb47b)",
+              background: "#fc7927",
 
               WebkitBackgroundClip: "text",
               color: "transparent",
@@ -281,14 +281,14 @@ const About = () => {
                   zIndex: 10,
                   backgroundColor: "white",
                   padding: "0.5rem",
-                  border: "4px solid #f97316",
+                  border: "4px solid #fc7927",
                   borderRadius: "9999px",
                   marginTop: "-1.5rem",
                   transform: activeTimelineItem === index ? "scale(1.2)" : "scale(1)",
                   transition: "all 0.3s ease",
                 }}>
                   <FaClock style={{
-                    color: "#f97316",
+                    color: "#fc7927",
                     fontSize: "1.25rem",
                   }} />
                 </div>
@@ -606,8 +606,9 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
+          
           <p style={{
-            color: "#f97316",
+            color: "#fc7927",
             fontWeight: 600,
             marginBottom: "0.5rem",
           }}>
@@ -646,7 +647,7 @@ const About = () => {
             fontSize: "2.25rem",
             fontWeight: "bold",
             marginBottom: "1rem",
-            color: "#f97316",
+            color: "#fc7927",
           }}
           whileHover={{ scale: 1.05 }}
           transition={{ type: "spring", stiffness: 300 }}
@@ -693,7 +694,7 @@ const About = () => {
 
         <motion.button
           style={{
-            backgroundColor: "#f97316",
+            backgroundColor: "#fc7927",
             color: "white",
             padding: "0.75rem 1.5rem",
             borderRadius: "0.375rem",
