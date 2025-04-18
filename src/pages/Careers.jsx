@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import { FaCalendarAlt, FaGlobe, FaUsers } from 'react-icons/fa';
 import { GiTalk } from 'react-icons/gi';
 import TestimonialCarousel from '../components/Testimonials';
 import FAQsSection from '../components/FAQs';
 import warehouseImg from '../assets/Warehouse.jpeg';
+import { Helmet } from 'react-helmet-async';
 
 const Data = [
   {
@@ -90,6 +91,18 @@ const Careers = () => {
   };
 
   return (
+    <Fragment>
+      <Helmet>
+  <title>Careers at Ulinkit</title>
+  <meta 
+    name="description" 
+    content="Join the Ulinkit team and help shape the future of global commerce. Explore open roles and be part of a mission-driven company connecting the world." 
+  />
+  <link rel="canonical" href="https://www.ulinkit.com/careers" />
+</Helmet>
+
+
+   
     <div style={{ fontFamily: 'sans-serif' }}>
       {/* Hero Section */}
       <div style={{
@@ -375,6 +388,7 @@ const Careers = () => {
       <TestimonialCarousel />
       <FAQsSection />
     </div>
+    </Fragment>
   );
 };
 

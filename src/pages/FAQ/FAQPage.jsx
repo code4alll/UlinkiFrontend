@@ -20,307 +20,350 @@ const FAQPage = () => {
     {
       id: uuidv4(),
       title: 'Who We Are?',
-      panel: (<div>
-        <p className='heading2 headMargin'>We are MENA’s largest Business-to-Business eMarketplace. Shaping the B2B sector by building a digital ecosystem, beautifully designed and simple to use. </p>
-        <p className='heading2 headMargin'>Through our technology, holistic ecosystem, financial solutions, and talented people, we are enabling cross-border trade between the Middle East and the world, supporting SMEs in their business growth, reinventing B2B procurement, and empowering entrepreneurs across the region</p>
-      </div>),
+      panel: (
+        <div>
+          <p className='heading2 headMargin'>
+            Ulinkit.com is a global B2B eMarketplace reshaping the business-to-business sector with a modern digital ecosystem that's beautifully designed and easy to use.
+          </p>
+          <p className='heading2 headMargin'>
+            Through cutting-edge technology, integrated financial solutions, and a strong team, Ulinkit enables cross-border trade, supports SMEs in scaling, reinvents procurement, and empowers entrepreneurs globally.
+          </p>
+        </div>
+      ),
     },
     {
       id: uuidv4(),
       title: 'Who is Ulinkit for?',
-      panel: (<div>
-        <p className='heading2 headMargin'>Title structure: ([Brand], [Model name], [model number], [other feature], [item type], [size], [color], [quantity]).</p>
-        <p className='heading2 headMargin'>  Example: Graco (brand), Maxi (Model name), GTB538 (Model number), lightweight (other features) car seat (item type) - 1-12 years (size), navy blue (color). California Garden (brand) Canned, Ready To Eat (other features) Chickpeas (item type) 400g (size) Pack of 24 (quantity).</p>
-        <p className='heading2 headMargin'>Provide a short, descriptive title that will help customers identify the key features. Keep the title less than 200 characters long.</p>
-        <p className='heading2 headMargin'>Write numbers in the numerical form not the text form (“3” not “three”).</p>
-        <p className='heading2 headMargin'>Separate your keywords and features with hyphens (-) or commas (,).</p>
-        <p className='heading2 headMargin'>Always include brand name, model number, size, quantity and color when available.</p>
-        <p className='heading2 headMargin'>Avoid “keyword stuffing”: i.e. adding unnecessary or unrelated keywords.</p>
-        <p className='heading2 headMargin'>Do not use ALL CAPS, all titles should be in sentence case.</p>
-        <p className='heading2 headMargin'>Do not include details about price, availability, company information, or warranty.</p>
-        <p className='heading2 headMargin'>Titles should not contain special characters such as %, $,@,™,®.</p>
-      </div>),
+      panel: (
+        <div>
+          <p className='heading2 headMargin'>
+            Ulinkit is designed for businesses of all sizes looking to expand their reach and sell physical products across global markets.
+          </p>
+          <p className='heading2 headMargin'>
+            Title structure for product listings: [Brand], [Model name], [Model number], [Key features], [Item type], [Size], [Color], [Quantity].
+          </p>
+          <p className='heading2 headMargin'>
+            Example: Graco Maxi GTB538 lightweight car seat - 1-12 years, navy blue. <br />
+            California Garden Canned, Ready To Eat Chickpeas 400g - Pack of 24.
+          </p>
+          <p className='heading2 headMargin'>Keep the title under 200 characters, use numerical digits, and avoid keyword stuffing.</p>
+          <p className='heading2 headMargin'>Do not use ALL CAPS or include price, availability, or warranty information in the title.</p>
+        </div>
+      ),
     },
     {
       id: uuidv4(),
       title: 'How can I contact you?',
-      panel: (<div>
-        <p className='heading2 headMargin'>This “free text” content should be in paragraph form with proper grammar.</p>
-        <p className='heading2 headMargin'>US English spelling should be used. This should be “reader friendly” with a slight “sales approach” to engage the buyer. Maximum character limit is 1000 characters.</p>
-        <p className='heading2 headMargin'>  Do not include any warranty information or advertising claims.</p>
-        <p className='heading2 headMargin'>  Do not include special characters such as %, $,@,™,®. </p>
-        <p className='heading2 headMargin'>   Upload your A+ content (if applicable).</p>
-      </div>),
+      panel: (
+        <div>
+          <p className='heading2 headMargin'>You can contact us through the support section on our website or via the contact form provided on the Help Center.</p>
+          <p className='heading2 headMargin'>Use proper grammar, US English spelling, and keep messages within 1000 characters.</p>
+          <p className='heading2 headMargin'>Avoid special characters such as %, $, @, ™, ® and don’t include warranty or promotional claims.</p>
+          <p className='heading2 headMargin'>A+ content can be uploaded if applicable.</p>
+        </div>
+      ),
     },
     {
       id: uuidv4(),
       title: 'Where is Ulinkit based?',
-      panel: (<div>
-        <p className='heading2 headMargin'>Your product shouldn’t fill more than 85% of the image space or less than 70% of the full image.</p>
-        <p className='heading2 headMargin'>Image file size should be between 100KB and 10MB.</p>
-        <p className='heading2 headMargin'>Accepted Images file types are “png, jpeg, jpg, bmp”.</p>
-        <p className='heading2 headMargin'>It is permitted to use lifestyle images as the main image for the following categories; Furniture, Beddings, Lights and Curtains, as long as they showcase the product clearly.</p>
-      </div>),
+      panel: (
+        <div>
+          <p className='heading2 headMargin'>Ulinkit is headquartered in the UAE, facilitating global trade with trusted sellers and buyers worldwide.</p>
+          <p className='heading2 headMargin'>For product images: the product should fill 70–85% of the image space, file size between 100KB and 10MB.</p>
+          <p className='heading2 headMargin'>Accepted file types: PNG, JPEG, JPG, BMP.</p>
+          <p className='heading2 headMargin'>
+            Lifestyle images are allowed as main images in specific categories like Furniture, Beddings, Lights, and Curtains—provided the product is clearly visible.
+          </p>
+        </div>
+      ),
     },
   ];
+  
   const sou = [
     {
       id: uuidv4(),
       title: 'How do I register as a Seller on Ulinkit?',
       panel: (<div>
-        <p className='heading2 headMargin'>Ulinkit.com is a platform that allows you to sell physical products only. Services and Subscriptions are not permitted to be sold on Ulinkit.</p>
-        <p className='heading2 headMargin'>Ensure the product brand and item type is permitted to be sold online by UAE law. Alcohol and smoking products, drugs and medical products, and animals are not permitted on the platform.</p>
-        <p className='heading2 headMargin'>Ensure the product details do not contain any graphic or sexual content and the language is professional.</p>
-        <p className='heading2 headMargin'>The official language of the product details must be in English (mandatory) and Arabic (optional) only.</p>
-        <p className='heading2 headMargin'>Ensure your that each listing contain one product only. Variants and accessories should be listed separately.</p>
-        <p className='heading2 headMargin'>Ensure your product details are consistent and does not have conflicting information.</p>
+        <p className='heading2 headMargin'>Ulinkit.com is a marketplace for selling **physical products only**. The sale of services or subscriptions is not permitted.</p>
+        <p className='heading2 headMargin'>Ensure your product brand and type are legally allowed to be sold online under UAE law. Prohibited items include alcohol, tobacco products, drugs, medical products, and animals.</p>
+        <p className='heading2 headMargin'>Product details must not contain any graphic, explicit, or inappropriate content. All language must remain professional.</p>
+        <p className='heading2 headMargin'>Product descriptions must be written in **English (mandatory)**. Arabic is optional and can help improve local reach.</p>
+        <p className='heading2 headMargin'>Each listing must include **only one product**. Accessories and variants must be listed separately.</p>
+        <p className='heading2 headMargin'>Ensure all product information is consistent across the listing and free from contradictions.</p>
       </div>),
     },
     {
       id: uuidv4(),
       title: 'How do I start selling on Ulinkit?',
       panel: (<div>
-        <p className='heading2 headMargin'>The image should be readable for the buyers so they can see the functions and specifications of the product.</p>
-        <p className='heading2 headMargin'>Only one product in the image with a mentioned color and size so the buyers aren’t confused with multiple products and colors. (If the product has multiple variants such as colors or sizes, each variant should be listed separately).</p>
-        <p className='heading2 headMargin'>The image must match the title, key features and description and must not conflict with any of the product details (Example; Red T-shirt Image, whereas the title says blue).</p>
-        <p className='heading2 headMargin'>The images must be a photograph and not an illustration.</p>
-        <p className='heading2 headMargin'>The image must not contain watermarks, contact details, texts or illustrations.</p>
-        <p className='heading2 headMargin'>The images cannot be graphic, inappropriate, unprofessional.</p>
-        <p className='heading2 headMargin'>The Images must not contain live models (Lingerie, underwear, and sleep wear).</p>
+        <p className='heading2 headMargin'>Product images should be clear and readable so that buyers can understand the product’s features and specifications.</p>
+        <p className='heading2 headMargin'>Each image should show only one product with a clearly defined color and size to avoid confusion. If your product has variants (color or size), list them separately.</p>
+        <p className='heading2 headMargin'>Images must match the product title, key features, and description. There should be no contradictions (e.g., red shirt in image, blue in title).</p>
+        <p className='heading2 headMargin'>Only real photographs are accepted. Illustrations or mockups are not allowed.</p>
+        <p className='heading2 headMargin'>Images must not include watermarks, contact details, text overlays, or graphics.</p>
+        <p className='heading2 headMargin'>Unprofessional, graphic, or inappropriate images are strictly prohibited.</p>
+        <p className='heading2 headMargin'>Images must not contain live models for sensitive categories (e.g., lingerie, underwear, sleepwear).</p>
       </div>),
     },
     {
       id: uuidv4(),
       title: 'What products can I sell on Ulinkit?',
       panel: (<div>
-        <p className='heading2 headMargin'>Title should be clear enough to understand the details of the product.</p>
-        <p className='heading2 headMargin'>Titles should contain the brand as the first word.</p>
-        <p className='heading2 headMargin'>The phrase “Assorted colors” can be used if the image contains the manufacturer’s box or if the colors are mentioned in key features or description.</p>
-        <p className='heading2 headMargin'>The title should not contain multiple variants and should not conflict with the product details and images.</p>
-        <p className='heading2 headMargin'>The titles should not contain irrelevant keywords.</p>
-        <p className='heading2 headMargin'>Titles should not contain typos and/or special characters.</p>
+        <p className='heading2 headMargin'>Product titles should be concise, clear, and informative.</p>
+        <p className='heading2 headMargin'>Titles must begin with the **brand name**.</p>
+        <p className='heading2 headMargin'>You may use "Assorted colors" only if shown in a manufacturer’s box or mentioned in the key features or description.</p>
+        <p className='heading2 headMargin'>Avoid including multiple variants in one title. Ensure the title aligns with the product image and description.</p>
+        <p className='heading2 headMargin'>Do not include unrelated or misleading keywords in titles.</p>
+        <p className='heading2 headMargin'>Titles must be free of typos, excessive capitalization, or special characters.</p>
       </div>),
     },
     {
       id: uuidv4(),
       title: 'What is the benefit of being verified as a Seller?',
       panel: (<div>
-        <p className='heading2 headMargin'>The key features should highlight the most important functions and features of the product. It’s your chance to mention all the selling points that will help the buyers with their buying decision.</p>
-        <p className='heading2 headMargin'>Add a minimum 2, up to 6 key features per listing.</p>
-        <p className='heading2 headMargin'>Product Usage.</p>
-        <p className='heading2 headMargin'>Compatibility with other devices or products (if needed).</p>
-        <p className='heading2 headMargin'>The key features should not contain promotional details or information about multiple variants and should not conflict with the other product details and images.</p>
-        <p className='heading2 headMargin'>Key features should not contain typos and/or special characters.</p>
+        <p className='heading2 headMargin'>Key features help buyers make informed decisions by highlighting the most important functions and benefits of your product.</p>
+        <p className='heading2 headMargin'>Include a minimum of 2 and a maximum of 6 key features per listing.</p>
+        <p className='heading2 headMargin'>Mention product usage, compatibility with other devices, or technical details if applicable.</p>
+        <p className='heading2 headMargin'>Do not use promotional language or mention multiple variants in key features.</p>
+        <p className='heading2 headMargin'>Ensure key features are accurate and consistent with the rest of the listing.</p>
+        <p className='heading2 headMargin'>Key features must be professionally written, with no spelling errors or unnecessary symbols.</p>
       </div>),
     },
   ];
+  
   const spug = [
     {
       id: uuidv4(),
       title: 'How do I list or upload my products on Ulinkit.com?',
       panel: (<div>
-        <p className='heading2 headMargin'>Ulinkit.com is a platform that allows you to sell physical products only. Services and Subscriptions are not permitted to be sold on Ulinkit.</p>
-        <p className='heading2 headMargin'>Ensure the product brand and item type is permitted to be sold online by UAE law. Alcohol and smoking products, drugs and medical products, and animals are not permitted on the platform.</p>
-        <p className='heading2 headMargin'>Ensure the product details do not contain any graphic or sexual content and the language is professional.</p>
-        <p className='heading2 headMargin'>The official language of the product details must be in English (mandatory) and Arabic (optional) only.</p>
-        <p className='heading2 headMargin'>Ensure your that each listing contain one product only. Variants and accessories should be listed separately.</p>
-        <p className='heading2 headMargin'>Ensure your product details are consistent and does not have conflicting information.</p>
+        <p className='heading2 headMargin'>Ulinkit.com is a global marketplace dedicated to physical product sales only. The sale of services, subscriptions, or digital items is strictly prohibited.</p>
+        <p className='heading2 headMargin'>Ensure that your product type and brand are legally allowed to be sold online according to UAE laws. Prohibited items include alcohol, tobacco products, drugs, medical supplies, and live animals.</p>
+        <p className='heading2 headMargin'>Product listings must maintain a professional tone and avoid any graphic or inappropriate content.</p>
+        <p className='heading2 headMargin'>All product descriptions must be in English (mandatory). Arabic is optional but encouraged for wider regional reach.</p>
+        <p className='heading2 headMargin'>Each listing should represent a single product. Variants or accessories should be listed as separate items.</p>
+        <p className='heading2 headMargin'>Product information must be consistent and free from contradictory details.</p>
       </div>),
     },
     {
       id: uuidv4(),
       title: 'How do I update existing products?',
       panel: (<div>
-        <p className='heading2 headMargin'>The image should be readable for the buyers so they can see the functions and specifications of the product.</p>
-        <p className='heading2 headMargin'>Only one product in the image with a mentioned color and size so the buyers aren’t confused with multiple products and colors. (If the product has multiple variants such as colors or sizes, each variant should be listed separately).</p>
-        <p className='heading2 headMargin'>The image must match the title, key features and description and must not conflict with any of the product details (Example; Red T-shirt Image, whereas the title says blue).</p>
-        <p className='heading2 headMargin'>The images must be a photograph and not an illustration.</p>
-        <p className='heading2 headMargin'>The image must not contain watermarks, contact details, texts or illustrations.</p>
-        <p className='heading2 headMargin'>The images cannot be graphic, inappropriate, unprofessional.</p>
-        <p className='heading2 headMargin'>The Images must not contain live models (Lingerie, underwear, and sleep wear).</p>
+        <p className='heading2 headMargin'>Images should be clear, high quality, and accurately depict the product’s features and specifications.</p>
+        <p className='heading2 headMargin'>Each image must show only one product with a specific color and size to avoid confusion. Variants like different colors or sizes must be listed individually.</p>
+        <p className='heading2 headMargin'>Product images must align with the title, key features, and description. For example, don’t display a red shirt if the title says blue.</p>
+        <p className='heading2 headMargin'>Only real photographs are accepted. Illustrations, mockups, or drawings are not permitted.</p>
+        <p className='heading2 headMargin'>Images must not contain watermarks, text overlays, contact information, or logos.</p>
+        <p className='heading2 headMargin'>Avoid using unprofessional or inappropriate imagery.</p>
+        <p className='heading2 headMargin'>Live models are not permitted for certain categories (e.g., lingerie, underwear, sleepwear).</p>
       </div>),
     },
     {
       id: uuidv4(),
       title: 'How do I upload images of my products?',
       panel: (<div>
-        <p className='heading2 headMargin'>Title should be clear enough to understand the details of the product.</p>
-        <p className='heading2 headMargin'>Titles should contain the brand as the first word.</p>
-        <p className='heading2 headMargin'>The phrase “Assorted colors” can be used if the image contains the manufacturer’s box or if the colors are mentioned in key features or description.</p>
-        <p className='heading2 headMargin'>The title should not contain multiple variants and should not conflict with the product details and images.</p>
-        <p className='heading2 headMargin'>The titles should not contain irrelevant keywords.</p>
-        <p className='heading2 headMargin'>Titles should not contain typos and/or special characters.</p>
+        <p className='heading2 headMargin'>Product titles should be concise and clearly reflect the item’s details.</p>
+        <p className='heading2 headMargin'>Always start the title with the product’s brand name.</p>
+        <p className='heading2 headMargin'>If showing multiple colors in a manufacturer’s box, you may use “Assorted colors” in the title, provided the colors are also mentioned in the key features or description.</p>
+        <p className='heading2 headMargin'>Avoid including multiple variants in a single title. The title must reflect the specific product shown in the image and described in the listing.</p>
+        <p className='heading2 headMargin'>Do not include unrelated or spammy keywords in the title.</p>
+        <p className='heading2 headMargin'>Titles must be free of typos, unnecessary capitalization, or special characters.</p>
       </div>),
     },
     {
       id: uuidv4(),
       title: 'How do I find the right category for my products?',
       panel: (<div>
-        <p className='heading2 headMargin'>The key features should highlight the most important functions and features of the product. It’s your chance to mention all the selling points that will help the buyers with their buying decision.</p>
-        <p className='heading2 headMargin'>Add a minimum 2, up to 6 key features per listing.</p>
-        <p className='heading2 headMargin'>Product Usage.</p>
-        <p className='heading2 headMargin'>Compatibility with other devices or products (if needed).</p>
-        <p className='heading2 headMargin'>The key features should not contain promotional details or information about multiple variants and should not conflict with the other product details and images.</p>
-        <p className='heading2 headMargin'>Key features should not contain typos and/or special characters.</p>
+        <p className='heading2 headMargin'>Key features are crucial for showcasing your product’s value. They should outline the most important benefits and functions.</p>
+        <p className='heading2 headMargin'>Include at least 2 and up to 6 key features per listing.</p>
+        <p className='heading2 headMargin'>Mention usage instructions, compatibility with other devices, or technical details as necessary.</p>
+        <p className='heading2 headMargin'>Avoid promotional phrases or references to multiple variants. Key features should complement the rest of the product information and images.</p>
+        <p className='heading2 headMargin'>Ensure that key features are written professionally without spelling errors or symbols.</p>
       </div>),
     },
   ];
+  
   const am = [
     {
       id: uuidv4(),
-      title: 'How do I reset my password?',
-      panel: (<div>
-        <p className='heading2 headMargin'>Ulinkit.com is a platform that allows you to sell physical products only. Services and Subscriptions are not permitted to be sold on Ulinkit.</p>
-        <p className='heading2 headMargin'>Ensure the product brand and item type is permitted to be sold online by UAE law. Alcohol and smoking products, drugs and medical products, and animals are not permitted on the platform.</p>
-        <p className='heading2 headMargin'>Ensure the product details do not contain any graphic or sexual content and the language is professional.</p>
-        <p className='heading2 headMargin'>The official language of the product details must be in English (mandatory) and Arabic (optional) only.</p>
-        <p className='heading2 headMargin'>Ensure your that each listing contain one product only. Variants and accessories should be listed separately.</p>
-        <p className='heading2 headMargin'>Ensure your product details are consistent and does not have conflicting information.</p>
-      </div>),
+      title: 'What can I sell on Ulinkit.com?',
+      panel: (
+        <div>
+          <p className='heading2 headMargin'>Ulinkit.com is a global marketplace strictly for selling physical products. Services, subscriptions, and digital products are not permitted.</p>
+          <p className='heading2 headMargin'>Ensure your product complies with local and international laws. Prohibited items include alcohol, tobacco, controlled substances, medical supplies, and live animals.</p>
+          <p className='heading2 headMargin'>Product listings must maintain a professional tone and must not contain graphic, inappropriate, or offensive content.</p>
+          <p className='heading2 headMargin'>All product details must be provided in English (mandatory) and may optionally be included in Arabic or other supported languages.</p>
+          <p className='heading2 headMargin'>Each listing should represent a single product only. Variants and accessories must be listed individually.</p>
+          <p className='heading2 headMargin'>Ensure all product information is consistent and does not contain conflicting or misleading details.</p>
+        </div>
+      ),
     },
     {
       id: uuidv4(),
-      title: 'How do I report an IPR infringement?',
-      panel: (<div>
-        <p className='heading2 headMargin'>The image should be readable for the buyers so they can see the functions and specifications of the product.</p>
-        <p className='heading2 headMargin'>Only one product in the image with a mentioned color and size so the buyers aren’t confused with multiple products and colors. (If the product has multiple variants such as colors or sizes, each variant should be listed separately).</p>
-        <p className='heading2 headMargin'>The image must match the title, key features and description and must not conflict with any of the product details (Example; Red T-shirt Image, whereas the title says blue).</p>
-        <p className='heading2 headMargin'>The images must be a photograph and not an illustration.</p>
-        <p className='heading2 headMargin'>The image must not contain watermarks, contact details, texts or illustrations.</p>
-        <p className='heading2 headMargin'>The images cannot be graphic, inappropriate, unprofessional.</p>
-        <p className='heading2 headMargin'>The Images must not contain live models (Lingerie, underwear, and sleep wear).</p>
-      </div>),
+      title: 'What are the product image requirements?',
+      panel: (
+        <div>
+          <p className='heading2 headMargin'>Images should be clear and high-quality to accurately reflect the product’s appearance and features.</p>
+          <p className='heading2 headMargin'>Each image must display only one product, clearly showing the selected color and size. Different variants should be listed and imaged separately.</p>
+          <p className='heading2 headMargin'>Product images must match the title, description, and key features. There should be no discrepancies (e.g., an image of a red shirt with a title mentioning blue).</p>
+          <p className='heading2 headMargin'>Only real product photos are allowed—illustrations or computer-generated images are not accepted.</p>
+          <p className='heading2 headMargin'>Images must be free of watermarks, logos, contact details, text overlays, or graphic additions.</p>
+          <p className='heading2 headMargin'>Images must be professional and appropriate. Graphic, explicit, or offensive visuals are strictly prohibited.</p>
+          <p className='heading2 headMargin'>Live models are not allowed for sensitive product categories such as lingerie, underwear, or sleepwear.</p>
+        </div>
+      ),
     },
     {
       id: uuidv4(),
-      title: 'How secure is my information?',
-      panel: (<div>
-        <p className='heading2 headMargin'>Title should be clear enough to understand the details of the product.</p>
-        <p className='heading2 headMargin'>Titles should contain the brand as the first word.</p>
-        <p className='heading2 headMargin'>The phrase “Assorted colors” can be used if the image contains the manufacturer’s box or if the colors are mentioned in key features or description.</p>
-        <p className='heading2 headMargin'>The title should not contain multiple variants and should not conflict with the product details and images.</p>
-        <p className='heading2 headMargin'>The titles should not contain irrelevant keywords.</p>
-        <p className='heading2 headMargin'>Titles should not contain typos and/or special characters.</p>
-      </div>),
+      title: 'How should I write product titles?',
+      panel: (
+        <div>
+          <p className='heading2 headMargin'>Product titles should be concise and clearly describe the item being sold.</p>
+          <p className='heading2 headMargin'>Start the title with the brand name, followed by the product type and key identifier (e.g., “Nike Running Shoes - Black”).</p>
+          <p className='heading2 headMargin'>Use “Assorted Colors” only when the packaging displays it or if colors are clearly described in the product details.</p>
+          <p className='heading2 headMargin'>Do not include multiple variants in a single title. Avoid any inconsistency with product images or descriptions.</p>
+          <p className='heading2 headMargin'>Avoid using irrelevant keywords or filler words.</p>
+          <p className='heading2 headMargin'>Titles must be free of spelling errors, typos, or unnecessary special characters.</p>
+        </div>
+      ),
     },
     {
       id: uuidv4(),
-      title: 'What is the allowed number of users per account?',
-      panel: (<div>
-        <p className='heading2 headMargin'>The key features should highlight the most important functions and features of the product. It’s your chance to mention all the selling points that will help the buyers with their buying decision.</p>
-        <p className='heading2 headMargin'>Add a minimum 2, up to 6 key features per listing.</p>
-        <p className='heading2 headMargin'>Product Usage.</p>
-        <p className='heading2 headMargin'>Compatibility with other devices or products (if needed).</p>
-        <p className='heading2 headMargin'>The key features should not contain promotional details or information about multiple variants and should not conflict with the other product details and images.</p>
-        <p className='heading2 headMargin'>Key features should not contain typos and/or special characters.</p>
-      </div>),
+      title: 'What should I include in the key features section?',
+      panel: (
+        <div>
+          <p className='heading2 headMargin'>Key features should summarize the most important functions, specifications, and selling points of the product.</p>
+          <p className='heading2 headMargin'>Each listing should have a minimum of 2 and a maximum of 6 key features.</p>
+          <p className='heading2 headMargin'>Include key information such as usage, functionality, and compatibility with other devices (if applicable).</p>
+          <p className='heading2 headMargin'>Avoid promotional language, listing multiple variants, or any inconsistencies with other product details.</p>
+          <p className='heading2 headMargin'>Ensure the key features are grammatically correct and free of typos and symbols.</p>
+        </div>
+      ),
     },
   ];
+  
   const bou = [
     {
       id: uuidv4(),
       title: 'How do I track my orders?',
-      panel: (<div>
-        <p className='heading2 headMargin'>Ulinkit.com is a platform that allows you to sell physical products only. Services and Subscriptions are not permitted to be sold on Ulinkit.</p>
-        <p className='heading2 headMargin'>Ensure the product brand and item type is permitted to be sold online by UAE law. Alcohol and smoking products, drugs and medical products, and animals are not permitted on the platform.</p>
-        <p className='heading2 headMargin'>Ensure the product details do not contain any graphic or sexual content and the language is professional.</p>
-        <p className='heading2 headMargin'>The official language of the product details must be in English (mandatory) and Arabic (optional) only.</p>
-        <p className='heading2 headMargin'>Ensure your that each listing contain one product only. Variants and accessories should be listed separately.</p>
-        <p className='heading2 headMargin'>Ensure your product details are consistent and does not have conflicting information.</p>
-      </div>),
+      panel: (
+        <div>
+          <p className='heading2 headMargin'>Ulinkit.com is exclusively for selling physical products. Services and subscriptions are not allowed.</p>
+          <p className='heading2 headMargin'>Ensure your product type and brand are legally permitted for online sale under UAE law. Items such as alcohol, tobacco, drugs, medical supplies, and animals are strictly prohibited.</p>
+          <p className='heading2 headMargin'>Product descriptions must be professional and free from any graphic or explicit content.</p>
+          <p className='heading2 headMargin'>English is the mandatory language for listings, while Arabic is optional.</p>
+          <p className='heading2 headMargin'>Each listing must represent only one product. Variants and accessories should be listed separately.</p>
+          <p className='heading2 headMargin'>Ensure all product details are accurate and consistent, without conflicting information.</p>
+        </div>
+      ),
     },
     {
       id: uuidv4(),
       title: 'How do returns and refunds work?',
-      panel: (<div>
-        <p className='heading2 headMargin'>The image should be readable for the buyers so they can see the functions and specifications of the product.</p>
-        <p className='heading2 headMargin'>Only one product in the image with a mentioned color and size so the buyers aren’t confused with multiple products and colors. (If the product has multiple variants such as colors or sizes, each variant should be listed separately).</p>
-        <p className='heading2 headMargin'>The image must match the title, key features and description and must not conflict with any of the product details (Example; Red T-shirt Image, whereas the title says blue).</p>
-        <p className='heading2 headMargin'>The images must be a photograph and not an illustration.</p>
-        <p className='heading2 headMargin'>The image must not contain watermarks, contact details, texts or illustrations.</p>
-        <p className='heading2 headMargin'>The images cannot be graphic, inappropriate, unprofessional.</p>
-        <p className='heading2 headMargin'>The Images must not contain live models (Lingerie, underwear, and sleep wear).</p>
-      </div>),
+      panel: (
+        <div>
+          <p className='heading2 headMargin'>Product images should be clear and easily showcase the item’s features and specifications.</p>
+          <p className='heading2 headMargin'>Include only one product per image, with accurate color and size details to avoid confusion. If multiple variants exist, list each one separately.</p>
+          <p className='heading2 headMargin'>Images must match the title, key features, and description. Avoid inconsistencies (e.g., a red shirt image with a title that says blue).</p>
+          <p className='heading2 headMargin'>Use real product photos—illustrations are not accepted.</p>
+          <p className='heading2 headMargin'>Do not include watermarks, contact information, or any added text or graphics in the images.</p>
+          <p className='heading2 headMargin'>Images must be appropriate, professional, and free of any graphic content.</p>
+          <p className='heading2 headMargin'>Images of live models are not allowed for lingerie, underwear, or sleepwear items.</p>
+        </div>
+      ),
     },
     {
       id: uuidv4(),
       title: 'What is the benefit of verifying my account as a Buyer?',
-      panel: (<div>
-        <p className='heading2 headMargin'>Title should be clear enough to understand the details of the product.</p>
-        <p className='heading2 headMargin'>Titles should contain the brand as the first word.</p>
-        <p className='heading2 headMargin'>The phrase “Assorted colors” can be used if the image contains the manufacturer’s box or if the colors are mentioned in key features or description.</p>
-        <p className='heading2 headMargin'>The title should not contain multiple variants and should not conflict with the product details and images.</p>
-        <p className='heading2 headMargin'>The titles should not contain irrelevant keywords.</p>
-        <p className='heading2 headMargin'>Titles should not contain typos and/or special characters.</p>
-      </div>),
+      panel: (
+        <div>
+          <p className='heading2 headMargin'>Product titles must clearly convey the item’s details at a glance.</p>
+          <p className='heading2 headMargin'>Always start the title with the brand name.</p>
+          <p className='heading2 headMargin'>The term “Assorted Colors” is allowed only if the manufacturer’s box is shown or colors are listed in the description or key features.</p>
+          <p className='heading2 headMargin'>Avoid including multiple variants in the title. The title must align with the product details and image.</p>
+          <p className='heading2 headMargin'>Do not use irrelevant keywords in the title.</p>
+          <p className='heading2 headMargin'>Ensure titles are free from typos and special characters.</p>
+        </div>
+      ),
     },
     {
       id: uuidv4(),
       title: 'How long will it take for my order to be delivered?',
-      panel: (<div>
-        <p className='heading2 headMargin'>The key features should highlight the most important functions and features of the product. It’s your chance to mention all the selling points that will help the buyers with their buying decision.</p>
-        <p className='heading2 headMargin'>Add a minimum 2, up to 6 key features per listing.</p>
-        <p className='heading2 headMargin'>Product Usage.</p>
-        <p className='heading2 headMargin'>Compatibility with other devices or products (if needed).</p>
-        <p className='heading2 headMargin'>The key features should not contain promotional details or information about multiple variants and should not conflict with the other product details and images.</p>
-        <p className='heading2 headMargin'>Key features should not contain typos and/or special characters.</p>
-      </div>),
+      panel: (
+        <div>
+          <p className='heading2 headMargin'>Key features should clearly highlight the main functionalities and benefits of the product to aid the customer’s decision-making.</p>
+          <p className='heading2 headMargin'>Include a minimum of 2 and up to 6 key features per listing.</p>
+          <p className='heading2 headMargin'>Mention the product’s intended usage and its compatibility with other items (if applicable).</p>
+          <p className='heading2 headMargin'>Avoid promotional language or details about multiple variants in this section. It should not conflict with the rest of the listing.</p>
+          <p className='heading2 headMargin'>Ensure key features are free from spelling errors and special characters.</p>
+        </div>
+      ),
     },
   ];
+  
   const us = [
     {
       id: uuidv4(),
       title: 'What is Request For Quotation (RFQ)?',
-      panel: (<div>
-        <p className='heading2 headMargin'>Ulinkit.com is a platform that allows you to sell physical products only. Services and Subscriptions are not permitted to be sold on Ulinkit.</p>
-        <p className='heading2 headMargin'>Ensure the product brand and item type is permitted to be sold online by UAE law. Alcohol and smoking products, drugs and medical products, and animals are not permitted on the platform.</p>
-        <p className='heading2 headMargin'>Ensure the product details do not contain any graphic or sexual content and the language is professional.</p>
-        <p className='heading2 headMargin'>The official language of the product details must be in English (mandatory) and Arabic (optional) only.</p>
-        <p className='heading2 headMargin'>Ensure your that each listing contain one product only. Variants and accessories should be listed separately.</p>
-        <p className='heading2 headMargin'>Ensure your product details are consistent and does not have conflicting information.</p>
-      </div>),
+      panel: (
+        <div>
+          <p className='heading2 headMargin'>Ulinkit.com is a marketplace designed exclusively for selling physical products. Services and subscriptions are not permitted.</p>
+          <p className='heading2 headMargin'>Ensure that the product brand and type comply with UAE laws for online sales. Prohibited items include alcohol, tobacco, drugs, medical supplies, and animals.</p>
+          <p className='heading2 headMargin'>All product descriptions must be professional and free from graphic or explicit content.</p>
+          <p className='heading2 headMargin'>Product details must be provided in English (mandatory) and may also be included in Arabic (optional).</p>
+          <p className='heading2 headMargin'>Each product listing must feature only one item. Accessories and variants should be listed separately.</p>
+          <p className='heading2 headMargin'>Ensure that all product details are accurate, consistent, and free of conflicting information.</p>
+        </div>
+      ),
     },
     {
       id: uuidv4(),
       title: 'What is Pre-owned: Buy & Sell?',
-      panel: (<div>
-        <p className='heading2 headMargin'>The image should be readable for the buyers so they can see the functions and specifications of the product.</p>
-        <p className='heading2 headMargin'>Only one product in the image with a mentioned color and size so the buyers aren’t confused with multiple products and colors. (If the product has multiple variants such as colors or sizes, each variant should be listed separately).</p>
-        <p className='heading2 headMargin'>The image must match the title, key features and description and must not conflict with any of the product details (Example; Red T-shirt Image, whereas the title says blue).</p>
-        <p className='heading2 headMargin'>The images must be a photograph and not an illustration.</p>
-        <p className='heading2 headMargin'>The image must not contain watermarks, contact details, texts or illustrations.</p>
-        <p className='heading2 headMargin'>The images cannot be graphic, inappropriate, unprofessional.</p>
-        <p className='heading2 headMargin'>The Images must not contain live models (Lingerie, underwear, and sleep wear).</p>
-      </div>),
-    }
+      panel: (
+        <div>
+          <p className='heading2 headMargin'>Images must be clear and legible, allowing buyers to easily understand the product's features and specifications.</p>
+          <p className='heading2 headMargin'>Only one product should appear in each image, with clearly mentioned color and size to avoid confusion. If multiple variants exist, list them separately.</p>
+          <p className='heading2 headMargin'>Images must align with the product title, key features, and description, with no inconsistencies (e.g., red T-shirt image while the title says blue).</p>
+          <p className='heading2 headMargin'>All images must be real photographs—illustrations are not accepted.</p>
+          <p className='heading2 headMargin'>Images must not include watermarks, contact information, text overlays, or any form of graphic edits.</p>
+          <p className='heading2 headMargin'>Images should be appropriate, professional, and free of any offensive content.</p>
+          <p className='heading2 headMargin'>Images featuring live models are not allowed for products like lingerie, underwear, or sleepwear.</p>
+        </div>
+      ),
+    },
   ];
+  
   const ul = [
     {
       id: uuidv4(),
       title: 'How can I get a quote or estimate on shipping rates?',
-      panel: (<div>
-        <p className='heading2 headMargin'>Ulinkit.com is a platform that allows you to sell physical products only. Services and Subscriptions are not permitted to be sold on Ulinkit.</p>
-        <p className='heading2 headMargin'>Ensure the product brand and item type is permitted to be sold online by UAE law. Alcohol and smoking products, drugs and medical products, and animals are not permitted on the platform.</p>
-        <p className='heading2 headMargin'>Ensure the product details do not contain any graphic or sexual content and the language is professional.</p>
-        <p className='heading2 headMargin'>The official language of the product details must be in English (mandatory) and Arabic (optional) only.</p>
-        <p className='heading2 headMargin'>Ensure your that each listing contain one product only. Variants and accessories should be listed separately.</p>
-        <p className='heading2 headMargin'>Ensure your product details are consistent and does not have conflicting information.</p>
-      </div>),
+      panel: (
+        <div>
+          <p className='heading2 headMargin'>Ulinkit.com supports the sale of physical products only. Services and subscriptions are not allowed on the platform.</p>
+          <p className='heading2 headMargin'>Make sure that the brand and product type comply with UAE online selling regulations. Restricted items include alcohol, tobacco, medical products, drugs, and animals.</p>
+          <p className='heading2 headMargin'>Product descriptions must be professional and free of any graphic or explicit content.</p>
+          <p className='heading2 headMargin'>All product information must be provided in English (mandatory) and optionally in Arabic.</p>
+          <p className='heading2 headMargin'>Each listing must represent a single product only. Variants and accessories should be listed separately.</p>
+          <p className='heading2 headMargin'>Ensure that all product information is consistent and does not contain conflicting details.</p>
+        </div>
+      ),
     },
     {
       id: uuidv4(),
       title: 'How do I get insurance for my cargo and who should pay for it?',
-      panel: (<div>
-        <p className='heading2 headMargin'>The image should be readable for the buyers so they can see the functions and specifications of the product.</p>
-        <p className='heading2 headMargin'>Only one product in the image with a mentioned color and size so the buyers aren’t confused with multiple products and colors. (If the product has multiple variants such as colors or sizes, each variant should be listed separately).</p>
-        <p className='heading2 headMargin'>The image must match the title, key features and description and must not conflict with any of the product details (Example; Red T-shirt Image, whereas the title says blue).</p>
-        <p className='heading2 headMargin'>The images must be a photograph and not an illustration.</p>
-        <p className='heading2 headMargin'>The image must not contain watermarks, contact details, texts or illustrations.</p>
-        <p className='heading2 headMargin'>The images cannot be graphic, inappropriate, unprofessional.</p>
-        <p className='heading2 headMargin'>The Images must not contain live models (Lingerie, underwear, and sleep wear).</p>
-      </div>),
-    }
+      panel: (
+        <div>
+          <p className='heading2 headMargin'>Product images must be clear and easily readable so buyers can understand the features and specifications.</p>
+          <p className='heading2 headMargin'>Only one product should appear in the image, with a clearly mentioned color and size. If your product has multiple variants (like different colors or sizes), list each variant separately.</p>
+          <p className='heading2 headMargin'>Ensure that images accurately match the product title, features, and description. Avoid mismatches (e.g., showing a red T-shirt while the title says blue).</p>
+          <p className='heading2 headMargin'>All images must be actual photographs; illustrations are not accepted.</p>
+          <p className='heading2 headMargin'>Do not include watermarks, contact details, text overlays, or any graphic elements on the images.</p>
+          <p className='heading2 headMargin'>Images must be professional, appropriate, and free from any graphic or offensive content.</p>
+          <p className='heading2 headMargin'>Images must not include live models for products like lingerie, underwear, or sleepwear.</p>
+        </div>
+      ),
+    },
   ];
+  
 
   const allItems = [...itu, ...sou, ...spug, ...am, ...bou, ...us, ...ul];
   const [filteredFaqs, setFilteredFaqs] = useState(allItems);

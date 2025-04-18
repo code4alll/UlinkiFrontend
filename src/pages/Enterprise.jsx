@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import warehouseImg from '../assets/Warehouse.jpeg'; 
+import { Helmet } from "react-helmet-async";
 import {
     CreditCard,
     Truck,
@@ -34,6 +35,18 @@ const Enterprise = () => {
     const [hoveredFeature, setHoveredFeature] = React.useState(null);
 
     return (
+        <Fragment>
+
+       
+        <Helmet>
+  <title>Enterprise Solutions - Ulinkit</title>
+  <meta 
+    name="description" 
+    content="Scale your business globally with Ulinkit's enterprise solutions. Tailored tools, support, and insights to power large-scale cross-border operations." 
+  />
+  <link rel="canonical" href="https://www.ulinkit.com/enterprise" />
+</Helmet>
+
         <div >
             {/* Hero Section */}
             <div style={{
@@ -511,6 +524,7 @@ Exclusive to the region and the first of its kind, <strong style={{ color: '#F28
 
             </div>
         </div>
+        </Fragment>
     );
 };
 

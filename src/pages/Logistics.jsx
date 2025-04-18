@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 function Logistics() {
   const navigate = useNavigate(); 
@@ -442,6 +443,16 @@ function Logistics() {
   };
 
   return (
+    <Fragment>
+      <Helmet>
+  <title>Logistics - Ulinkit</title>
+  <meta 
+    name="description" 
+    content="Efficient and reliable global logistics with Ulinkit. Discover how we simplify cross-border shipping and fulfillment for your business." 
+  />
+  <link rel="canonical" href="https://www.ulinkit.com/logistics" />
+</Helmet>
+
     <div style={styles.container}>
       {/* Navbar */}
     
@@ -633,6 +644,7 @@ function Logistics() {
         </motion.button>
       </motion.div>
     </div>
+    </Fragment>
   );
 }
 
