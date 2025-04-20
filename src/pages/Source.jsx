@@ -5,9 +5,15 @@ import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
 import SellIcon from '@mui/icons-material/Sell';
 import CategoryIcon from '@mui/icons-material/Category';
 import PaymentIcon from '@mui/icons-material/Payment';
+import SupportAgentIcon from '@mui/icons-material/SupportAgent';
+import { FaRegHandshake, FaGlobeAmericas, FaCreditCard, FaComments } from 'react-icons/fa';
+
+
+
 
 
 const Source = () => {
+  
 
     return (
         <Fragment>
@@ -158,51 +164,95 @@ const Source = () => {
       </section>
 
             <section className="sourceBanner" style={{ background: 'white' }}>
-                <article className="sourceTextTwo">
-                    <h1 className="heading5" style={{ color: '#003953' }}>Why source on Ulinkit?</h1>
-                    <div className="sourceTextBox">
-                        <p className='heading3'>Increase your margins</p>
-                        <p className="heading2">“I don’t mind admitting it’s the secret behind our higher profits...”</p>
-                    </div>
-                    <div className="sourceTextBox">
-                        <p className='heading3'>Easily import from anywhere</p>
-                        <p className="heading2">“great selection from Dubai, India or more than 50 other countries.”</p>
-                    </div>
-                    <div className="sourceTextBox">
-                        <p className='heading3'>Convenient payment & invoicing</p>
-                        <p className="heading2">“a relief to pay for everything with a quick bank transfer.”</p>
-                    </div>
-                    <div className="sourceTextBox">
-                        <p className='heading3'>One place to communicate</p>
-                        <p className="heading2">“Frankly, never going back to chasing suppliers across email, phone and chat apps.”</p>
-                    </div>
-                </article>
+            <article className="sourceTextTwo">
+  <h1 className="heading5" style={{ color: '#003953' }}>Why source on Ulinkit?</h1>
+  
+  <ul style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
+    <li style={{ display: 'flex', alignItems: 'center', marginBottom: '1rem' }}>
+      <div className="sourceIcon" style={{ marginRight: '1rem' }}>
+        <FaRegHandshake /> {/* Replace with your actual icon */}
+      </div>
+      <div className="sourceTextBox">
+        <p className='heading3'>Boost your profit margins</p>
+        <p className="heading2">“Sourcing through Ulinkit has helped us cut costs and increase profits — it's a game-changer for smart businesses.”</p>
+      </div>
+    </li>
+
+    <li style={{ display: 'flex', alignItems: 'center', marginBottom: '1rem' }}>
+      <div className="sourceIcon" style={{ marginRight: '1rem' }}>
+        <FaGlobeAmericas /> {/* Replace with your actual icon */}
+      </div>
+      <div className="sourceTextBox">
+        <p className='heading3'>Source globally, effortlessly</p>
+        <p className="heading2">“From India to the Gulf and beyond — Ulinkit connects us with reliable suppliers across 50+ countries, all in one place.”</p>
+      </div>
+    </li>
+
+    <li style={{ display: 'flex', alignItems: 'center', marginBottom: '1rem' }}>
+      <div className="sourceIcon" style={{ marginRight: '1rem' }}>
+        <FaCreditCard /> {/* Replace with your actual icon */}
+      </div>
+      <div className="sourceTextBox">
+        <p className='heading3'>Simplified payments & invoices</p>
+        <p className="heading2">“With multi-currency support and easy bank transfers, we finally have payment processes that match our global operations.”</p>
+      </div>
+    </li>
+
+    <li style={{ display: 'flex', alignItems: 'center', marginBottom: '1rem' }}>
+      <div className="sourceIcon" style={{ marginRight: '1rem' }}>
+        <FaComments /> {/* Replace with your actual icon */}
+      </div>
+      <div className="sourceTextBox">
+        <p className='heading3'>Streamlined communication</p>
+        <p className="heading2">“Everything is centralized — messages, quotes, and updates. No more juggling emails and apps to stay on top of our orders.”</p>
+      </div>
+    </li>
+  </ul>
+</article>
+
+
                 <div className="sourceImg">
                     <img src="https://res.cloudinary.com/dey1tujp8/image/upload/v1729144832/Ulinkit/Only_Box_76a6515490_uxsbgy.webp" alt="products" />
                 </div>
             </section>
+            <section className="sourcehow">
+    <h1 className="heading5" style={{ color: '#003953' }}>How it works</h1>
 
-            <section className='sourcehow'>
-                <h1 className="heading5" style={{ color: '#003953' }}>How it works</h1>
-                <section className='sourcegrid'>
-                    <article className='sourcegriditem'>
-                        <div className="sourceNum">1</div>
-                        <h1 className="heading2">Register for free in 3 easy steps</h1>
-                    </article>
-                    <article className='sourcegriditem'>
-                        <div className="sourceNum">2</div>
-                        <h1 className="heading2">Browse 4 million+ products</h1>
-                    </article>
-                    <article className='sourcegriditem'>
-                        <div className="sourceNum">3</div>
-                        <h1 className="heading2">Order & Pay</h1>
-                    </article>
-                    <article className='sourcegriditem'>
-                        <div className="sourceNum">4</div>
-                        <h1 className="heading2">Get it fast with our shipping solutions</h1>
-                    </article>
-                </section>
-            </section>
+    <section className="sourcegrid">
+        <article className="sourcegriditem">
+            <div className="sourceNum">1</div>
+            <div className="sourceStepContent">
+                <h1 className="heading3">Create Your Free Account</h1>
+                <p className="heading2">Sign up in just 3 quick steps and access the full power of global sourcing.</p>
+            </div>
+        </article>
+
+        <article className="sourcegriditem">
+            <div className="sourceNum">2</div>
+            <div className="sourceStepContent">
+                <h1 className="heading3">Discover Verified Products</h1>
+                <p className="heading2">Explore trusted suppliers and products from India, the Gulf, and over 50+ countries.</p>
+            </div>
+        </article>
+
+        <article className="sourcegriditem">
+            <div className="sourceNum">3</div>
+            <div className="sourceStepContent">
+                <h1 className="heading3">Place Orders & Make Payments</h1>
+                <p className="heading2">Send inquiries, negotiate, and pay securely — all within the platform.</p>
+            </div>
+        </article>
+
+        <article className="sourcegriditem">
+            <div className="sourceNum">4</div>
+            <div className="sourceStepContent">
+                <h1 className="heading3">Track & Receive Your Shipment</h1>
+                <p className="heading2">Enjoy end-to-end visibility with our reliable global shipping and logistics solutions.</p>
+            </div>
+        </article>
+    </section>
+</section>
+
 
             <section className="valueAdded">
                 <img src="https://res.cloudinary.com/dey1tujp8/image/upload/v1729150879/Ulinkit/hands-typing-laptop-computer-coffee-shop_gb2yty.jpg" alt="value" />
@@ -211,66 +261,107 @@ const Source = () => {
                     <h1 className="heading5" style={{ color: '#003953' }}>Value-added services for your business</h1>
 
                     <section className="valuegrid">
+                      
                         <article className="valuegriditem">
-                            <div className="valueicon"><InsertDriveFileIcon /></div>
-                            <div className="vlauetext">
-                                <h1 className="heading3">Customs and product clearance registration</h1>
-                                <h2 className="heading2">Enjoy peace of mind that your products are compliant with local standards. One point of contact, hassle-free process. All your certification needs addressed.</h2>
-                            </div>
-                        </article>
-                        <article className="valuegriditem">
-                            <div className="valueicon"><SellIcon /></div>
-                            <div className="vlauetext">
-                                <h1 className="heading3">Customs and product clearance registration</h1>
-                                <h2 className="heading2">Enjoy peace of mind that your products are compliant with local standards. One point of contact, hassle-free process. All your certification needs addressed.</h2>
-                            </div>
-                        </article>
-                        <article className="valuegriditem">
-                            <div className="valueicon"><CategoryIcon /></div>
-                            <div className="vlauetext">
-                                <h1 className="heading3">Customs and product clearance registration</h1>
-                                <h2 className="heading2">Enjoy peace of mind that your products are compliant with local standards. One point of contact, hassle-free process. All your certification needs addressed.</h2>
-                            </div>
-                        </article>
-                        <article className="valuegriditem">
-                            <div className="valueicon"><PaymentIcon /></div>
-                            <div className="vlauetext">
-                                <h1 className="heading3">Customs and product clearance registration</h1>
-                                <h2 className="heading2">Enjoy peace of mind that your products are compliant with local standards. One point of contact, hassle-free process. All your certification needs addressed.</h2>
-                            </div>
-                        </article>
+    <div className="valueicon"><SellIcon /></div>
+    <div className="vlauetext">
+        <h1 className="heading3">Seamless Customs & Compliance Support</h1>
+        <h2 className="heading2">Ensure smooth international trade with expert handling of customs, regulations, and product clearances — all from one trusted partner.</h2>
+    </div>
+</article>
+
+<article className="valuegriditem">
+    <div className="valueicon"><CategoryIcon /></div>
+    <div className="vlauetext">
+        <h1 className="heading3">Wide-Range Product Sourcing</h1>
+        <h2 className="heading2">Gain access to verified suppliers across diverse categories from the Gulf, India, and 50+ countries — handpicked to meet your business needs.</h2>
+    </div>
+</article>
+
+<article className="valuegriditem">
+    <div className="valueicon"><PaymentIcon /></div>
+    <div className="vlauetext">
+        <h1 className="heading3">Secure & Flexible Global Payments</h1>
+        <h2 className="heading2">Make payments confidently with trusted international gateways, multi-currency support, and secure transactions tailored for global sourcing.</h2>
+    </div>
+</article>
+
+<article className="valuegriditem">
+    <div className="valueicon"><SupportAgentIcon /></div>
+    <div className="vlauetext">
+        <h1 className="heading3">Dedicated Sourcing & Support Team</h1>
+        <h2 className="heading2">Work with experts who understand your market. From sourcing to after-sales — get personalized assistance at every step of your global trade journey.</h2>
+    </div>
+</article>
+
                     </section>
                 </div>
             </section>
 
-            <section className='sourcelook'>
-                <h1 className="heading5" style={{ color: '#003953' }}>Look no further. We have it all. And we keep growing.</h1>
-                <div className="lookgrid">
-                    <div className="lookitem">
-                        <div className="looknum">4 mill+</div>
-                        <p className="heading3" style={{ color: '#003953' }}>SKU’s</p>
-                    </div>
-                    <div className="lookitem">
-                        <div className="looknum">350k+</div>
-                        <p className="heading3" style={{ color: '#003953' }}>unique visitors/month</p>
-                    </div>
-                    <div className="lookitem">
-                        <div className="looknum">14</div>
-                        <p className="heading3" style={{ color: '#003953' }}>categories</p>
-                    </div>
-                    <div className="lookitem">
-                        <div className="looknum">5.5x</div>
-                        <p className="heading3" style={{ color: '#003953' }}>trade volume growth in the last 6 months</p>
-                    </div>
-                </div>
-            </section>
+            <section className='sourcelook' style={{ padding: '4rem 2rem', textAlign: 'center', backgroundColor: '#f9f9f9' }}>
+  <h1 className="heading5" style={{ color: '#003953' }}>
+    Ulinkit by the numbers — growing with businesses like yours.
+  </h1>
+  <div className="lookgrid" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '2rem', marginTop: '2rem' }}>
+    <div className="lookitem" style={{ backgroundColor: '#fff', padding: '2rem', borderRadius: '16px', width: '220px', boxShadow: '0 8px 20px rgba(0, 0, 0, 0.05)', transition: 'transform 0.3s ease' }}>
+      <div className="looknum" style={{ fontSize: '2rem', fontWeight: 'bold', color: '#003953', marginBottom: '0.5rem' }}>2M+</div>
+      <p className="heading3" style={{ fontSize: '1rem', fontWeight: '500', color: '#003953' }}>Active SKUs</p>
+    </div>
+    <div className="lookitem" style={{ backgroundColor: '#fff', padding: '2rem', borderRadius: '16px', width: '220px', boxShadow: '0 8px 20px rgba(0, 0, 0, 0.05)', transition: 'transform 0.3s ease' }}>
+      <div className="looknum" style={{ fontSize: '2rem', fontWeight: 'bold', color: '#003953', marginBottom: '0.5rem' }}>500K+</div>
+      <p className="heading3" style={{ fontSize: '1rem', fontWeight: '500', color: '#003953' }}>Monthly Visitors</p>
+    </div>
+    <div className="lookitem" style={{ backgroundColor: '#fff', padding: '2rem', borderRadius: '16px', width: '220px', boxShadow: '0 8px 20px rgba(0, 0, 0, 0.05)', transition: 'transform 0.3s ease' }}>
+      <div className="looknum" style={{ fontSize: '2rem', fontWeight: 'bold', color: '#003953', marginBottom: '0.5rem' }}>22</div>
+      <p className="heading3" style={{ fontSize: '1rem', fontWeight: '500', color: '#003953' }}>Product Categories</p>
+    </div>
+    <div className="lookitem" style={{ backgroundColor: '#fff', padding: '2rem', borderRadius: '16px', width: '220px', boxShadow: '0 8px 20px rgba(0, 0, 0, 0.05)', transition: 'transform 0.3s ease' }}>
+      <div className="looknum" style={{ fontSize: '2rem', fontWeight: 'bold', color: '#003953', marginBottom: '0.5rem' }}>7.2x</div>
+      <p className="heading3" style={{ fontSize: '1rem', fontWeight: '500', color: '#003953' }}>Trade Growth in 6 Months</p>
+    </div>
+  </div>
+</section>
 
-            <section className="flexcol wh home" style={{ gap: '60px', backgroundColor: '#3770bf', color: 'white', marginBottom:'40px' }}>
-                <article className="flexcol wh" style={{ gap: '20px' }}>
-                    <h1 className="heading5" style={{ color: 'var(--bgClr)' }}>Join Ulink today!</h1>
-                    <h2 className="heading2" style={{ color: 'var(--bgClr)' }}>Boost your business and increase your sales anywhere in the world.</h2>
-                </article>
-            </section>
+
+
+<section className="flexcol wh home" style={{ 
+    gap: '60px', 
+    backgroundColor: '#f0f0f0',  // Gray background
+    color: 'black',  // Black text
+    marginBottom: '40px', 
+    display: 'flex', 
+    flexDirection: 'column', 
+    justifyContent: 'center', 
+    alignItems: 'center', 
+    padding: '40px', 
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' // Shadow effect
+}}>
+    <article className="flexcol wh" style={{ 
+        gap: '20px', 
+        textAlign: 'center', 
+        width: '100%', 
+        maxWidth: '800px' 
+    }}>
+        <h1 className="heading5" style={{ 
+            color: 'black', // Black text color
+            fontSize: '2.5rem', 
+            fontWeight: 'bold', 
+            textShadow: '2px 2px 4px rgba(0, 0, 0, 0.1)' // Subtle shadow on text
+        }}>
+            Join Ulink today!
+        </h1>
+        <h2 className="heading2" style={{ 
+            color: 'black', // Black text color
+            fontSize: '1.25rem', 
+            fontWeight: 'normal',
+            textShadow: '1px 1px 2px rgba(0, 0, 0, 0.1)' // Subtle shadow on text
+        }}>
+            Boost your business and increase your sales anywhere in the world.
+        </h2>
+    </article>
+</section>
+
+
         </Fragment>
     )
 }
