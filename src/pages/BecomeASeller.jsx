@@ -459,79 +459,78 @@ Strategically Located & Officially Backed for Your Success
         </div>
       </section>
 
-            <article className="flexcol wh home-alt" style={{ backgroundColor: 'var(--bgClr)' }}>
-                <div className="flexcol wh" style={{ gap: '20px' }}>
-                    <h1 className="heading5">Frequently asked questions</h1>
-                </div>
+      <article className="flexcol wh home-alt" style={{ backgroundColor: 'var(--bgClr)' }}>
+    <div className="flexcol wh" style={{ gap: '20px' }}>
+        <h1 className="heading5">Frequently Asked Questions</h1>
+    </div>
 
-                <div className="flexcol wh">
+    <div className="flexcol wh">
+        <section className={`accordion-pd ${activeIndex === 1 ? 'active' : ''}`} onClick={() => toggleAccordion(1)}>
+            <div className='flex' style={{ gap: '20px' }}>
+                <HelpCenterIcon />
+                <h2 className="heading2">How do I register as a Seller on Ulink?</h2>
+            </div>
+        </section>
+        <div className="panel-pd wh" style={{ maxHeight: activeIndex === 1 ? '300px' : '0' }}>
+            <div className="flexcol-start bas-panel wh">
+                <p className="heading2">Getting started as a Seller on Ulink is simple!</p>
+                <p className="heading2"><a className='heading2' href="/signup">Click here</a> to begin creating your Seller account.</p>
+                <p className="heading2">Fill out a short form with your business and personal details to start selling globally.</p>
+            </div>
+        </div>
 
-                    <section className={`accordion-pd ${activeIndex === 1 ? 'active' : ''}`} onClick={() => toggleAccordion(1)}>
-                        <div className='flex' style={{ gap: '20px' }}>
-                            <HelpCenterIcon />
-                            <h2 className="heading2">How do I register as a Seller on Ulink?</h2>
-                        </div>
-                    </section>
-                    <div className="panel-pd wh" style={{ maxHeight: activeIndex === 1 ? '300px' : '0' }}>
-                        <div className="flexcol-start bas-panel wh">
-                            <p className="heading2">Registering as a Seller is easy!</p>
-                            <p className="heading2"><a className='heading2' href="/signup">Click here</a> to start creating your Seller account.</p>
-                            <p className="heading2">Complete a short form with your personal and business information.</p>
-                        </div>
-                    </div>
+        <section className={`accordion-pd ${activeIndex === 2 ? 'active' : ''}`} onClick={() => toggleAccordion(2)}>
+            <div className='flex' style={{ gap: '20px' }}>
+                <HelpCenterIcon />
+                <h2 className="heading2">How do I start selling on Ulink?</h2>
+            </div>
+        </section>
+        <div className="panel-pd wh" style={{ maxHeight: activeIndex === 2 ? '300px' : '0' }}>
+            <div className="flexcol-start bas-panel wh">
+                <p className="heading2">Once your Seller account is created, you can list your products for sale in our global marketplace.</p>
+                <p className="heading2">We’ll guide you through the process, and with our secure platform, you can start reaching customers worldwide.</p>
+            </div>
+        </div>
 
-                    <section className={`accordion-pd ${activeIndex === 2 ? 'active' : ''}`} onClick={() => toggleAccordion(2)}>
-                        <div className='flex' style={{ gap: '20px' }}>
-                            <HelpCenterIcon />
-                            <h2 className="heading2">How do I start selling on Ulink?</h2>
-                        </div>
-                    </section>
-                    <div className="panel-pd wh" style={{ maxHeight: activeIndex === 2 ? '300px' : '0' }}>
-                        <div className="flexcol-start bas-panel wh">
-                            <p className="heading2">Registering as a Seller is easy!</p>
-                            <p className="heading2"><a className='heading2' href="/signup">Click here</a> to start creating your Seller account.</p>
-                            <p className="heading2">Complete a short form with your personal and business information.</p>
-                        </div>
-                    </div>
+        <section className={`accordion-pd ${activeIndex === 3 ? 'active' : ''}`} onClick={() => toggleAccordion(3)}>
+            <div className='flex' style={{ gap: '20px' }}>
+                <HelpCenterIcon />
+                <h2 className="heading2">What products can I sell on Ulink?</h2>
+            </div>
+        </section>
+        <div className="panel-pd wh" style={{ maxHeight: activeIndex === 3 ? '300px' : '0' }}>
+            <div className="flexcol-start bas-panel wh">
+                <p className="heading2">You can sell a wide variety of products across various categories, including electronics, fashion, home goods, and more.</p>
+                <p className="heading2">Ulink provides a platform for businesses worldwide to sell to a global audience.</p>
+            </div>
+        </div>
 
-                    <section className={`accordion-pd ${activeIndex === 3 ? 'active' : ''}`} onClick={() => toggleAccordion(3)}>
-                        <div className='flex' style={{ gap: '20px' }}>
-                            <HelpCenterIcon />
-                            <h2 className="heading2">What products can I sell on Ulink?</h2>
-                        </div>
-                    </section>
-                    <div className="panel-pd wh" style={{ maxHeight: activeIndex === 3 ? '300px' : '0' }}>
-                        <div className="flexcol-start bas-panel wh">
-                            <p className="heading2">Registering as a Seller is easy!</p>
-                            <p className="heading2"><a className='heading2' href="/signup">Click here</a> to start creating your Seller account.</p>
-                            <p className="heading2">Complete a short form with your personal and business information.</p>
-                        </div>
-                    </div>
+        <section className={`accordion-pd ${activeIndex === 4 ? 'active' : ''}`} onClick={() => toggleAccordion(4)}>
+            <div className='flex' style={{ gap: '20px' }}>
+                <HelpCenterIcon />
+                <h2 className="heading2">What is the benefit of being verified as a Seller?</h2>
+            </div>
+        </section>
+        <div className="panel-pd wh" style={{ maxHeight: activeIndex === 4 ? '300px' : '0' }}>
+            <div className="flexcol-start bas-panel wh">
+                <p className="heading2">Being a verified Seller gives you credibility, access to Ulink's global network of customers, and enhanced sales opportunities.</p>
+                <p className="heading2">It also provides you with more tools to manage and scale your business efficiently.</p>
+            </div>
+        </div>
 
-                    <section className={`accordion-pd ${activeIndex === 4 ? 'active' : ''}`} onClick={() => toggleAccordion(4)}>
-                        <div className='flex' style={{ gap: '20px' }}>
-                            <HelpCenterIcon />
-                            <h2 className="heading2">What is the benefit of being verified as a Seller?</h2>
-                        </div>
-                    </section>
-                    <div className="panel-pd wh" style={{ maxHeight: activeIndex === 4 ? '300px' : '0' }}>
-                        <div className="flexcol-start bas-panel wh">
-                            <p className="heading2">Registering as a Seller is easy!</p>
-                            <p className="heading2"><a className='heading2' href="/signup">Click here</a> to start creating your Seller account.</p>
-                            <p className="heading2">Complete a short form with your personal and business information.</p>
-                        </div>
-                    </div>
+        <Link to="/faq" className='btn box flex' style={{ width: 'fit-content', marginTop: '20px', backgroundColor: 'var(--CodeOne)', whiteSpace: 'nowrap' }} type='submit'>
+            <div className="heading2">View all FAQs</div>
+        </Link>
+    </div>
+</article>
 
-                    <Link to="/faq" className='btn box flex' style={{ width: 'fit-content', marginTop: '20px', backgroundColor: 'var(--CodeOne)', whiteSpace: 'nowrap' }} type='submit'><div className="heading2">View all FAQs</div></Link>
-                </div>
-            </article>
+<article className="flexcol wh home" style={{ gap: '60px', backgroundColor: 'var(--CodeTwoHover)', color: 'white' }}>
+    <div className="flexcol wh" style={{ gap: '20px' }}>
+        <h1 className="heading5" style={{ color: 'var(--bgClr)' }}>Join Ulink today!</h1>
+        <h2 className="heading2" style={{ color: 'var(--bgClr)' }}>Expand your business globally and tap into new markets with Ulink.</h2>
+    </div>
+</article>
 
-            <article className="flexcol wh home" style={{ gap: '60px', backgroundColor: 'var(--CodeTwoHover)', color: 'white' }}>
-                <div className="flexcol wh" style={{ gap: '20px' }}>
-                    <h1 className="heading5" style={{ color: 'var(--bgClr)' }}>Join Ulink today!</h1>
-                    <h2 className="heading2" style={{ color: 'var(--bgClr)' }}>Boost your business and increase your sales anywhere in the world.</h2>
-                </div>
-            </article>
         </Fragment>
     );
 };

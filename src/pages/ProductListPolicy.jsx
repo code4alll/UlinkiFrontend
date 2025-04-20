@@ -2,36 +2,28 @@ import React, { Fragment, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const prohibitedItems = [
-  'Listing of services or job opportunities',
-  'Counterfeit goods or any form of fake items',
-  'Goods or items that infringe upon the intellectual property rights of any individual or entity',
-  'Stocks, bonds, investment interests, and other securities',
-  'Currencies (including digital currencies) and negotiable instruments (e.g., cheques)',
-  'Items that promote hatred, violence, or intolerance based on ethnicity, race, or religion',
-  'Artifacts, antiquities, and valuable art pieces',
-  'Pornographic materials or related items',
-  'Medical drugs (including over-the-counter medications)',
-  'Medical devices and equipment',
-  'Drug paraphernalia (e.g., marijuana pipes, bongs, and grow lights)',
-  'E-cigarettes and electronic hookahs',
-  'Tobacco products, nicotine, and e-liquids',
-  'Flammable, explosive, hazardous, and radioactive chemicals or substances',
-  'Fireworks, firecrackers, and other explosive devices',
-  'Firearms, ammunition, or replicas of firearms or ammunition',
-  'Weapons (e.g., crossbows, switchblade knives)',
-  'Descramblers or illegal signal decoders',
-  'Devices intended to block, jam, or interfere with authorized communications',
-  'Spy equipment or surveillance devices',
-  'Bank card readers or “skimming” devices',
-  'Used SIM cards',
-  'Live animals',
-  'Animal parts that are restricted by law (e.g., ivory)',
-  'Alcohol intended for consumption, or food products containing alcohol',
-  'Pork and pork-based products',
-  'Any other items prohibited by law, regulations, sanctions, or trade restrictions in any jurisdiction',
-  'Residential properties such as houses, villas, and apartments',
-  'Automotive items such as motorcycles, cars, and scooters',
-  'Medical sexual enhancers, fertility boosters, or hormonal products (except for natural supplements)'
+  'Narcotic drugs and psychotropic substances as per NDPS Act',
+  'Counterfeit or pirated goods',
+  'Products infringing on copyrights, trademarks, or intellectual property',
+  'Currency, including Indian and foreign (except for collectibles with proper licensing)',
+  'Stocks, bonds, securities, or financial instruments',
+  'Pornographic material or obscene content as per Section 67 of the IT Act',
+  'Firearms, ammunition, or explosive substances (Arms Act)',
+  'Live animals or protected wildlife items (Wildlife Protection Act, 1972)',
+  'Meat and meat products not permitted by FSSAI or exported without APEDA clearance',
+  'Alcohol and alcoholic beverages without FSSAI/FDA and state-level permissions',
+  'Medicines, medical devices, or health supplements without CDSCO/FSSAI approval',
+  'Products containing banned substances by the Ministry of Health and Family Welfare',
+  'E-cigarettes and vaping products (banned under Prohibition of Electronic Cigarettes Act)',
+  'Hazardous or radioactive materials',
+  'Items promoting hatred, communal violence, or sedition',
+  'Used cosmetics, undergarments, or personal hygiene items',
+  'Human organs, body parts, or bodily fluids',
+  'Antiquities and art objects without ASI clearance (Antiquities and Art Treasures Act)',
+  'Items that violate Indian customs, DGFT, or import/export policies',
+  'Illegal signal jammers, surveillance, or hacking devices',
+  'SIM cards, Aadhaar, PAN, or other government-issued ID documents',
+  'Any item prohibited by law or deemed unsafe by relevant Indian authorities'
 ];
 
 
@@ -105,7 +97,9 @@ const ProductListingPolicy = () => {
 
       <div style={{ fontSize: '16px', marginBottom: '30px', lineHeight: '1.7' }}>
         <p>
-        This Product Listing Policy applies to the Ulinkit.com website and any mobile applications operated by U-Link Outsourcing private Limited and its affiliates  <strong>(“Ulinkit”)</strong>.
+        This Product Listing Policy applies to the Ulinkit operated by U-Link Outsourcing
+            Private Limited. As Ulinkit is governed under Indian law, sellers must comply with all applicable Indian
+            regulations and trade policies.
         </p>
         <p>
   You may not post or sell any item that is restricted or prohibited by federal, state, or local law in any
@@ -113,68 +107,64 @@ const ProductListingPolicy = () => {
   exhaustive. As a Seller, you are solely responsible for ensuring that your listings comply with all applicable laws and regulations.
 </p>
 <p>
-  Ulinkit may impose additional platform-specific restrictions that go beyond legal requirements. These restrictions may
-  be updated at any time. It is your responsibility to regularly review this policy to ensure your continued compliance.
+Sellers must not list items that are illegal, unsafe, or restricted under Indian laws or guidelines set by
+regulatory authorities like DGFT, FSSAI, CDSCO, RBI, or Ministry of Commerce & Industry.
 </p>
 <p>
-  Ulinkit reserves the right, at its sole discretion, to determine whether an item violates this policy. We may require
-  immediate removal of such items, and repeated violations may result in suspension or termination of your account in
-  accordance with our User Terms and Conditions.
+Ulinkit reserves the right to take down listings, suspend seller accounts, or take legal action if a violation
+of this policy is detected. Sellers are solely responsible for compliance.
 </p>
 
       </div>
 
       <div style={sectionBox}>
         <h2 onClick={() => toggleSection('uaeProhibitedItems')} style={sectionStyle}>
-          GLOBAL MARKETPLACE-SPECIFIC PROHIBITED ITEMS
+        Ulinkit Platform-Specific Restrictions
           <span style={arrowStyle(openSections.uaeProhibitedItems)}>▼</span>
         </h2>
         {openSections.uaeProhibitedItems && (
           <ul style={listStyle}>
            <ul>
-  <li>Any narcotics or recreational drugs of any kind</li>
-  <li>Gambling equipment, machinery, and devices</li>
-  <li>Pirated or unauthorized content</li>
-  <li>Counterfeit currency or monetary items</li>
-  <li>Substances contaminated by radiation or nuclear fallout</li>
-  <li>Items that violate Islamic principles or public morality</li>
-  <li>Items associated with black magic, witchcraft, or sorcery</li>
-  <li>Poppy seeds or any products containing poppy seeds</li>
-  <li>Nylon-based fishing nets</li>
-  <li>
-    Any goods or items prohibited by the GCC Common Customs Law or any other law or regulation applicable in the UAE
-  </li>
-</ul>
+           <li>No bulk uploading of items without prior verification</li>
+              <li>All imported items must comply with BIS and customs labeling rules</li>
+              <li>Exporters must follow DGFT licensing and e-commerce export norms</li>
+              <li>Health-related products must not make misleading medical claims</li>
+              <li>Items violating cultural or religious sentiments may be restricted</li>
+              <li>All sellers must provide accurate GST and compliance documents</li>
+            </ul>
 
           </ul>
         )}
       </div>
 
       <div style={sectionBox}>
-        <h2 onClick={() => toggleSection('tradelingProhibitedItems')} style={sectionStyle}>
-          OTHER THINGS PROHIBITED BY Ulinkit
-          <span style={arrowStyle(openSections.UlinkitProhibitedItems)}>▼</span>
-        </h2>
-        {openSections.tradelingProhibitedItems && (
-          <ul style={listStyle}>
-            <ul>
-  <li>Any narcotic substances or recreational drugs</li>
-  <li>Gambling equipment, machinery, and devices of any kind</li>
-  <li>Pirated or unauthorized content</li>
-  <li>Counterfeit currencies or monetary instruments</li>
-  <li>Substances contaminated by radiation or nuclear fallout</li>
-  <li>Items that conflict with Islamic beliefs or public morality</li>
-  <li>Items associated with black magic, witchcraft, or sorcery</li>
-  <li>Poppy seeds or any products containing poppy seeds</li>
-  <li>Fishing nets made of nylon</li>
-  <li>
-    Any other goods or items prohibited under the GCC Common Customs Law or any other applicable law or regulation in the UAE
-  </li>
-</ul>
+  <h2 onClick={() => toggleSection('UlinkitProhibitedItems')} style={sectionStyle}>
+    OTHER THINGS PROHIBITED BY Ulinkit
+    <span style={arrowStyle(openSections.UlinkitProhibitedItems)}>▼</span>
+  </h2>
+  {openSections.UlinkitProhibitedItems && (
+    <ul style={listStyle}>
+      <li>Narcotic drugs and psychotropic substances as per the Narcotic Drugs and Psychotropic Substances Act, 1985</li>
+      <li>Firearms, explosives, and ammunition without proper licenses under the Arms Act, 1959</li>
+      <li>Counterfeit currency, stamps, and any forged documents</li>
+      <li>Products that infringe copyrights, trademarks, or other intellectual property rights</li>
+      <li>Live animals, birds, or any wildlife species protected under the Wildlife Protection Act, 1972</li>
+      <li>Human remains or any part thereof</li>
+      <li>Pornographic materials or obscene content under the Information Technology Act, 2000</li>
+      <li>Fake academic certificates, IDs, or government-issued documents</li>
+      <li>Sand, minerals, or other restricted items under the Mines and Minerals (Regulation and Development) Act</li>
+      <li>Endangered plants or products derived from them as per CITES and Indian environmental laws</li>
+      <li>Items that promote hate speech, violence, or discrimination on the basis of religion, caste, sex, or ethnicity</li>
+      <li>Lottery tickets, gambling devices, and betting services (offline or online)</li>
+      <li>Electronic devices intended to jam, intercept, or monitor communications illegally</li>
+      <li>Any goods banned or restricted by the Directorate General of Foreign Trade (DGFT) or the Customs Act, 1962</li>
+      <li>Medical drugs or equipment not approved by the Central Drugs Standard Control Organization (CDSCO)</li>
+      <li>Food products that violate FSSAI guidelines or labeling norms</li>
+      <li>Alcoholic beverages without proper licensing and state-wise approval</li>
+    </ul>
+  )}
+</div>
 
-          </ul>
-        )}
-      </div>
 
       <div style={sectionBox}>
         <h2 onClick={() => toggleSection('fullPolicy')} style={sectionStyle}>
