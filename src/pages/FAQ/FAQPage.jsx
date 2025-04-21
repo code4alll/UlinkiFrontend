@@ -125,27 +125,7 @@ const FAQPage = () => {
             5. Once verified, you will receive confirmation and access to your Seller Dashboard where you can start listing products.
           </p>
     
-          <p className='heading2 headMargin'>
-            <strong>Important Product Listing Guidelines:</strong>
-          </p>
-          <p className='heading2 headMargin'>
-            Ulinkit.com is a marketplace for selling <strong>physical products only</strong>. The sale of services or subscriptions is not permitted.
-          </p>
-          <p className='heading2 headMargin'>
-            Ensure your product brand and type are legally allowed to be sold online under UAE law. Prohibited items include alcohol, tobacco products, drugs, medical products, and animals.
-          </p>
-          <p className='heading2 headMargin'>
-            Product details must not contain any graphic, explicit, or inappropriate content. All language must remain professional.
-          </p>
-          <p className='heading2 headMargin'>
-            Product descriptions must be written in <strong>English (mandatory)</strong>. Arabic is optional and can help improve local reach.
-          </p>
-          <p className='heading2 headMargin'>
-            Each listing must include <strong>only one product</strong>. Accessories and variants must be listed separately.
-          </p>
-          <p className='heading2 headMargin'>
-            Ensure all product information is consistent across the listing and free from contradictions.
-          </p>
+       
         </div>
       ),
     },
@@ -171,30 +151,7 @@ const FAQPage = () => {
             4. Start uploading your product listings by adding titles, descriptions, prices, stock details, and images.
           </p>
     
-          <p className='heading2 headMargin'>
-            <strong>Important Image Guidelines:</strong>
-          </p>
-          <p className='heading2 headMargin'>
-            Product images should be clear and readable so that buyers can understand the product’s features and specifications.
-          </p>
-          <p className='heading2 headMargin'>
-            Each image should show only one product with a clearly defined color and size to avoid confusion. If your product has variants (color or size), list them separately.
-          </p>
-          <p className='heading2 headMargin'>
-            Images must match the product title, key features, and description. There should be no contradictions (e.g., red shirt in image, blue in title).
-          </p>
-          <p className='heading2 headMargin'>
-            Only real photographs are accepted. Illustrations or mockups are not allowed.
-          </p>
-          <p className='heading2 headMargin'>
-            Images must not include watermarks, contact details, text overlays, or graphics.
-          </p>
-          <p className='heading2 headMargin'>
-            Unprofessional, graphic, or inappropriate images are strictly prohibited.
-          </p>
-          <p className='heading2 headMargin'>
-            Images must not contain live models for sensitive categories (e.g., lingerie, underwear, sleepwear).
-          </p>
+       
         </div>
       ),
     },
@@ -220,7 +177,7 @@ const FAQPage = () => {
             **Prohibited items** include (but are not limited to): alcohol, tobacco, drugs, medicines, supplements, weapons, adult content, and live animals.
           </p>
           <p className='heading2 headMargin'>
-            All listings must adhere to the **laws of the seller's country**, including but not limited to the regulations of **UAE and India**.
+            All listings must adhere to the **laws of the seller's country**, including but not limited to the regulations of **India**.
           </p>
           <p className='heading2 headMargin'>
             Sellers are responsible for ensuring that their products meet Ulinkit's quality standards and comply with **e-commerce and consumer protection laws** in their respective countries.
