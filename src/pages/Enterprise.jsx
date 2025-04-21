@@ -76,18 +76,20 @@ const Enterprise = () => {
                             fontSize: '36px',
                             fontWeight: 'bold',
                             marginBottom: '20px',
-                            lineHeight: '1.2'
+                            lineHeight: '1.2',
+                            color: '#FFFFFF'
                         }}>
                          "Your reliable <span style={{ color: '#F28705' }}>sourcing partner</span> <br /> for all your procurement needs."
                         </h1>
                         <p style={{
                             fontSize: '16px',
                             lineHeight: '1.8',
-                            marginBottom: '30px'
+                            marginBottom: '30px',
+                            color: '#FFFFFF'
                         }}>
 Exclusive to the region and the first of its kind, <strong style={{ color: '#F28705' }}>ULINKIT Enterprise</strong> is your trusted product sourcing partner. With over 7 million items in curated catalogs at competitive prices, we simplify sourcing, supplier management, and eliminate communication challenges. Serving all business departments, we handle the complex 'sourcing' so you don't have to.
                         </p>
-                        <button
+                        <button onClick={() => window.location.href = '/signup'}
                             style={{
                                 backgroundColor: '#fc7927',
                                 color: '#FFFFFF',
@@ -235,7 +237,9 @@ Exclusive to the region and the first of its kind, <strong style={{ color: '#F28
                                 </li>
                             ))}
                         </ul>
-                        <button style={{
+                        <button onClick={() => window.location.href = '/signup'}
+                        
+                        style={{
                             marginTop: '30px',
                             padding: '12px 24px',
                             backgroundColor: '#Fc7927',
@@ -510,7 +514,8 @@ Exclusive to the region and the first of its kind, <strong style={{ color: '#F28
             }}>
                 <h2 style={{
   fontSize: '18px',
-  fontWeight: 'normal'
+  fontWeight: 'normal',
+  color: '#FFFFFF',
 }}>
   Have any questions? Please reach out to a friendly customer service agent at: 
   <a href="tel:+918750518844" style={{ marginLeft: '8px', color: '#fc7927', textDecoration: 'none' }}>

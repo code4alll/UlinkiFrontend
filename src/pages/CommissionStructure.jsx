@@ -101,7 +101,7 @@ const CommissionStructure = () => {
                 <article className="cs-box4">
                     <div className="cs-box3">
                         <h1 className="heading4 wh">Ulink's commission structure</h1>
-                        <h2 className="descrip2 wh" style={{ color: 'white' }}>At Ulink you can register for free, and you will only ever pay a small commission on actual sales. No hidden fees. It's simple: your success is our success!</h2>
+                        <h2 className="descrip2 wh" style={{ color: 'white' }}>At Ulinkit you can register for free, and you will only ever pay a small commission on actual sales. No hidden fees. It's simple: your success is our success!</h2>
                         <button onClick={signup} className='btn box flex' style={{ width: 'fit-content', backgroundColor: 'var(--CodeOne)' }}><div className="heading2">Register now</div></button>
                     </div>
                     <div className="cs-box2">
@@ -121,13 +121,13 @@ const CommissionStructure = () => {
                     </div>
 
                     <p className="fee heading2" style={{ marginTop: '30px' }}>STANDARD FEE %</p>
-                    <h3 className="heading3 wh">Sell on Ulink</h3>
+                    <h3 className="heading3 wh">Sell on Ulinkit</h3>
                     <h4 className="heading3 wh">Use all the features that will save you time and money, whilst increasing your sales:</h4>
                     <div className="cs-box">
                         <p className="heading2 list">Get access to the market with 500+ million business people</p>
                         <p className="heading2 list">Make sales at set prices, or allow buyers to negotiate directly with you</p>
                         <p className="heading2 list">Pay commission only when you make a sale</p>
-                        <p className="heading2 list">For sellers outside the UAE it means they don’t need a local office and import license.</p>
+                        <p className="heading2 list">For sellers outside the India it means they don’t need a local office and import license.</p>
                     </div>
                 </article>
 

@@ -24,7 +24,7 @@ const PaymentMethod = () => {
         panel: (
           <div>
             <p className='heading2 headMargin'>
-              Ulinkit provides an installment payment option that allows you to divide your purchase into easy monthly payments. This option is available for orders above 500 AED or ₹10,000(depends on your local currency) subject to your bank’s terms and conditions. Additional processing fees or interest rates may apply depending on your selected tenure.
+              Ulinkit provides an installment payment option that allows you to divide your purchase into easy monthly payments. This option is available for orders above  ₹10,000(depends on your local currency) subject to your bank’s terms and conditions. Additional processing fees or interest rates may apply depending on your selected tenure.
             </p>
             <p className='heading2 headMargin'>
               Supported banks include: HDFC, ICICI, Axis Bank, SBI, Kotak Mahindra Bank, Canara Bank, IDFC Bank, IndusInd Bank.
@@ -115,7 +115,7 @@ const PaymentMethod = () => {
         panel: (
           <div>
             <p className='heading2 headMargin'>
-              Yes, EMI can be availed on discounted or promotional items as long as your cart meets the minimum EMI threshold (500 AED or ₹10,000 depends on your local currency).
+              Yes, EMI can be availed on discounted or promotional items as long as your cart meets the minimum EMI threshold (₹10,000 depends on your local currency).
             </p>
           </div>
         ),

@@ -7,12 +7,21 @@ import CategoryIcon from '@mui/icons-material/Category';
 import PaymentIcon from '@mui/icons-material/Payment';
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 import { FaRegHandshake, FaGlobeAmericas, FaCreditCard, FaComments } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 
 
 
 
 const Source = () => {
+  const navigate = useNavigate();
+  const handleRegisterClick = () => {
+    navigate('/Signup');
+  }
+  const handleLoginClick = () => {
+    navigate('/login');
+  }
+
   
 
     return (
@@ -26,7 +35,10 @@ const Source = () => {
                 <article className="sourceText">
                     <h1 className="heading4">Faster, cheaper buying for your business</h1>
                     <h2 className="heading" style={{ color: 'white' }}>Do all your wholesale sourcing on one platform. Get the products you need, at the prices you want.</h2>
-                    <button className='btn box' style={{ background: 'var(--CodeOne)', width: 'fit-content', padding: '10px 30px' }}>Register</button>
+                    <button onClick={()=>{
+                        handleRegisterClick()
+                      
+                    }} className='btn box' style={{ background: 'var(--CodeOne)', width: 'fit-content', padding: '10px 30px' }}>Register</button>
                 </article>
                 <div className="sourceImg">
                     <img src="https://res.cloudinary.com/dey1tujp8/image/upload/v1729144832/Ulinkit/Only_Box_76a6515490_uxsbgy.webp" alt="products" />
