@@ -94,7 +94,7 @@ const App = () => {
         <div style={{ maxWidth: '500px' }}>
           <p style={{ fontWeight: 'bold', color: '#000' }}>Featured Post</p>
           <h1 style={{ fontSize: '2rem', margin: '0.5rem 0', color: '#000' }}>Ulinkit: The Go-To Online Wholesale Marketplace</h1>
-          <p style={{ color: '#000' }}>Transforming procurement in the UAE.</p>
+          <p style={{ color: '#000' }}>Transforming procurement in the Global MarketPlace.</p>
           <button
             style={{
               backgroundColor: hoveredButton ? '#ff8533' : '#ff6600',
