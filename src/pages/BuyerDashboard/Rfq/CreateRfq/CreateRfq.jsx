@@ -327,7 +327,7 @@ const CreateRfq = () => {
                         </div>
                         <div className='border-p'>
                             <p className='paragraph-4 mr-left'>Select shipping terms</p>
-                            <p className=' mr-left'>Tradeling offers delivery services. However you can also select other shipping options.</p>
+                            <p className=' mr-left'>Ulinkit offers delivery services. However you can also select other shipping options.</p>
                         </div>
                         <div className='border-p ' >
                             <div className='display-flex'>
