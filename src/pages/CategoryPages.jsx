@@ -2245,7 +2245,7 @@ const CategoryPages = () => {
               <div className="best-deals">
                 <img
                   className="top-deal-1"
-                  src={ImageImport.ToyCar}
+                  src={ImageImport.toysCar}
                   alt="toycar"
                 />
               </div>
