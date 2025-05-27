@@ -58,6 +58,9 @@ import WritingMaterial from '../../assets/Stationary/writingmaterial.png';
  import RefurbishedLaptop from '../../assets/refurbish/RefurbishedLaptop.avif';
  import RefurbishedPhone from '../../assets/refurbish/refurbishedPhone.avif'
 
+ //Toys
+ import toysCar from '../../assets/Toys/toysCar.avif'
+
 
 
 const ImageImport =  {
@@ -117,7 +120,11 @@ const ImageImport =  {
 
     // RefurbishedLaptop
     RefurbishedLaptop,
-    RefurbishedPhone
+    RefurbishedPhone,
+
+
+    //Toys
+    toysCar
 }
 
 

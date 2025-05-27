@@ -484,8 +484,8 @@ const Header = () => {
       <div ref={offerRef}>
         {showFirst ? (
           <div className="offer">
-            <p className='offer-text bounce-in-top'>Get 20% OFF on your first order.</p>
-            <p className="coupn bounce-in-bottom">ULINKITFIRST20</p>
+            <p className='offer-text bounce-in-top'>Get 50% OFF on your first order.</p>
+            <p className="coupn bounce-in-bottom">ULINKITFIRST50</p>
           </div>
         ) : (
           <div className="offer2">
@@ -762,12 +762,13 @@ const Header = () => {
           <div className="sub-header-option">
             <DepartureBoardIcon /> <div className="sub-heading3">Express</div>
           </div>
+         
           <Link to="/rfqmarketplace" className="sub-header-option">
             <SendIcon /> <div className="sub-heading3">RFQ Marketplace</div>
           </Link>
-          <div className="sub-header-option">
-            <BusinessCenterIcon /> <div className="sub-heading3">Enterprise</div>
-          </div>
+          <Link to="/enterprise" className="sub-header-option">
+            <SendIcon /> <div className="sub-heading3">Enterprise</div>
+          </Link>
           {(isAuthenticated === false || (isAuthenticated && user.role !== 'Seller')) && (
             <Link to="/become-a-seller" className='header-btns'>Become A Seller</Link>
           )}
