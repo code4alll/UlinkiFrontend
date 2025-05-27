@@ -18,6 +18,7 @@ const ProductList = () => {
     const dispatch = useDispatch();
     const user = useSelector((state) => state.auth.user);
     const { sellerProducts, loading, error } = useSelector((state) => state.sellerProducts);
+    console.log(sellerProducts);
 
     const [page, setPage] = useState(0);
     const [size, setSize] = useState(21);
@@ -238,7 +239,7 @@ const ProductList = () => {
                                                 {item.imageUrl && <img className='imgPro' src={item.imageUrl} alt={item.imageName} />}
                                             </div>
                                             <div className="heading2 download-btn" onClick={() => productDetail(item.productId)} style={{ whiteSpace: 'nowrap' }}>
-                                                {item.productName.length > 15 ? `${item.productName.substring(0, 15)}...` : item.productName}
+                                                {item.productName?.length > 15 ? `${item.productName?.substring(0, 15)}...` : item.productName}
                                             </div>
                                             <div className="heading2">
                                                 {item.category.length > 15 ? `${item.category.substring(0, 15)}...` : item.category}

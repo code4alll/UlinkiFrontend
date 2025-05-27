@@ -39,6 +39,36 @@ export const addProduct = createAsyncThunk(
   }
 );
 
+export const bulkUpload = createAsyncThunk(
+  'product/bulkUpload',
+  async ({ formData, category }, { getState, rejectWithValue }) => {
+    try {
+      const { auth } = getState();
+      const token = auth.token;
+      console.log("Token:", token);
+      console.log(formData,category);
+
+      const headers = {
+        Authorization: `Bearer ${token}`,
+      };
+      for (const [key, value] of formData.entries()) {
+        console.log(`Sending data : ${key}: ${value}`);
+      }
+      const encodedCategory = encodeURIComponent(category);
+      const response = await axios.post(
+        `${BASE_URL}/uploadfile?category=${encodedCategory}`,
+        formData,
+        { headers }
+      );
+      console.log("Response data:", response.data);
+      return response.data;
+    } catch (error) {
+      console.error("Error response:", error.response.data);
+      return rejectWithValue(error.response.data);
+    }
+  }
+);
+
 const addProductSlice = createSlice({
   name: 'product',
   initialState,
