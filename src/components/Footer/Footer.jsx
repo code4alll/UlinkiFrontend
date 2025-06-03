@@ -72,19 +72,19 @@ const Footer = () => {
           <section className="footer">
             <h1 className="footer-title">Sell on Ulinkit</h1>
             <div className="item-list">
-              <Link to="/become-a-seller" className="itemLink">Start Selling</Link>
-              <Link to="/webinar" className="itemLink">Webinar & E-Books</Link>
-              <Link to="/logistics" className="itemLink">Ulink Logistics</Link>
-              <Link to="/product-List-Policy" className="itemLink">Product Listing Policy</Link>
+              <Link to="/" className="itemLink">Start Selling</Link>
+              <Link to="/" className="itemLink">Webinar & E-Books</Link>
+              <Link to="/" className="itemLink">Ulink Logistics</Link>
+              <Link to="/" className="itemLink">Product Listing Policy</Link>
             </div>
           </section>
           <section className="footer">
             <h1 className="footer-title">About Ulinkit</h1>
             <div className="item-list">
-              <Link to="/about-Us" className="itemLink">About Us</Link>
-              <Link to="/press" className="itemLink">Press</Link>
-              <Link to="/careers" className="itemLink">Careers</Link>
-              <Link to="/blog" className="itemLink">Blog</Link>
+              <Link to="/" className="itemLink">About Us</Link>
+              <Link to="/" className="itemLink">Press</Link>
+              <Link to="/" className="itemLink">Careers</Link>
+              <Link to="/" className="itemLink">Blog</Link>
             </div>
           </section>
           <section className="footer">
@@ -100,14 +100,14 @@ const Footer = () => {
             <h1 className="footer-title">Ulink Services</h1>
             <div className="item-list">
               <Link to="/enterprise" className="itemLink">Enterprise</Link>
-             
+              <Link to="/" className="itemLink">Buy Back Program</Link>
             </div>
           </section>
           <section className="footer">
             <h1 className="footer-title">Procurement</h1>
             <div className="item-list">
-              <Link to="/payment-method" className="itemLink">Payment Methods</Link>
-              <Link to="/buy-Back-Program" className="itemLink">Buy Back Program</Link>
+              <Link to="/" className="itemLink">Payment Methods</Link>
+              <Link to="/" className="itemLink">Buy Back Program</Link>
             </div>
           </section>
         </article>
