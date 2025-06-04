@@ -9,6 +9,7 @@ import Layout from './components/Layout';
 
 
 
+
 //buyer dashboard
 const BuyerDashboard = lazy(() => import('./pages/BuyerDashboard/BuyerDashboard'));
 const BuyerMessage = lazy(() => import('./pages/BuyerDashboard/BuyerMassage/BuyerMessage'));
@@ -91,6 +92,17 @@ const ContactUs = lazy(() => import('./pages/ContactUs'));
 const Source = lazy(() => import('./pages/Source'));
 const PaymentMethod = lazy(() => import('./pages/PaymentMethod'));
 const AllCat = lazy(() => import('./pages/AllCat'));
+const AboutUs = lazy(() => import('./pages/AboutUs'));
+
+const Press = lazy(() => import('./pages/Press'));
+const Careers= lazy(() => import('./pages/Careers'));
+const Blog= lazy(() => import('./pages/Blog'));
+const Webinar= lazy(() => import('./pages/Webinar'));
+const Logistics= lazy(() => import('./pages/Logistics'));
+const ProductListingPolicy= lazy(() => import('./pages/ProductListPolicy'));
+const Enterprise= lazy(() => import('./pages/Enterprise'));
+const BuybackProgram= lazy(() => import('./pages/BuybackProgram'));
+const StartSelling= lazy(() => import('./pages/StartSelling'));
 
 
 //Admin
@@ -141,6 +153,17 @@ function App() {
           <Route path='/source-on-ulinkit' element={<Layout><Source /></Layout>} />
           <Route path='/payment-method' element={<Layout><PaymentMethod /></Layout>} />
           <Route path='/all-categories' element={<Layout><AllCat /></Layout>} />
+        
+          <Route path='/press' element={<Layout><Press/></Layout>} />
+          <Route path='/careers' element={<Layout><Careers/></Layout>} />
+          <Route path='/blog' element={<Layout><Blog/></Layout>} />
+          <Route path='/webinar' element={<Layout><Webinar/></Layout>} />
+          <Route path='/logistics' element={<Layout><Logistics/></Layout>} />
+          <Route path='/become-a-seller' element={<Layout><BecomeASeller/></Layout>} />
+          <Route path='/product-List-Policy' element={<Layout><ProductListingPolicy/></Layout>} />
+          <Route path='/enterprise' element={<Layout><Enterprise/></Layout>} />
+          <Route path='/buy-Back-Program' element={<Layout><BuybackProgram/></Layout>} />
+          <Route path='/about-Us' element={<Layout><AboutUs/></Layout>} />
 
 
           {/*Without authentication */}
@@ -247,4 +270,3 @@ function App() {
 };
 
 export default App
-

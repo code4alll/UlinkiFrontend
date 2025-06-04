@@ -3,8 +3,11 @@ import banner from '../../assets/banner.jpg';
 import './Guidelines.css';
 import { v4 as uuidv4 } from 'uuid';
 import { Helmet } from 'react-helmet-async';
+import { useNavigate } from 'react-router-dom';
+
 
 const Guidelines = () => {
+    const navigate = useNavigate();
 
 
     const [activeIndex, setActiveIndex] = useState(null);
@@ -15,165 +18,195 @@ const Guidelines = () => {
 
     const gpl = [
         {
-            id: uuidv4(),
-            title: 'a. General overview',
-            panel: (<div>
-                <li className='heading2 headMargin'>For all product content requests, contact content.support@ulink.com.</li>
-                <li className='heading2 headMargin'>Avoid repetition in your content in order to ensure that your products rank higher when people do online searching.</li>
-                <li className='heading2 headMargin'>Provide as many relevant details as possible to help the customer make the decision without further research about the product.</li>
-            </div>),
+          id: uuidv4(),
+          title: 'a. General Overview',
+          panel: (
+            <div>
+            <li className='heading2 headMargin'>
+              For any queries related to product content, please contact us at <a href="mailto:support@ulink.com" className='underline'>support@ulinkit.com</a>.
+            </li>
+            <li className='heading2 headMargin'>
+              Refrain from repeating the same information to enhance product discoverability in search results.
+            </li>
+            <li className='heading2 headMargin'>
+              Provide clear and detailed descriptions to help customers make confident purchase decisions without needing additional research.
+            </li>
+          </div>
+          
+          ),
         },
         {
-            id: uuidv4(),
-            title: 'b. Title structure',
-            panel: (<div>
-                <li className='heading2 headMargin'>Title structure: ([Brand], [Model name], [model number], [other feature], [item type], [size], [color], [quantity]).</li>
-                <li className='heading2 headMargin'>  Example: Graco (brand), Maxi (Model name), GTB538 (Model number), lightweight (other features) car seat (item type) - 1-12 years (size), navy blue (color). California Garden (brand) Canned, Ready To Eat (other features) Chickpeas (item type) 400g (size) Pack of 24 (quantity).</li>
-                <li className='heading2 headMargin'>Provide a short, descriptive title that will help customers identify the key features. Keep the title less than 200 characters long.</li>
-                <li className='heading2 headMargin'>Write numbers in the numerical form not the text form (“3” not “three”).</li>
-                <li className='heading2 headMargin'>Separate your keywords and features with hyphens (-) or commas (,).</li>
-                <li className='heading2 headMargin'>Always include brand name, model number, size, quantity and color when available.</li>
-                <li className='heading2 headMargin'>Avoid “keyword stuffing”: i.e. adding unnecessary or unrelated keywords.</li>
-                <li className='heading2 headMargin'>Do not use ALL CAPS, all titles should be in sentence case.</li>
-                <li className='heading2 headMargin'>Do not include details about price, availability, company information, or warranty.</li>
-                <li className='heading2 headMargin'>Titles should not contain special characters such as %, $,@,™,®.</li>
-            </div>),
+          id: uuidv4(),
+          title: 'b. Title Structure',
+          panel: (
+            <div>
+            <li className='heading2 headMargin'>Use the following format for listing titles: [Brand], [Model Name], [Model Number], [Key Feature], [Product Type], [Size], [Color], [Quantity]</li>
+            <li className='heading2 headMargin'>Example: Graco, Maxi, GTB538, Lightweight, Car Seat - 1-12 Years, Navy Blue, Pack of 1.</li>
+            <li className='heading2 headMargin'>Keep your title concise, clear, and under 200 characters, focusing on the most important product details.</li>
+            <li className='heading2 headMargin'>Use numeric digits for all numbers (e.g., "3" instead of "three").</li>
+            <li className='heading2 headMargin'>Separate keywords and product attributes using commas or hyphens.</li>
+            <li className='heading2 headMargin'>Include brand name, model number, size, color, and quantity when available.</li>
+            <li className='heading2 headMargin'>Avoid overusing keywords or including unrelated information.</li>
+            <li className='heading2 headMargin'>Use sentence case (capitalize only the first word and proper nouns). Do not use ALL CAPS.</li>
+            <li className='heading2 headMargin'>Do not include pricing, stock availability, warranty, or company information in the title.</li>
+            <li className='heading2 headMargin'>Avoid using special symbols such as %, $, @, ™, or ® in the title.</li>
+          </div>
+          
+          ),
         },
         {
-            id: uuidv4(),
-            title: 'c. Product description',
-            panel: (<div>
-                <li className='heading2 headMargin'>This “free text” content should be in paragraph form with proper grammar.</li>
-                <li className='heading2 headMargin'>US English spelling should be used. This should be “reader friendly” with a slight “sales approach” to engage the buyer. Maximum character limit is 1000 characters.</li>
-                <li className='heading2 headMargin'>Describe the product’s important features, including size and color information and compatibility.</li>
-                <li className='heading2 headMargin'>Page content should be comprehensive and employ related terms/keywords (what keywords an average person would use when searching online for such a product).</li>
-                <li className='heading2 headMargin'>Include the brand name, series and model number, even if these are already in the product title.</li>
-                <li className='heading2 headMargin'>Use sentence case (only capitalize the first word of a sentence or proper nouns)</li>
-                <li className='heading2 headMargin'>Use p to insert a paragraph break.</li>
-                <li className='heading2 headMargin'>Do not use ALL CAPS, all titles should be in sentence case.</li>
-                <li className='heading2 headMargin'>Do not include details about price, availability, company information, or warranty.</li>
-                <li className='heading2 headMargin'>Titles should not contain special characters such as %, $,@,™,®.</li>
-                <li className='heading2 headMargin'>If you pull this content from another site you should change at least 20% in order for search engines to recognize this as original content.</li>
-                <li className='heading2 headMargin'> Do not include subjective or time-sensitive comments e.g. “2023 deal”.</li>
-                <li className='heading2 headMargin'>  Do not include any web or email addresses.</li>
-                <li className='heading2 headMargin'>  Do not include any warranty information or advertising claims.</li>
-                <li className='heading2 headMargin'>  Do not include special characters such as %, $,@,™,®. </li>
-                <li className='heading2 headMargin'>   Upload your A+ content (if applicable).</li>
-            </div>),
+          id: uuidv4(),
+          title: 'c. Product Description',
+          panel: (
+            <div>
+            <li className='heading2 headMargin'>Write product descriptions in clear, well-structured paragraphs using proper grammar.</li>
+            <li className='heading2 headMargin'>Use U.S. English with a friendly and slightly promotional tone. Keep the text within 1000 characters.</li>
+            <li className='heading2 headMargin'>Highlight key features such as size, color, compatibility, and any unique or standout aspects.</li>
+            <li className='heading2 headMargin'>Naturally include relevant keywords and commonly searched terms for better visibility.</li>
+            <li className='heading2 headMargin'>Mention the brand, series, and model number—even if they appear in the title.</li>
+            <li className='heading2 headMargin'>Use sentence case: capitalize only the first word of each sentence and proper nouns.</li>
+            <li className='heading2 headMargin'>Use &lt;p&gt; tags to separate paragraphs where appropriate.</li>
+            <li className='heading2 headMargin'>Avoid using ALL CAPS. Maintain a clean, sentence-case format.</li>
+            <li className='heading2 headMargin'>Do not mention pricing, stock status, seller details, or warranty information.</li>
+            <li className='heading2 headMargin'>Exclude special characters such as %, $, @, ™, and ®.</li>
+            <li className='heading2 headMargin'>If referencing content from another source, ensure that at least 20% is rewritten to make it unique.</li>
+            <li className='heading2 headMargin'>Avoid using time-based or subjective language (e.g., “Top deal of 2024”).</li>
+            <li className='heading2 headMargin'>Do not include links, email addresses, or external contact information.</li>
+            <li className='heading2 headMargin'>Stay away from exaggerated claims or unverifiable promotional language.</li>
+            <li className='heading2 headMargin'>If available, upload enhanced content such as A+ or branded visuals for added appeal.</li>
+          </div>
+          
+          ),
         },
         {
-            id: uuidv4(),
-            title: 'd. Images',
-            panel: (<div>
-                <li className='heading2 headMargin'>Your product shouldn’t fill more than 85% of the image space or less than 70% of the full image.</li>
-                <li className='heading2 headMargin'>Image file size should be between 100KB and 10MB.</li>
-                <li className='heading2 headMargin'>Accepted Images file types are “png, jpeg, jpg, bmp”.</li>
-                <li className='heading2 headMargin'>Transparent .png files are not supported, transparent parts will display black in listing.</li>
-                <li className='heading2 headMargin'>sRGB and CMYK color space.</li>
-                <li className='heading2 headMargin'>Minimum resolution 500 X 500 pixels, Maximum 1000 X 1000 pixels.</li>
-                <li className='heading2 headMargin'>The accepted ratio or crop is a 11 square image.</li>
-                <li className='heading2 headMargin'>The image must not be a graphic, rendering or illustration of the product.</li>
-                <li className='heading2 headMargin'>The use of a logo or icon instead of an actual product image is not permitted.</li>
-                <li className='heading2 headMargin'>Images must not contain elements or content that covers the product or confusing additional items.</li>
-                <li className='heading2 headMargin'>Images must not contain copyright marks or watermarks.</li>
-                <li className='heading2 headMargin'>Images must not contain borders.</li>
-                <li className='heading2 headMargin'>Images must not be blurry or pixelated.</li>
-                <li className='heading2 headMargin'>Show a single unit of the product.</li>
-                <li className='heading2 headMargin'>Choose images that clearly and accurately represent the product.</li>
-                <li className='heading2 headMargin'>Show the main product image against a white background.</li>
-                <li className='heading2 headMargin'>The main image should show the main product only, not accessories or other items in the box.</li>
-                <li className='heading2 headMargin'>Add up to 5 secondary images.</li>
-                <li className='heading2 headMargin'>Do not include text, logos, watermarks, or price tags.</li>
-                <li className='heading2 headMargin'>Do not include a background or border on the main image.</li>
-                <li className='heading2 headMargin'>Do not show multiple images if the item is a multipack.</li>
-                <li className='heading2 headMargin'>Do not show multiple views of the products in the main image.</li>
-                <li className='heading2 headMargin'>Do not include images of compatible products in the main image. (e.g. if you’re selling phone cases, don’t picture them with phones)</li>
-                <li className='heading2 headMargin'>Minimum number of pictures for an item in electronics is 3.</li>
-                <li className='heading2 headMargin'>It is permitted to use lifestyle images as the main image for the following categories; Furniture, Beddings, Lights and Curtains, as long as they showcase the product clearly.</li>
-            </div>),
+          id: uuidv4(),
+          title: 'd. Images',
+          panel: (
+            <div>
+            <li className='heading2 headMargin'>Ensure the product takes up 70% to 85% of the image frame for optimal visibility.</li>
+            <li className='heading2 headMargin'>Image file size should range between 100KB and 10MB.</li>
+            <li className='heading2 headMargin'>Supported image formats include .jpg, .jpeg, .png, and .bmp (transparent PNGs are not allowed).</li>
+            <li className='heading2 headMargin'>Use sRGB or CMYK color modes for accurate color display.</li>
+            <li className='heading2 headMargin'>Images must have a resolution between 500x500 and 1000x1000 pixels.</li>
+            <li className='heading2 headMargin'>Maintain a 1:1 (square) aspect ratio for all product images.</li>
+            <li className='heading2 headMargin'>Only use real photographs of the product—illustrations or digital graphics are not permitted.</li>
+            <li className='heading2 headMargin'>Do not use logos or icons in place of the actual product image.</li>
+            <li className='heading2 headMargin'>Keep the image clean—avoid extra elements, overlays, or unrelated objects.</li>
+            <li className='heading2 headMargin'>Images must be clear, sharp, and free from watermarks, borders, or distortion.</li>
+            <li className='heading2 headMargin'>Display a single, clearly visible unit of the product in the main image.</li>
+            <li className='heading2 headMargin'>Use a plain white background for the main product image.</li>
+            <li className='heading2 headMargin'>Do not show accessories, packaging contents, or add-ons in the main image.</li>
+            <li className='heading2 headMargin'>You may upload up to five additional images to showcase your product.</li>
+            <li className='heading2 headMargin'>Avoid using text, watermarks, pricing labels, or complex backgrounds in the main image.</li>
+            <li className='heading2 headMargin'>Do not display bundles, multipacks, or different angles in the main image.</li>
+            <li className='heading2 headMargin'>Exclude compatible items from the main image (e.g., avoid showing a phone inside a case).</li>
+            <li className='heading2 headMargin'>Electronics listings must include at least three high-quality images.</li>
+            <li className='heading2 headMargin'>Lifestyle images may be used as the main image for certain categories (e.g., furniture, bedding, lighting, curtains) if the product remains clearly visible and identifiable.</li>
+          </div>
+          
+          ),
         },
         {
-            id: uuidv4(),
-            title: 'e. Specifications',
-            panel: (
-                <div>
-                    <li className='heading2 headMargin'>Follow the value instructions in the product template</li>
-                    <li className='heading2 headMargin'>Key features: Add a minimum of 2, up to 6 Key features. Each key feature has a maximum character limit of 250 characters.</li>
-                </div>
-            ),
+          id: uuidv4(),
+          title: 'e. Specifications',
+          panel: (
+            <div>
+            <li className='heading2 headMargin'>Make sure all product details match the format and structure of the listing template.</li>
+            <li className='heading2 headMargin'>Key features: Include at least 2 and no more than 6 bullet points. Each feature should be concise and limited to 250 characters.</li>
+          </div>
+          
+          ),
         },
-    ]
+      ];
+      
 
-    const pac = [
+      const pac = [
         {
             id: uuidv4(),
             title: 'a. General guidelines',
-            panel: (<div>
-                <li className='heading2 headMargin'>Tradeling.com is a platform that allows you to sell physical products only. Services and Subscriptions are not permitted to be sold on Tradeling.</li>
-                <li className='heading2 headMargin'>Ensure the product brand and item type is permitted to be sold online by UAE law. Alcohol and smoking products, drugs and medical products, and animals are not permitted on the platform.</li>
-                <li className='heading2 headMargin'>Ensure the product details do not contain any graphic or sexual content and the language is professional.</li>
-                <li className='heading2 headMargin'>The official language of the product details must be in English (mandatory) and Arabic (optional) only.</li>
-                <li className='heading2 headMargin'>Ensure your that each listing contain one product only. Variants and accessories should be listed separately.</li>
-                <li className='heading2 headMargin'>Ensure your product details are consistent and does not have conflicting information.</li>
-            </div>),
+            panel: (
+                <div>
+                <li className='heading2 headMargin'>Ulinkit is a platform for listing and selling physical products only. Services, subscriptions, or digital goods are not permitted.</li>
+                <li className='heading2 headMargin'>Make sure your product complies with local and international laws. Prohibited items include alcohol, tobacco, drugs, medical devices, and live animals.</li>
+                <li className='heading2 headMargin'>Product listings must not contain any explicit, graphic, or inappropriate content. All language should be clear, respectful, and professional.</li>
+                <li className='heading2 headMargin'>Product information must be provided in English. Additional languages are welcome as long as English is included.</li>
+                <li className='heading2 headMargin'>Each product listing must represent a single item. List variants (e.g., sizes or colors) and accessories separately.</li>
+                <li className='heading2 headMargin'>Ensure product details are accurate, consistent, and do not contain conflicting or misleading information.</li>
+              </div>
+              
+            ),
         },
         {
             id: uuidv4(),
             title: 'b. Imagery',
-            panel: (<div>
-                <li className='heading2 headMargin'>The image should be readable for the buyers so they can see the functions and specifications of the product.</li>
-                <li className='heading2 headMargin'>Only one product in the image with a mentioned color and size so the buyers aren’t confused with multiple products and colors. (If the product has multiple variants such as colors or sizes, each variant should be listed separately).</li>
-                <li className='heading2 headMargin'>The image must match the title, key features and description and must not conflict with any of the product details (Example; Red T-shirt Image, whereas the title says blue).</li>
-                <li className='heading2 headMargin'>The images must be a photograph and not an illustration.</li>
-                <li className='heading2 headMargin'>The image must not contain watermarks, contact details, texts or illustrations.</li>
-                <li className='heading2 headMargin'>The images cannot be graphic, inappropriate, unprofessional.</li>
-                <li className='heading2 headMargin'>The Images must not contain live models (Lingerie, underwear, and sleep wear).</li>
-            </div>),
+            panel: (
+                <div>
+                <li className='heading2 headMargin'>Product images must be clear and easy to view, allowing buyers to understand key features and specifications at a glance.</li>
+                <li className='heading2 headMargin'>Display only one product per image, showing the specific color and size to avoid confusion. If the item has multiple variants, list each variant separately.</li>
+                <li className='heading2 headMargin'>Images must accurately reflect the product title, features, and description. Avoid mismatches such as a red item image with a blue item title.</li>
+                <li className='heading2 headMargin'>Use real photographs only—illustrations, renderings, or drawings are not allowed.</li>
+                <li className='heading2 headMargin'>Images must be free from watermarks, text overlays, contact information, or any added graphics.</li>
+                <li className='heading2 headMargin'>Avoid using images that are graphic, unprofessional, or inappropriate in any way.</li>
+                <li className='heading2 headMargin'>For specific product categories such as lingerie, underwear, and sleepwear, images must not include live models.</li>
+              </div>
+              
+            ),
         },
         {
             id: uuidv4(),
             title: 'c. Title',
-            panel: (<div>
-                <li className='heading2 headMargin'>Title should be clear enough to understand the details of the product.</li>
-                <li className='heading2 headMargin'>Titles should contain the brand as the first word.</li>
-                <li className='heading2 headMargin'>The phrase “Assorted colors” can be used if the image contains the manufacturer’s box or if the colors are mentioned in key features or description.</li>
-                <li className='heading2 headMargin'>The title should not contain multiple variants and should not conflict with the product details and images.</li>
-                <li className='heading2 headMargin'>The titles should not contain irrelevant keywords.</li>
-                <li className='heading2 headMargin'>Titles should not contain typos and/or special characters.</li>
-            </div>),
+            panel: (
+                <div>
+                <li className='heading2 headMargin'>Product titles must be clear and informative, giving buyers a quick understanding of what is being offered.</li>
+                <li className='heading2 headMargin'>Begin each title with the product's brand name for easy identification and searchability.</li>
+                <li className='heading2 headMargin'>Use the term “Assorted colors” only if the image shows the manufacturer’s packaging or if color variety is explained in the features or description.</li>
+                <li className='heading2 headMargin'>Do not include multiple variants in a single title. Ensure the title matches the product details and image to avoid confusion.</li>
+                <li className='heading2 headMargin'>Avoid using unrelated or misleading keywords in the title.</li>
+                <li className='heading2 headMargin'>Titles must be free of spelling errors and must not include special characters or symbols.</li>
+              </div>
+              
+            ),
         },
         {
             id: uuidv4(),
             title: 'd. Top Key features',
-            panel: (<div>
-                <li className='heading2 headMargin'>The key features should highlight the most important functions and features of the product. It’s your chance to mention all the selling points that will help the buyers with their buying decision.</li>
-                <li className='heading2 headMargin'>Add a minimum 2, up to 6 key features per listing.</li>
-                <li className='heading2 headMargin'>Product Usage.</li>
-                <li className='heading2 headMargin'>Compatibility with other devices or products (if needed).</li>
-                <li className='heading2 headMargin'>The key features should not contain promotional details or information about multiple variants and should not conflict with the other product details and images.</li>
-                <li className='heading2 headMargin'>Key features should not contain typos and/or special characters.</li>
-            </div>),
+            panel: (
+                <div>
+                <li className='heading2 headMargin'>Key features should clearly present the most essential functions and benefits of the product, helping buyers make informed purchase decisions.</li>
+                <li className='heading2 headMargin'>Include at least 2 and up to 6 key features per product listing.</li>
+                <li className='heading2 headMargin'>Mention the intended use or purpose of the product where applicable.</li>
+                <li className='heading2 headMargin'>Indicate compatibility with other devices or products, if relevant.</li>
+                <li className='heading2 headMargin'>Avoid including promotional language, multiple variants, or any conflicting information across the listing.</li>
+                <li className='heading2 headMargin'>Ensure each feature is clearly written and free from spelling errors or special characters.</li>
+              </div>
+              
+            ),
         },
         {
             id: uuidv4(),
             title: 'e. Keywords',
-            panel: (<div>
-                <li className='heading2 headMargin'>Using keywords that are strictly related to the product for better search experience. Use the words or phrases that the buyers would use to search for your products.</li>
-                <li className='heading2 headMargin'> Use words and phrases but not sentences.</li>
-                <li className='heading2 headMargin'> Add a minimum 2, up to 5 keywords per listing.</li>
-            </div>),
+            panel: (
+                <div>
+                <li className='heading2 headMargin'>Choose relevant keywords that accurately describe the product to improve visibility in search results. Think like a buyer—use terms they’re likely to search for.</li>
+                <li className='heading2 headMargin'>Include phrases or individual words, not full sentences.</li>
+                <li className='heading2 headMargin'>Add a minimum of 2 and a maximum of 5 targeted keywords per product listing.</li>
+              </div>
+              
+            ),
         },
         {
             id: uuidv4(),
-            title: 'd. High-quality description',
-            panel: (<div>
-                <li className='heading2 headMargin'>The story behind the product.</li>
-                <li className='heading2 headMargin'>Detailed display of usage, functions, specifications ingredients, materials and compatibility.</li>
-                <li className='heading2 headMargin'>The description should not contain promotional details or information about multiple variants and should not conflict with the other product details and images.</li>
-            </div>),
+            title: 'f. High-quality description',
+            panel: (
+                <div>
+                <li className='heading2 headMargin'>Share the inspiration or story behind the product to build a deeper connection with buyers.</li>
+                <li className='heading2 headMargin'>Clearly explain how the product works, its features, specifications, materials, ingredients, and any device or item compatibility.</li>
+                <li className='heading2 headMargin'>Avoid promotional language or mentioning multiple product variants. Ensure the description aligns with all other product details and images.</li>
+              </div>
+              
+            ),
         },
-
-    ]
+    ];
 
 
 
@@ -229,10 +262,16 @@ const Guidelines = () => {
                 </div>
 
                 <h3 className="heading5">3. Attend the webinar on how to upload your products</h3>
-                <h4 className="heading2">Do you have questions about uploading your catalogue on Tradeling? Or do you simply need a first-hand demonstration showing how to upload products?
+                <h4 className="heading2">Do you have questions about uploading your catalogue on Ulinkit? Or do you simply need a first-hand demonstration showing how to upload products?
                     Join our free 1-hour webinar, where our experts will show you how to do it and start selling!
                 </h4>
-                <button className='btn box2 flex' style={{ width: 'fit-content', backgroundColor: 'var(--CodeOne)' }}><div className="heading2">Register Now</div></button>
+                <button
+      onClick={() => navigate('/signup')}
+      className='btn box2 flex'
+      style={{ width: 'fit-content', backgroundColor: 'var(--CodeOne)' }}
+    >
+      <div className="heading2">Register Now</div>
+    </button>
             </article>
         </Fragment>
     )
