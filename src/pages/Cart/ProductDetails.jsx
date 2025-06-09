@@ -10,7 +10,6 @@ import currencySymbols from '../../components/Schemas/currencySymbols';
 import { Helmet } from 'react-helmet-async';
 import { toast } from 'react-hot-toast';
 
-
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import FlightIcon from '@mui/icons-material/Flight';
 import returned from '../../assets/returned.png';
@@ -31,10 +30,7 @@ import upi from '../../assets/upi.png';
 import netbanking from '../../assets/netbanking.png';
 import './cart.css';
 
-
-
 const ProductDetails = () => {
-
     const user = useSelector((state) => state.auth.user);
     const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
     const { id } = useParams();
@@ -75,7 +71,8 @@ const ProductDetails = () => {
             setSelectedImage(product.image[0].imageUrl);
         }
         if (product && product.minOrderQuant) {
-            setValue(moq.toString());
+            setMoq(product.minOrderQuant);
+            setValue(product.minOrderQuant.toString());
         }
         if (product && product.sellPrice && product.unitPrice) {
             setSalep(product.sellPrice);
@@ -105,10 +102,9 @@ const ProductDetails = () => {
         }
     }, [product, rates, toCurrency]);
 
-
-
     // Fetch currency options and exchange rates
     const convertPrice = (price, fromCurrency) => {
+        if (!price || !fromCurrency) return 0;
         const rate = exchangeRates[selectedCurrency];
         if (!rate) return price;
         const priceInUSD = price / exchangeRates[fromCurrency];
@@ -119,11 +115,13 @@ const ProductDetails = () => {
     const incrementValue = () => {
         setValue(prevValue => (parseInt(prevValue) + 1).toString());
     };
+    
     const decrementValue = () => {
         setValue(prevValue => Math.max(parseInt(prevValue) - 1, moq).toString());
     };
+    
     const handleInputChange = (e) => {
-        const newValue = parseInt(e.target.value);
+        const newValue = parseInt(e.target.value) || moq;
         setValue(newValue >= moq ? newValue.toString() : moq.toString());
     };
 
@@ -148,6 +146,7 @@ const ProductDetails = () => {
 
     //bullet-points
     const renderBulletPoints = (bulletPoints) => {
+        if (!bulletPoints) return null;
         const bulletPointArray = bulletPoints.split('/').filter(point => point.trim() !== '');
         return (
             <ul className='bullet-points'>
@@ -160,12 +159,14 @@ const ProductDetails = () => {
 
     const cartHandler = () => {
         if (!product) return;
-        dispatch(addToCart({ productId: id, quantity: value }));
-        toast(<div className='toaster'> < VerifiedIcon /> {`${value} items added to cart successfully!`}</div>,
+        dispatch(addToCart({ productId: id, quantity: parseInt(value) }));
+        toast(<div className='toaster'> <VerifiedIcon /> {`${value} items added to cart successfully!`}</div>,
             { duration: 3000, position: 'top-center', style: { padding: '3px', color: 'rgb(0, 189, 0)' }, className: 'success', ariaProps: { role: 'status', 'aria-live': 'polite' } });
     };
 
+    // Fixed null handling
     const convertPascalToReadable = (text) => {
+        if (!text) return "";
         return text.replace(/([A-Z])/g, ' $1').trim();
     };
 
@@ -194,7 +195,6 @@ const ProductDetails = () => {
         navigate('/rfq');
     }
 
-
     if (status === 'loading') {
         return <Loader />;
     }
@@ -205,7 +205,13 @@ const ProductDetails = () => {
         return null;
     }
 
-
+    // Safely generate breadcrumb path
+    const breadcrumbPath = [
+        convertPascalToReadable(product.selectedSupOption),
+        convertPascalToReadable(product.selectedSubOption),
+        convertPascalToReadable(product.selectedMiniSubOption),
+        convertPascalToReadable(product.selectedMicroSubOption)
+    ].filter(segment => segment).join(' > ');
 
     return (
         <div className="flexcol wh product-detail">
@@ -218,13 +224,12 @@ const ProductDetails = () => {
 
             <Fragment>
                 <article className="flex wh">
-                    <h1 className="heading2 wh">{`${convertPascalToReadable(product.selectedSupOption)} > ${convertPascalToReadable(product.selectedSubOption)} > ${convertPascalToReadable(product.selectedMiniSubOption)} > ${convertPascalToReadable(product.selectedMicroSubOption)}`}</h1>
+                    <h1 className="heading2 wh">{breadcrumbPath}</h1>
                 </article>
 
                 <div className="pdcont">
                     <div className="pdcol pdcol_one">
                         <div className="big-image-box">
-
                             <div className="big-image" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} onMouseMove={handleMouseMove}>
                                 <div className="image-wrapper-big">
                                     <img src={selectedImage} alt="Big Image" className='zoomedimg' />
@@ -238,48 +243,31 @@ const ProductDetails = () => {
                                 )}
                             </div>
 
-
                             <div className="flex" style={{ width: '100%', padding: '10px', justifyContent: 'space-evenly', border: 'var(--border)' }}>
-                                {product.image && product.image.length > 0 && (
-                                    <div className="small-image" onClick={() => handleImageClick(product.image[0].imageUrl)}>
-                                        <img src={product.image[0].imageUrl} alt={product.productName} />
+                                {product.image?.slice(0, 5).map((img, index) => (
+                                    <div key={index} className="small-image" onClick={() => handleImageClick(img.imageUrl)}>
+                                        <img src={img.imageUrl} alt={product.productName} />
                                     </div>
-                                )}
-                                {product.image && product.image.length > 1 && (
-                                    <div className="small-image" onClick={() => handleImageClick(product.image[1].imageUrl)}>
-                                        <img src={product.image[1].imageUrl} alt={product.productName} />
-                                    </div>
-                                )}
-                                {product.image && product.image.length > 2 && (
-                                    <div className="small-image" onClick={() => handleImageClick(product.image[2].imageUrl)}>
-                                        <img src={product.image[2].imageUrl} alt={product.productName} />
-                                    </div>
-                                )}
-                                {product.image && product.image.length > 3 && (
-                                    <div className="small-image" onClick={() => handleImageClick(product.image[3].imageUrl)}>
-                                        <img src={product.image[3].imageUrl} alt={product.productName} />
-                                    </div>
-                                )}
-                                {product.image && product.image.length > 4 && (
-                                    <div className="small-image" onClick={() => handleImageClick(product.image[4].imageUrl)}>
-                                        <img src={product.image[4].imageUrl} alt={product.productName} />
-                                    </div>
-                                )}
+                                ))}
                             </div>
                         </div>
                     </div>
                     <div className="pdcol pdcol_two">
-                        <p className="heading2 wh captext">Brand : {product.brandName}</p>
+                        <p className="heading2 wh captext">Brand : {product.brandName || "N/A"}</p>
                         <p className="heading wh captext">{product.productName}</p>
                         <div className="sel-box" style={{ gap: '20px' }}>
                             <div className="flexcol wh" style={{ gap: '10px', alignItems: 'start' }}>
                                 <div className="flex" style={{ gap: '15px' }}>
-                                    <span className='descrip2' style={{ textDecoration: 'line-through' }}>{currencySymbols[selectedCurrency]} {convertPrice(product.unitPrice, product.currencyname)} {selectedCurrency}</span>
+                                    <span className='descrip2' style={{ textDecoration: 'line-through' }}>
+                                        {currencySymbols[selectedCurrency]} {convertPrice(product.unitPrice, product.currencyname)} {selectedCurrency}
+                                    </span>
                                     <span style={{ fontWeight: 'bold', fontSize: '14px', color: 'limegreen' }}>{discountPercentage}% OFF</span>
                                 </div>
                                 <div className="flex" style={{ gap: '15px' }}>
                                     <span>{selectedCurrency}</span>
-                                    <span style={{ fontWeight: 'bold', fontSize: '22px' }}>{currencySymbols[selectedCurrency]} {convertPrice(product.sellPrice, product.currencyname)} {selectedCurrency}</span>
+                                    <span style={{ fontWeight: 'bold', fontSize: '22px' }}>
+                                        {currencySymbols[selectedCurrency]} {convertPrice(product.sellPrice, product.currencyname)} {selectedCurrency}
+                                    </span>
 
                                     <span style={{ fontWeight: 'normal', fontSize: '14px', fontWeight: 600 }}>
                                         Converted to {convertedAmount.toFixed(2)}
@@ -298,8 +286,8 @@ const ProductDetails = () => {
 
                                 <div className="flex shareicons" style={{ gap: '10px' }}>
                                     <div className='descrip2'>Share it on :</div>
-                                    < WhatsAppIcon onClick={() => handleShare('whatsapp')} />
-                                    < FacebookIcon onClick={() => handleShare('facebook')} />
+                                    <WhatsAppIcon onClick={() => handleShare('whatsapp')} />
+                                    <FacebookIcon onClick={() => handleShare('facebook')} />
                                     <XIcon onClick={() => handleShare('twitter')} />
                                 </div>
                             </div>
@@ -323,12 +311,12 @@ const ProductDetails = () => {
                             </div>
                             <div className="panel-pd" style={{ maxHeight: activeIndex === 1 ? '300px' : '0' }}>
                                 <div className="flexcol wh" style={{ padding: '10px', alignItems: 'start' }}>
-                                    <p className="descrip2 captext">Brand: {product.brandName}</p>
-                                    <p className="descrip2 captext">Country of origin: {product.origin}</p>
-                                    <p className="descrip2 captext">Storage temperature:{product.temperature}</p>
-                                    <p className="descrip2 captext">Unit size: {product.size}</p>
-                                    <p className="descrip2 captext">Number of packs in one carton: {product.unitsPerCarton}</p>
-                                    <p className="descrip2 captext">Min. Order Quantity: {product.minOrderQuant}</p>
+                                    <p className="descrip2 captext">Brand: {product.brandName || "N/A"}</p>
+                                    <p className="descrip2 captext">Country of origin: {product.origin || "N/A"}</p>
+                                    <p className="descrip2 captext">Storage temperature: {product.temperature || "N/A"}</p>
+                                    <p className="descrip2 captext">Unit size: {product.size || "N/A"}</p>
+                                    <p className="descrip2 captext">Number of packs in one carton: {product.unitsPerCarton || "N/A"}</p>
+                                    <p className="descrip2 captext">Min. Order Quantity: {product.minOrderQuant || "N/A"}</p>
                                 </div>
                             </div>
 
@@ -337,8 +325,8 @@ const ProductDetails = () => {
                             </div>
                             <div className="panel-pd" style={{ maxHeight: activeIndex === 2 ? '300px' : '0' }}>
                                 <div className="flexcol wh" style={{ padding: '10px', alignItems: 'start' }}>
-                                    <p className="descrip2 captext">Carton dimensions (LWH): {product.cartonLgh} {product.cartonLghUnit} x {product.cartonWdh} {product.cartonWdhUnit} x {product.cartonHgt} {product.cartonHgtUnit}</p>
-                                    <p className="descrip2 captext">Carton weight: {product.cartonWgt} {product.cartonWgtUnit} </p>
+                                    <p className="descrip2 captext">Carton dimensions (LWH): {product.cartonLgh || "N/A"} {product.cartonLghUnit || ""} x {product.cartonWdh || "N/A"} {product.cartonWdhUnit || ""} x {product.cartonHgt || "N/A"} {product.cartonHgtUnit || ""}</p>
+                                    <p className="descrip2 captext">Carton weight: {product.cartonWgt || "N/A"} {product.cartonWgtUnit || ""} </p>
                                 </div>
                             </div>
                         </div>
@@ -349,10 +337,10 @@ const ProductDetails = () => {
                                 <p className="heading3">Order quantity</p>
                                 <div className="plus-minus">
                                     <div style={{ cursor: 'pointer' }}><RemoveCircleOutlineIcon onClick={decrementValue} /></div>
-                                    <input className='pminput' type="number" value={value} onChange={handleInputChange} />
+                                    <input className='pminput' type="number" value={value} onChange={handleInputChange} min={moq} />
                                     <div style={{ cursor: 'pointer' }}><AddCircleOutlineIcon onClick={incrementValue} /></div>
                                 </div>
-                                <p className="descrip2" style={{ display: 'none' }}>Minimum order quantity : {product.minOrderQuant}</p>
+                                <p className="descrip2">Minimum order quantity: {moq}</p>
                             </div>
 
                             <div className="flex wh topbottom" style={{ justifyContent: 'space-between', padding: '10px 0px' }}>
@@ -361,15 +349,26 @@ const ProductDetails = () => {
                             </div>
 
                             <div className="flexcol wh" style={{ gap: '10px' }}>
-                                {isAuthenticated && user.role === 'Seller' && (<p className="descrip2 flex" style={{ gap: '10px' }}><InfoIcon style={{ color: 'gray' }} />To purchase products, please log in using your Buyer account.</p>)}
-                                {isAuthenticated && user.role === 'Buyer' && (
+                                {isAuthenticated && user?.role === 'Seller' && (
+                                    <p className="descrip2 flex" style={{ gap: '10px' }}>
+                                        <InfoIcon style={{ color: 'gray' }} />To purchase products, please log in using your Buyer account.
+                                    </p>
+                                )}
+                                {isAuthenticated && user?.role === 'Buyer' && (
                                     <Fragment>
-                                        <button className='btn2 addtocart flex' onClick={cartHandler}><AddShoppingCartIcon style={{ width: '15px' }} /><div className="heading2">Add to cart</div></button>
-                                        <button onClick={rfqredirect} className='btn addtocart flex'><div className="heading2">Negotiate with seller</div></button>
+                                        <button className='btn2 addtocart flex' onClick={cartHandler}>
+                                            <AddShoppingCartIcon style={{ width: '15px' }} />
+                                            <div className="heading2">Add to cart</div>
+                                        </button>
+                                        <button onClick={rfqredirect} className='btn addtocart flex'>
+                                            <div className="heading2">Negotiate with seller</div>
+                                        </button>
                                     </Fragment>
                                 )}
                                 {!isAuthenticated && (
-                                    <p className="descrip2 flex" style={{ gap: '10px' }}><InfoIcon style={{ color: 'gray' }} />To purchase products, please login/signup using your Buyer account.</p>
+                                    <p className="descrip2 flex" style={{ gap: '10px' }}>
+                                        <InfoIcon style={{ color: 'gray' }} />To purchase products, please login/signup using your Buyer account.
+                                    </p>
                                 )}
                             </div>
                         </div>
@@ -397,11 +396,16 @@ const ProductDetails = () => {
                             <div className="flexcol wh" style={{ gap: '10px', alignItems: 'start' }}>
                                 <p className="heading3">Seller information</p>
                                 <div className="flex wh" style={{ justifyContent: 'space-between' }}>
-                                    <p className="descrip2">{product.seller.name}</p>
-                                    {product.seller.isVerified ? (<div className="warning-btn2 flex"><VerifiedIcon style={{ width: '13px' }} />Verified</div>)
-                                        : (<div className="warning-btn3 flex"><NewReleasesIcon style={{ width: '13px' }} />Unverified</div>)}
+                                    <p className="descrip2">{product.seller?.name || "N/A"}</p>
+                                    {product.seller?.isVerified ? (
+                                        <div className="warning-btn2 flex"><VerifiedIcon style={{ width: '13px' }} />Verified</div>
+                                    ) : (
+                                        <div className="warning-btn3 flex"><NewReleasesIcon style={{ width: '13px' }} />Unverified</div>
+                                    )}
                                 </div>
-                                <div className="descrip2">{product.seller.companyName}, {product.seller.countryOfoperation}</div>
+                                <div className="descrip2">
+                                    {product.seller?.companyName || "N/A"}, {product.seller?.countryOfoperation || "N/A"}
+                                </div>
                                 <div className="flex-start wh">
                                     <a className='hoverr wh'>More from this seller</a>
                                 </div>
@@ -464,10 +468,9 @@ const ProductDetails = () => {
                 </article>
 
                 <p className="descrip2 flexstart captext wh">
-                    {product.addInfo}
+                    {product.addInfo || "No description available"}
                 </p>
             </Fragment>
-
         </div>
     )
 }
